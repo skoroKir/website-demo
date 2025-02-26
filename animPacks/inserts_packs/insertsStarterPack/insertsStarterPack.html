@@ -1,0 +1,567 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<meta charset="UTF-8">
+
+<head>
+    <link href="fonts/" rel="stylesheet">
+</head>
+
+<body>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.6.10/lottie.js" integrity="sha256-j5t8yIha0IKq9Oajlw+yBTISHC7DMh1AVIC3v1Ka6S8=" crossorigin="anonymous"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.9.1/lottie.min.js" integrity="sha512-CWKGqmXoxo+9RjazbVIaiFcD+bYEIcUbBHwEzPlT0FilQq3TCUac+/uxZ5KDmvYiXJvp32O8rcgchkYw6J6zOA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <!-- animation data -->
+    <script src="animData/insertSPQuote.js"></script>
+    <script src="animData/infographSPPieChart.js"></script>
+    <script src="animData/infographSPCompareGraph.js"></script>
+
+    <!-- <script src="animData/sportFtblSPScore.js"></script>
+    <script src="animData/sportFtblSPGoal.js"></script>
+    <script src="animData/sportFtblSPSub.js"></script> -->
+    
+    <div id="animationSet">  
+        <div id="quote" class="quote"></div>
+        <div id="pieChart" class="pieChart"></div>
+        <div id="compareGraph" class="compareGraph"></div>
+    </div>
+
+    <script src="https://cdn.socket.io/4.4.0/socket.io.min.js" integrity="sha384-1fOn6VtTq3PWwfsOrk45LnYcGosJwzMHv+Xh/Jx5303FVOXzEnw0EpLv30mtjmlj" crossorigin="anonymous"></script>
+
+    <script>
+
+        /////ANIMATION INSTANSES
+
+        //Common parameteres
+        var commonParams = {
+            renderer: 'svg',
+            loop: false,
+            autoplay: false,
+            autoloadSegments: false,
+            prerender: false,
+        }
+////////////////////////////////////////////////////////////////////
+
+        //Quote
+        var paramsQuote = {
+            container: document.getElementById('quote'),
+            animationData: insertSPQuoteData,
+            rendererSettings: {
+                imagePreserveAspectRatio: 'xMidYMid slice'
+            },
+  
+        
+        };
+        paramsQuote = Object.assign(commonParams, paramsQuote);
+
+        var quoteAnim;
+        quoteAnim = lottie.loadAnimation(paramsQuote);
+
+////////////////////////////////////////////////////////////////////
+
+        //Pie chart
+        var paramsPieChart = {
+            container: document.getElementById('pieChart'),
+            animationData: infogrSPPieChartData,
+            rendererSettings: {
+                imagePreserveAspectRatio: 'xMidYMid meet'
+            },
+            // loop: true,
+            // autoplay: true,
+        };
+        paramsPieChart = Object.assign(commonParams, paramsPieChart);
+
+        var pieChartAnim;
+        pieChartAnim = lottie.loadAnimation(paramsPieChart);
+
+ ////////////////////////////////////////////////////////////////////       
+
+        //Compare graph
+
+        var paramsCompareGraph = {
+            container: document.getElementById('compareGraph'),
+            animationData: infogrSPCompareGraphData,
+            rendererSettings: {
+                imagePreserveAspectRatio: 'xMidYMid meet'
+            },
+            // loop: true,
+            // autoplay: true,
+        };
+        paramsCompareGraph = Object.assign(commonParams, paramsCompareGraph);
+
+        var compareGraphAnim;
+        compareGraphAnim = lottie.loadAnimation(paramsCompareGraph);
+        
+/////////////////////////////////////////////////////////////////////////////////
+
+        // QUOTE  TEXT UPDATING AND ANIMATION LOGIC
+        //defining editable elements
+        quoteMainText=quoteAnim.renderer.elements[2];
+        quoteName=quoteAnim.renderer.elements[4];
+        quoteColor=quoteAnim.renderer.elements[9];
+        quoteImg=document.getElementById('quoteImage').getElementsByTagName("image")[0];
+        quoteBkgImg=document.getElementById('bkgImage').getElementsByTagName("image")[0];
+
+
+        
+        //horBarColor=horBarChartAnim.renderer.elements[1].elements[15];    
+
+
+        //cleaning editables elements
+        function quoteClear(){
+            quoteMainText.updateDocumentData({
+                t: ''
+            }, 0);
+            quoteName.updateDocumentData({
+                t: ''
+            }, 0);
+            quoteColor.updateDocumentData({
+                t: ''
+            }, 0);
+
+            quoteImg.setAttribute("href", 'images/img_0.png');
+            quoteBkgImg.setAttribute("href", 'images/img_1.jpg');
+        }
+
+        //Animate in
+        function quoteON(){
+            quoteAnim.goToAndPlay("animIn", true);
+        }
+        //Animate out
+        function quoteOUT(){
+            if (quoteAnim.currentFrame != quoteAnim.firstFrame) {
+                quoteAnim.goToAndPlay("animOut", true);
+                    setTimeout(function() {
+                        quoteAnim.firstFrame = 0;
+                        quoteAnim.goToAndStop(quoteAnim.firstFrame, true);
+                        // horBarChartAnim.goToAndStop("0", true); //doesn't work as expected yet
+                    }, 2000);
+                }
+        }
+
+        function quote(action, text, name, color, quotePic, bkgPic) {
+
+            function quoteUpdate(){
+            quoteMainText.updateDocumentData({
+                t: text
+            }, 0);
+            quoteName.updateDocumentData({
+                t: name
+            }, 0);
+            quoteColor.updateDocumentData({
+                t: color
+            }, 0);
+
+            quoteImg.setAttribute("href", quotePic);
+            quoteBkgImg.setAttribute("href", bkgPic);
+            }
+
+            function quoteBasicLogicAnimIn(){
+                if (quoteAnim.currentFrame <= 0) {                 
+                    quoteUpdate()                     
+                    quoteON();            
+                }
+                // else if (title !== horBarTitle.layerElement.textContent ||textOne !== horBarTextOne.layerElement.textContent ||percOne !== horBarPercOne.layerElement.textContent ||textTwo !== horBarTextTwo.layerElement.textContent
+                // ||percTwo !== horBarPercTwo.layerElement.textContent||textThree !== horBarTextThree.layerElement.textContent||percThree !== horBarPercThree.layerElement.textContent||textFour !== horBarTextFour.layerElement.textContent
+                // ||percFour !== horBarPercFour.layerElement.textContent||color !== horBarColors.layerElement.textContent){
+                //     horBarChartOUT()
+                //     setTimeout(function() {
+                //         horBarChartUpdate()
+                //         horBarChartON();
+                //     }, 1500);
+                // }                
+
+            }
+
+            function quoteBasicLogicAnimOut(){
+                setTimeout(function(){
+                        quoteClear()
+                        },2000)        
+                quoteOUT();
+            }
+
+            switch (action){
+                case 'on':
+                    if(pieChartAnim.currentFrame>0){
+                        pieChartOUT()
+                        setTimeout(function(){
+                            horBarChartBasicLogicAnimIn()
+                        },
+                        1500);
+                    }
+                    else if(compareGraphAnim.currentFrame>0){
+                        compareGraphOUT()
+                        setTimeout(function(){
+                            horBarChartBasicLogicAnimIn()
+                        },
+                        900);
+                        }
+                    else{
+                        quoteBasicLogicAnimIn()
+                    }
+                    break;
+                case 'off':                    
+                    quoteBasicLogicAnimOut()
+                    break
+            }
+        }
+
+        // Pie chart  TEXT UPDATING AND ANIMATION LOGIC
+        //defining editable elements
+        pieChartTitle=pieChartAnim.renderer.elements[1];
+        pieChartTextOne=pieChartAnim.renderer.elements[2].elements[4];
+        pieChartPercOne=pieChartAnim.renderer.elements[2].elements[0];
+        pieChartDirOne=pieChartAnim.renderer.elements[2].elements[5];
+        pieChartTextTwo=pieChartAnim.renderer.elements[3].elements[4];
+        pieChartPercTwo=pieChartAnim.renderer.elements[3].elements[0];
+        pieChartDirTwo=pieChartAnim.renderer.elements[3].elements[5];
+        pieChartTextThree=pieChartAnim.renderer.elements[4].elements[4];
+        pieChartPercThree=pieChartAnim.renderer.elements[4].elements[0];
+        pieChartDirThree=pieChartAnim.renderer.elements[4].elements[5];
+        pieChartColors=pieChartAnim.renderer.elements[5];
+
+        //cleaning editables elements
+        function pieChartClear(){
+            pieChartTitle.updateDocumentData({
+                t: ''
+            }, 0);
+            pieChartTextOne.updateDocumentData({
+                t: ''
+            }, 0);
+            pieChartPercOne.updateDocumentData({
+                t: ''
+            }, 0);
+            pieChartDirOne.updateDocumentData({
+                t: ''
+            }, 0);
+            pieChartTextTwo.updateDocumentData({
+                t: ''
+            }, 0);
+            pieChartPercTwo.updateDocumentData({
+                t: ''
+            }, 0);
+            pieChartDirTwo.updateDocumentData({
+                t: ''
+            }, 0);
+            pieChartTextThree.updateDocumentData({
+                t: ''
+            }, 0);
+            pieChartDirThree.updateDocumentData({
+                t: ''
+            }, 0);
+            pieChartDirThree.updateDocumentData({
+                t: ''
+            }, 0);
+            pieChartColors.updateDocumentData({
+                t: ''
+            }, 0);
+
+
+
+            // editableImg0.setAttribute("href", 'images/img_0.jpg');
+            // editableImg1.setAttribute("href", 'images/img_1.jpg');
+        }
+
+        //Animate in
+        function pieChartON(){
+            pieChartAnim.goToAndPlay("animIn", true);
+        }
+        //Animate out
+        function pieChartOUT(){
+            if (pieChartAnim.currentFrame != pieChartAnim.firstFrame) {
+                pieChartAnim.goToAndPlay("animOut", true);
+                    setTimeout(function() {
+                        pieChartAnim.firstFrame = 0;
+                        pieChartAnim.goToAndStop(pieChartAnim.firstFrame, true);
+                    }, 1500);
+                }
+        }
+
+        function piechart(action, title, textOne, percOne, dirOne, textTwo, percTwo, dirTwo, textThree, percThree, dirThree, color) {
+
+            function pieChartUpdate(){
+            pieChartTitle.updateDocumentData({
+                t: title
+            }, 0);
+            pieChartTextOne.updateDocumentData({
+                t: textOne
+            }, 0);
+            pieChartPercOne.updateDocumentData({
+                t: percOne
+            }, 0);
+            pieChartDirOne.updateDocumentData({
+                t: dirOne
+            }, 0);
+            pieChartTextTwo.updateDocumentData({
+                t: textTwo
+            }, 0);
+            pieChartPercTwo.updateDocumentData({
+                t: percTwo
+            }, 0);
+            pieChartDirTwo.updateDocumentData({
+                t: dirTwo
+            }, 0);
+            pieChartTextThree.updateDocumentData({
+                t: textThree
+            }, 0);
+            pieChartPercThree.updateDocumentData({
+                t: percThree
+            }, 0);
+            pieChartDirThree.updateDocumentData({
+                t: dirThree
+            }, 0);
+            pieChartColors.updateDocumentData({
+                t: color
+            }, 0);
+
+            // editableImg0.setAttribute("href", teamLogo0);
+            // editableImg1.setAttribute("href", teamLogo1);
+            }
+
+            function pieChartBasicLogicAnimIn(){
+                if (horBarChartAnim.currentFrame <= 0) {                 
+                    pieChartUpdate()                     
+                    pieChartON();            
+                }
+                else if (title !== pieChartTitle.layerElement.textContent ||textOne !== pieChartTextOne.layerElement.textContent ||percOne !== pieChartPercOne.layerElement.textContent||dirOne!=pieChartDirOne.layerElement.textContent
+                ||textTwo !== pieChartTextTwo.layerElement.textContent||percTwo !== pieChartPercTwo.layerElement.textContent||dirTwo!=pieChartDirTwo.layerElement.textContent||textThree !== pieChartTextThree.layerElement.textContent
+                ||percThree !== pieChartPercThree.layerElement.textContent||dirThree!=pieChartDirThree.layerElement.textContent||color !== pieChartColors.layerElement.textContent){
+                    pieChartOUT()
+                    setTimeout(function() {
+                        pieChartUpdate()
+                        pieChartON();
+                    }, 1500);
+                }                
+            }
+
+            function pieChartBasicLogicAnimOut(){
+                setTimeout(function(){
+                        pieChartClear()
+                        },1500)        
+                pieChartOUT();
+            }
+
+            switch (action){
+            case 'on':
+                if(horBarChartAnim.currentFrame>0){
+                     horBarChartOUT()
+                     setTimeout(function(){
+                        pieChartBasicLogicAnimIn()
+                     },
+                     1500);
+                 }
+                else if(compareGraphAnim.currentFrame>0){
+                    compareGraphOUT()
+                     setTimeout(function(){
+                        pieChartBasicLogicAnimIn()
+                     },
+                     700);
+                 }
+                 else{
+                     pieChartBasicLogicAnimIn()
+                 }
+                break;
+            case 'off':                    
+                pieChartBasicLogicAnimOut()
+                break
+            }
+        }
+
+
+
+
+     // Compare graph  TEXT UPDATING AND ANIMATION LOGIC
+        //defining editable elements
+        compareGraphTitle=compareGraphAnim.renderer.elements[1];
+        compareGraphTextOne=compareGraphAnim.renderer.elements[4];
+        compareGraphTextTwo=compareGraphAnim.renderer.elements[5];
+        compareGraphTextPerc=compareGraphAnim.renderer.elements[2]
+        compareGraphColors=compareGraphAnim.renderer.elements[9];
+
+        //cleaning editables elements
+        function compareGraphClear(){
+            compareGraphTitle.updateDocumentData({
+                t: ''
+            }, 0);
+            compareGraphTextOne.updateDocumentData({
+                t: ''
+            }, 0);
+            compareGraphTextTwo.updateDocumentData({
+                t: ''
+            }, 0);
+            compareGraphTextPerc.updateDocumentData({
+                t: ''
+            }, 0);
+            compareGraphColors.updateDocumentData({
+                t: ''
+            }, 0);
+            // editableImg0.setAttribute("href", 'images/img_0.jpg');
+            // editableImg1.setAttribute("href", 'images/img_1.jpg');
+        }
+
+        //Animate in
+        function compareGraphON(){
+            compareGraphAnim.goToAndPlay("animIn", true);
+        }
+        //Animate out
+        function compareGraphOUT(){
+            if (compareGraphAnim.currentFrame != compareGraphAnim.firstFrame) {
+                compareGraphAnim.goToAndPlay("animOut", true);
+                    setTimeout(function() {
+                        compareGraphAnim.firstFrame = 0;
+                        //compareGraphAnim.goToAndStop(compareGraphAnim.firstFrame, true);
+                        compareGraphAnim.goToAndStop("animIn", true);
+                        // horBarChartAnim.goToAndStop("0", true); //doesn't work as expected yet
+                    }, 1500);
+                }
+        }
+
+        function comparegraph(action, title, textOne, textTwo, percOne, color) {
+
+            function compareGraphUpdate(){
+            compareGraphTitle.updateDocumentData({
+                t: title
+            }, 0);
+            compareGraphTextOne.updateDocumentData({
+                t: textOne
+            }, 0);
+            compareGraphTextTwo.updateDocumentData({
+                t: textTwo
+            }, 0);
+            compareGraphTextPerc.updateDocumentData({
+                t: percOne
+            }, 0);
+            compareGraphColors.updateDocumentData({
+                t: color
+            }, 0);
+
+
+            // editableImg0.setAttribute("href", teamLogo0);
+            // editableImg1.setAttribute("href", teamLogo1);
+            }
+
+            function compareGraphBasicLogicAnimIn(){
+                if (compareGraphAnim.currentFrame <= 0) {                 
+                    compareGraphUpdate()                     
+                    compareGraphON();            
+                }
+
+                else if (title !== compareGraphTitle.layerElement.textContent ||textOne !== compareGraphTextOne.layerElement.textContent ||textTwo !== compareGraphTextTwo.layerElement.textContent
+                ||percOne !== compareGraphTextPerc.layerElement.textContent||color !== compareGraphColors.layerElement.textContent){
+                    compareGraphOUT()
+                    setTimeout(function() {
+                        compareGraphUpdate()
+                        compareGraphON();
+                    }, 1500);
+                }                
+
+            }
+
+            function compareGraphBasicLogicAnimOut(){
+                setTimeout(function(){
+                    compareGraphClear()
+                        },1500)        
+                        compareGraphOUT();
+            }
+
+            switch (action){
+            case 'on':
+                if(horBarChartAnim.currentFrame>0){
+                    horBarChartOUT()
+                     setTimeout(function(){
+                        compareGraphBasicLogicAnimIn()
+                     },
+                     1500);
+                 }
+                 else if(pieChartAnim.currentFrame>0){
+                    pieChartOUT()
+                     setTimeout(function(){
+                        compareGraphBasicLogicAnimIn()
+                     },
+                     900);
+                 }
+                else{
+                     compareGraphBasicLogicAnimIn()
+                    }
+                
+                break;
+            case 'off':                    
+                compareGraphBasicLogicAnimOut()
+                break
+            }
+        }
+
+
+//////////////////////////////////////////////
+
+
+ 
+        //document.getElementById("timing").innerHTML = "new text"
+
+       
+        //const bc = new BroadcastChannel('output'); //Receives from the source
+
+        const getQueryParam = param => {
+        const urlSearchParams = new URLSearchParams(window.location.search);
+        const value = urlSearchParams.get(param);
+        return value
+        }
+
+        const sessionID = getQueryParam('session')
+        console.log(sessionID)
+        var recievedMessage
+
+
+        const socket = io("https://gfxpro.tv", {path: '/socket/socket.io', query: {room: sessionID}});//ws://192.236.146.167:3000
+        socket.on('message', message => {
+            receivedMessage = JSON.parse(message)
+            console.log(receivedMessage);
+            templateSelected = receivedMessage[receivedMessage.length - 1]
+            eval(templateSelected)(...receivedMessage)
+        })
+        
+        // bc.addEventListener('message', function (event) {
+        //     console.log(event.data)
+        //     animAgumentsArr = event.data
+        //     templateSelected = animAgumentsArr[animAgumentsArr.length - 1]
+        //     eval(templateSelected)(...animAgumentsArr)
+
+        // });
+    </script>
+
+</body>
+
+<style>
+    body {
+        background-color: rgba(0, 189, 72, 0);
+        margin: 0px;
+        height: 100%;
+        overflow: hidden;
+        font-family: 'Scada', sans-serif;
+    }
+    
+    .quote, .pieChart, .compareGraph{
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        background-color: rgba(81, 133, 245, 0);
+        width: 100%;
+        height: 100%;
+        display: block;
+        overflow: hidden;
+        transform: translate3d(0, 0, 0);
+        text-align: center;
+        opacity: 1;
+    }
+
+    
+    /* @font-face { font-family: scada-regular; 
+         src: url('font/Scada-Regular.ttf'); }
+    .position{
+        font-family: scada-regular;
+    }
+
+    @import url('https://fonts.googleapis.com/css2?family=Scada&display=swap'); */
+</style>
+
+</html>
+

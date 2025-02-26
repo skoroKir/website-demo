@@ -1,0 +1,6616 @@
+var infogrSPPieChartData =
+
+{
+    "v": "5.7.13",
+    "fr": 25,
+    "ip": 0,
+    "op": 125,
+    "w": 1920,
+    "h": 1080,
+    "nm": "pieChartMainStitch",
+    "ddd": 0,
+    "assets": [
+      {
+        "id": "comp_0",
+        "nm": "pieChartOne",
+        "layers": [
+          {
+            "ddd": 0,
+            "ind": 1,
+            "ty": 5,
+            "nm": ".pieChartOnePercSource #pieChartOnePercSource",
+            "ln": "pieChartOnePercSource",
+            "cl": "pieChartOnePercSource",
+            "sr": 1,
+            "ks": {
+              "o": {
+                "a": 0,
+                "k": 100,
+                "ix": 11
+              },
+              "r": {
+                "a": 0,
+                "k": 0,
+                "ix": 10
+              },
+              "p": {
+                "a": 0,
+                "k": [
+                  -245.043,
+                  32.25,
+                  0
+                ],
+                "ix": 2,
+                "l": 2
+              },
+              "a": {
+                "a": 0,
+                "k": [
+                  0,
+                  -50.4,
+                  0
+                ],
+                "ix": 1,
+                "l": 2
+              },
+              "s": {
+                "a": 0,
+                "k": [
+                  100,
+                  100,
+                  100
+                ],
+                "ix": 6,
+                "l": 2
+              }
+            },
+            "ao": 0,
+            "t": {
+              "d": {
+                "k": [
+                  {
+                    "s": {
+                      "s": 144,
+                      "f": "Scada-Bold",
+                      "t": "50",
+                      "ca": 0,
+                      "j": 2,
+                      "tr": 0,
+                      "lh": 172.8,
+                      "ls": 0,
+                      "fc": [
+                        1,
+                        1,
+                        1
+                      ]
+                    },
+                    "t": 0
+                  }
+                ]
+              },
+              "p": {},
+              "m": {
+                "g": 1,
+                "a": {
+                  "a": 0,
+                  "k": [
+                    0,
+                    0
+                  ],
+                  "ix": 2
+                }
+              },
+              "a": []
+            },
+            "ip": 0,
+            "op": 125,
+            "st": 0,
+            "bm": 0
+          },
+          {
+            "ddd": 0,
+            "ind": 2,
+            "ty": 5,
+            "nm": ".pieChartOnePercText #pieChartOnePercText",
+            "ln": "pieChartOnePercText",
+            "cl": "pieChartOnePercText",
+            "sr": 1,
+            "ks": {
+              "o": {
+                "a": 1,
+                "k": [
+                  {
+                    "i": {
+                      "x": [
+                        0.667
+                      ],
+                      "y": [
+                        1
+                      ]
+                    },
+                    "o": {
+                      "x": [
+                        0.333
+                      ],
+                      "y": [
+                        0
+                      ]
+                    },
+                    "t": 6,
+                    "s": [
+                      0
+                    ]
+                  },
+                  {
+                    "i": {
+                      "x": [
+                        0.833
+                      ],
+                      "y": [
+                        1
+                      ]
+                    },
+                    "o": {
+                      "x": [
+                        0.333
+                      ],
+                      "y": [
+                        0
+                      ]
+                    },
+                    "t": 14,
+                    "s": [
+                      100
+                    ]
+                  },
+                  {
+                    "i": {
+                      "x": [
+                        0.833
+                      ],
+                      "y": [
+                        1
+                      ]
+                    },
+                    "o": {
+                      "x": [
+                        0.167
+                      ],
+                      "y": [
+                        0
+                      ]
+                    },
+                    "t": 111,
+                    "s": [
+                      100
+                    ]
+                  },
+                  {
+                    "t": 123,
+                    "s": [
+                      0
+                    ]
+                  }
+                ],
+                "ix": 11
+              },
+              "r": {
+                "a": 0,
+                "k": 0,
+                "ix": 10
+              },
+              "p": {
+                "a": 0,
+                "k": [
+                  220,
+                  361.6,
+                  0
+                ],
+                "ix": 2,
+                "l": 2,
+                "x": "var $bm_rt;\nvar x, y;\nx = thisComp.layer('pieChartOne').transform.position[0];\ny = thisComp.layer('pieChartOne').transform.position[1];\n$bm_rt = [\n    x,\n    y\n];"
+              },
+              "a": {
+                "a": 0,
+                "k": [
+                  0,
+                  -50.4,
+                  0
+                ],
+                "ix": 1,
+                "l": 2
+              },
+              "s": {
+                "a": 0,
+                "k": [
+                  100,
+                  100,
+                  100
+                ],
+                "ix": 6,
+                "l": 2,
+                "x": "var $bm_rt;\nvar targetSize, realSize, x, x, y;\ntargetSize = 300;\nrealSize = thisLayer.sourceRectAtTime().width;\nif (realSize > targetSize) {\n    x = $bm_mul($bm_div(targetSize, realSize), 100);\n} else {\n    x = 100;\n}\ny = value[1];\n$bm_rt = [\n    x,\n    y\n];"
+              }
+            },
+            "ao": 0,
+            "ef": [
+              {
+                "ty": 5,
+                "nm": "Slider Control",
+                "np": 3,
+                "mn": "ADBE Slider Control",
+                "ix": 1,
+                "en": 1,
+                "ef": [
+                  {
+                    "ty": 0,
+                    "nm": "Slider",
+                    "mn": "ADBE Slider Control-0001",
+                    "ix": 1,
+                    "v": {
+                      "a": 1,
+                      "k": [
+                        {
+                          "i": {
+                            "x": [
+                              0.667
+                            ],
+                            "y": [
+                              1
+                            ]
+                          },
+                          "o": {
+                            "x": [
+                              0.333
+                            ],
+                            "y": [
+                              0
+                            ]
+                          },
+                          "t": 9,
+                          "s": [
+                            0
+                          ]
+                        },
+                        {
+                          "t": 45,
+                          "s": [
+                            25
+                          ]
+                        }
+                      ],
+                      "ix": 1,
+                      "x": "var $bm_rt;\nvar t1, t2;\nt1 = key(1).time;\nt2 = key(2).time;\nvalue = Math.round(thisComp.layer('.pieChartOnePercSource #pieChartOnePercSource').text.sourceText);\n$bm_rt = ease(time, t1, t2, 0, value);"
+                    }
+                  }
+                ]
+              }
+            ],
+            "t": {
+              "d": {
+                "k": [
+                  {
+                    "s": {
+                      "s": 144,
+                      "f": "Scada-Bold",
+                      "t": "",
+                      "ca": 0,
+                      "j": 2,
+                      "tr": 0,
+                      "lh": 172.8,
+                      "ls": 0,
+                      "fc": [
+                        1,
+                        1,
+                        1
+                      ]
+                    },
+                    "t": 0
+                  }
+                ],
+                "x": "var $bm_rt;\n$bm_rt = $bm_sum(Math.round(effect('Slider Control')('Slider')), '%');"
+              },
+              "p": {},
+              "m": {
+                "g": 1,
+                "a": {
+                  "a": 0,
+                  "k": [
+                    0,
+                    0
+                  ],
+                  "ix": 2
+                }
+              },
+              "a": []
+            },
+            "ip": 6,
+            "op": 125,
+            "st": 0,
+            "bm": 0
+          },
+          {
+            "ddd": 0,
+            "ind": 3,
+            "ty": 4,
+            "nm": "pieChartOne",
+            "sr": 1,
+            "ks": {
+              "o": {
+                "a": 0,
+                "k": 100,
+                "ix": 11
+              },
+              "r": {
+                "a": 0,
+                "k": 0,
+                "ix": 10
+              },
+              "p": {
+                "a": 0,
+                "k": [
+                  960,
+                  544,
+                  0
+                ],
+                "ix": 2,
+                "l": 2
+              },
+              "a": {
+                "a": 0,
+                "k": [
+                  0,
+                  0,
+                  0
+                ],
+                "ix": 1,
+                "l": 2
+              },
+              "s": {
+                "a": 0,
+                "k": [
+                  100,
+                  100,
+                  100
+                ],
+                "ix": 6,
+                "l": 2
+              }
+            },
+            "ao": 0,
+            "shapes": [
+              {
+                "ty": "gr",
+                "it": [
+                  {
+                    "ty": "gr",
+                    "it": [
+                      {
+                        "d": 1,
+                        "ty": "el",
+                        "s": {
+                          "a": 0,
+                          "k": [
+                            418,
+                            418
+                          ],
+                          "ix": 2
+                        },
+                        "p": {
+                          "a": 0,
+                          "k": [
+                            0,
+                            0
+                          ],
+                          "ix": 3
+                        },
+                        "nm": "Ellipse Path 1",
+                        "mn": "ADBE Vector Shape - Ellipse",
+                        "hd": false
+                      },
+                      {
+                        "ty": "st",
+                        "c": {
+                          "a": 0,
+                          "k": [
+                            0.784313976765,
+                            0.572087824345,
+                            0,
+                            1
+                          ],
+                          "ix": 3,
+                          "x": "var $bm_rt;\nvar txt, barOneColor;\nfunction hexToColor(theHex) {\n    var r = theHex >> 16;\n    var g = (theHex & 65280) >> 8;\n    var b = theHex & 255;\n    return [\n        r / 255,\n        g / 255,\n        b / 255,\n        1\n    ];\n}\ntxt = comp('pieChartMainStitch').layer('.barColors #barColors').text.sourceText.split(',')[0];\nbarOneColor = parseInt(txt, 16);\n$bm_rt = hexToColor(barOneColor);"
+                        },
+                        "o": {
+                          "a": 0,
+                          "k": 100,
+                          "ix": 4
+                        },
+                        "w": {
+                          "a": 0,
+                          "k": 85,
+                          "ix": 5
+                        },
+                        "lc": 1,
+                        "lj": 1,
+                        "ml": 4,
+                        "bm": 0,
+                        "nm": "Stroke 1",
+                        "mn": "ADBE Vector Graphic - Stroke",
+                        "hd": false
+                      },
+                      {
+                        "ty": "tr",
+                        "p": {
+                          "a": 0,
+                          "k": [
+                            0,
+                            0
+                          ],
+                          "ix": 2
+                        },
+                        "a": {
+                          "a": 0,
+                          "k": [
+                            0,
+                            0
+                          ],
+                          "ix": 1
+                        },
+                        "s": {
+                          "a": 0,
+                          "k": [
+                            100,
+                            100
+                          ],
+                          "ix": 3
+                        },
+                        "r": {
+                          "a": 0,
+                          "k": 0,
+                          "ix": 6
+                        },
+                        "o": {
+                          "a": 0,
+                          "k": 100,
+                          "ix": 7
+                        },
+                        "sk": {
+                          "a": 0,
+                          "k": 0,
+                          "ix": 4
+                        },
+                        "sa": {
+                          "a": 0,
+                          "k": 0,
+                          "ix": 5
+                        },
+                        "nm": "Transform"
+                      }
+                    ],
+                    "nm": "pieOneM",
+                    "np": 3,
+                    "cix": 2,
+                    "bm": 0,
+                    "ix": 1,
+                    "mn": "ADBE Vector Group",
+                    "hd": false
+                  },
+                  {
+                    "ty": "tm",
+                    "s": {
+                      "a": 0,
+                      "k": 0,
+                      "ix": 1
+                    },
+                    "e": {
+                      "a": 1,
+                      "k": [
+                        {
+                          "i": {
+                            "x": [
+                              0
+                            ],
+                            "y": [
+                              1
+                            ]
+                          },
+                          "o": {
+                            "x": [
+                              0.023
+                            ],
+                            "y": [
+                              0
+                            ]
+                          },
+                          "t": 10,
+                          "s": [
+                            0
+                          ]
+                        },
+                        {
+                          "i": {
+                            "x": [
+                              0.667
+                            ],
+                            "y": [
+                              1
+                            ]
+                          },
+                          "o": {
+                            "x": [
+                              0.333
+                            ],
+                            "y": [
+                              0
+                            ]
+                          },
+                          "t": 35,
+                          "s": [
+                            63
+                          ]
+                        },
+                        {
+                          "i": {
+                            "x": [
+                              0.667
+                            ],
+                            "y": [
+                              1
+                            ]
+                          },
+                          "o": {
+                            "x": [
+                              0.333
+                            ],
+                            "y": [
+                              0
+                            ]
+                          },
+                          "t": 111,
+                          "s": [
+                            63
+                          ]
+                        },
+                        {
+                          "t": 123,
+                          "s": [
+                            63
+                          ]
+                        }
+                      ],
+                      "ix": 2,
+                      "x": "var $bm_rt;\nvar t1, t2, t3, t4;\nt1 = key(1).time;\nt2 = key(2).time;\nt3 = key(3).time;\nt4 = key(4).time;\n$bm_rt = value = Math.round(thisComp.layer('.pieChartOnePercSource #pieChartOnePercSource').text.sourceText.split('%')[0]);\nif (time < t2) {\n    $bm_rt = ease(time, t1, t2, 0, value);\n} else {\n    $bm_rt = ease(time, t3, t4, value, 0);\n}"
+                    },
+                    "o": {
+                      "a": 0,
+                      "k": 0,
+                      "ix": 3
+                    },
+                    "m": 1,
+                    "ix": 2,
+                    "nm": "trimPathsPieOneM",
+                    "mn": "ADBE Vector Filter - Trim",
+                    "hd": false
+                  },
+                  {
+                    "ty": "tr",
+                    "p": {
+                      "a": 0,
+                      "k": [
+                        0,
+                        0
+                      ],
+                      "ix": 2
+                    },
+                    "a": {
+                      "a": 0,
+                      "k": [
+                        0,
+                        0
+                      ],
+                      "ix": 1
+                    },
+                    "s": {
+                      "a": 0,
+                      "k": [
+                        100,
+                        100
+                      ],
+                      "ix": 3
+                    },
+                    "r": {
+                      "a": 0,
+                      "k": 0,
+                      "ix": 6
+                    },
+                    "o": {
+                      "a": 0,
+                      "k": 100,
+                      "ix": 7
+                    },
+                    "sk": {
+                      "a": 0,
+                      "k": 0,
+                      "ix": 4
+                    },
+                    "sa": {
+                      "a": 0,
+                      "k": 0,
+                      "ix": 5
+                    },
+                    "nm": "Transform"
+                  }
+                ],
+                "nm": "pieOneMain",
+                "np": 2,
+                "cix": 2,
+                "bm": 0,
+                "ix": 1,
+                "mn": "ADBE Vector Group",
+                "hd": false
+              },
+              {
+                "ty": "gr",
+                "it": [
+                  {
+                    "ty": "gr",
+                    "it": [
+                      {
+                        "d": 1,
+                        "ty": "el",
+                        "s": {
+                          "a": 0,
+                          "k": [
+                            452,
+                            452
+                          ],
+                          "ix": 2,
+                          "x": "var $bm_rt;\n$bm_rt = content('pieOneMain').content('pieOneM').content('Ellipse Path 1').size;"
+                        },
+                        "p": {
+                          "a": 0,
+                          "k": [
+                            0,
+                            0
+                          ],
+                          "ix": 3
+                        },
+                        "nm": "Ellipse Path 1",
+                        "mn": "ADBE Vector Shape - Ellipse",
+                        "hd": false
+                      },
+                      {
+                        "ty": "st",
+                        "c": {
+                          "a": 0,
+                          "k": [
+                            0,
+                            0.784313964844,
+                            0.166090004117,
+                            1
+                          ],
+                          "ix": 3,
+                          "x": "var $bm_rt;\n$bm_rt = content('pieOneMain').content('pieOneM').content('Stroke 1').color;"
+                        },
+                        "o": {
+                          "a": 0,
+                          "k": 40,
+                          "ix": 4
+                        },
+                        "w": {
+                          "a": 0,
+                          "k": 60,
+                          "ix": 5
+                        },
+                        "lc": 1,
+                        "lj": 1,
+                        "ml": 4,
+                        "bm": 0,
+                        "nm": "Stroke 1",
+                        "mn": "ADBE Vector Graphic - Stroke",
+                        "hd": false
+                      },
+                      {
+                        "ty": "tr",
+                        "p": {
+                          "a": 0,
+                          "k": [
+                            0,
+                            0
+                          ],
+                          "ix": 2
+                        },
+                        "a": {
+                          "a": 0,
+                          "k": [
+                            0,
+                            0
+                          ],
+                          "ix": 1
+                        },
+                        "s": {
+                          "a": 0,
+                          "k": [
+                            100,
+                            100
+                          ],
+                          "ix": 3
+                        },
+                        "r": {
+                          "a": 0,
+                          "k": 0,
+                          "ix": 6
+                        },
+                        "o": {
+                          "a": 0,
+                          "k": 100,
+                          "ix": 7
+                        },
+                        "sk": {
+                          "a": 0,
+                          "k": 0,
+                          "ix": 4
+                        },
+                        "sa": {
+                          "a": 0,
+                          "k": 0,
+                          "ix": 5
+                        },
+                        "nm": "Transform"
+                      }
+                    ],
+                    "nm": "pieOneUnder",
+                    "np": 3,
+                    "cix": 2,
+                    "bm": 0,
+                    "ix": 1,
+                    "mn": "ADBE Vector Group",
+                    "hd": false
+                  },
+                  {
+                    "ty": "tm",
+                    "s": {
+                      "a": 0,
+                      "k": 0,
+                      "ix": 1
+                    },
+                    "e": {
+                      "a": 1,
+                      "k": [
+                        {
+                          "i": {
+                            "x": [
+                              0
+                            ],
+                            "y": [
+                              1
+                            ]
+                          },
+                          "o": {
+                            "x": [
+                              0.033
+                            ],
+                            "y": [
+                              0
+                            ]
+                          },
+                          "t": 0,
+                          "s": [
+                            0
+                          ]
+                        },
+                        {
+                          "i": {
+                            "x": [
+                              0.833
+                            ],
+                            "y": [
+                              1
+                            ]
+                          },
+                          "o": {
+                            "x": [
+                              0.167
+                            ],
+                            "y": [
+                              0
+                            ]
+                          },
+                          "t": 20,
+                          "s": [
+                            100
+                          ]
+                        },
+                        {
+                          "i": {
+                            "x": [
+                              0.833
+                            ],
+                            "y": [
+                              1
+                            ]
+                          },
+                          "o": {
+                            "x": [
+                              0.167
+                            ],
+                            "y": [
+                              0
+                            ]
+                          },
+                          "t": 107,
+                          "s": [
+                            100
+                          ]
+                        },
+                        {
+                          "t": 123,
+                          "s": [
+                            0
+                          ]
+                        }
+                      ],
+                      "ix": 2
+                    },
+                    "o": {
+                      "a": 0,
+                      "k": 0,
+                      "ix": 3
+                    },
+                    "m": 1,
+                    "ix": 2,
+                    "nm": "trimPathsPieOneUnder",
+                    "mn": "ADBE Vector Filter - Trim",
+                    "hd": false
+                  },
+                  {
+                    "ty": "tr",
+                    "p": {
+                      "a": 0,
+                      "k": [
+                        0,
+                        0
+                      ],
+                      "ix": 2
+                    },
+                    "a": {
+                      "a": 0,
+                      "k": [
+                        0,
+                        0
+                      ],
+                      "ix": 1
+                    },
+                    "s": {
+                      "a": 0,
+                      "k": [
+                        100,
+                        100
+                      ],
+                      "ix": 3
+                    },
+                    "r": {
+                      "a": 0,
+                      "k": 0,
+                      "ix": 6
+                    },
+                    "o": {
+                      "a": 0,
+                      "k": 100,
+                      "ix": 7
+                    },
+                    "sk": {
+                      "a": 0,
+                      "k": 0,
+                      "ix": 4
+                    },
+                    "sa": {
+                      "a": 0,
+                      "k": 0,
+                      "ix": 5
+                    },
+                    "nm": "Transform"
+                  }
+                ],
+                "nm": "pieOneUnderlay",
+                "np": 2,
+                "cix": 2,
+                "bm": 0,
+                "ix": 2,
+                "mn": "ADBE Vector Group",
+                "hd": false
+              }
+            ],
+            "ip": 0,
+            "op": 125,
+            "st": 0,
+            "bm": 0
+          },
+          {
+            "ddd": 0,
+            "ind": 4,
+            "ty": 4,
+            "nm": "textThreeMatte",
+            "td": 1,
+            "sr": 1,
+            "ks": {
+              "o": {
+                "a": 0,
+                "k": 100,
+                "ix": 11
+              },
+              "r": {
+                "a": 0,
+                "k": 0,
+                "ix": 10
+              },
+              "p": {
+                "a": 0,
+                "k": [
+                  960,
+                  540,
+                  0
+                ],
+                "ix": 2,
+                "l": 2
+              },
+              "a": {
+                "a": 0,
+                "k": [
+                  0,
+                  0,
+                  0
+                ],
+                "ix": 1,
+                "l": 2
+              },
+              "s": {
+                "a": 0,
+                "k": [
+                  100,
+                  100,
+                  100
+                ],
+                "ix": 6,
+                "l": 2
+              }
+            },
+            "ao": 0,
+            "shapes": [
+              {
+                "ty": "gr",
+                "it": [
+                  {
+                    "ty": "rc",
+                    "d": 1,
+                    "s": {
+                      "a": 0,
+                      "k": [
+                        1920,
+                        160
+                      ],
+                      "ix": 2
+                    },
+                    "p": {
+                      "a": 0,
+                      "k": [
+                        0,
+                        0
+                      ],
+                      "ix": 3
+                    },
+                    "r": {
+                      "a": 0,
+                      "k": 0,
+                      "ix": 4
+                    },
+                    "nm": "Rectangle Path 1",
+                    "mn": "ADBE Vector Shape - Rect",
+                    "hd": false
+                  },
+                  {
+                    "ty": "fl",
+                    "c": {
+                      "a": 0,
+                      "k": [
+                        0.059238998563,
+                        0.839215985466,
+                        0.151001006482,
+                        1
+                      ],
+                      "ix": 4
+                    },
+                    "o": {
+                      "a": 0,
+                      "k": 100,
+                      "ix": 5
+                    },
+                    "r": 1,
+                    "bm": 0,
+                    "nm": "Fill 1",
+                    "mn": "ADBE Vector Graphic - Fill",
+                    "hd": false
+                  },
+                  {
+                    "ty": "tr",
+                    "p": {
+                      "a": 0,
+                      "k": [
+                        0,
+                        363
+                      ],
+                      "ix": 2
+                    },
+                    "a": {
+                      "a": 0,
+                      "k": [
+                        0,
+                        0
+                      ],
+                      "ix": 1
+                    },
+                    "s": {
+                      "a": 0,
+                      "k": [
+                        100,
+                        100
+                      ],
+                      "ix": 3
+                    },
+                    "r": {
+                      "a": 0,
+                      "k": 0,
+                      "ix": 6
+                    },
+                    "o": {
+                      "a": 0,
+                      "k": 100,
+                      "ix": 7
+                    },
+                    "sk": {
+                      "a": 0,
+                      "k": 0,
+                      "ix": 4
+                    },
+                    "sa": {
+                      "a": 0,
+                      "k": 0,
+                      "ix": 5
+                    },
+                    "nm": "Transform"
+                  }
+                ],
+                "nm": "Rectangle 1",
+                "np": 3,
+                "cix": 2,
+                "bm": 0,
+                "ix": 1,
+                "mn": "ADBE Vector Group",
+                "hd": false
+              }
+            ],
+            "ip": 0,
+            "op": 125,
+            "st": 0,
+            "bm": 0
+          },
+          {
+            "ddd": 0,
+            "ind": 5,
+            "ty": 5,
+            "nm": ".pieChartOneText #pieChartOneText",
+            "ln": "pieChartOneText",
+            "cl": "pieChartOneText",
+            "tt": 1,
+            "sr": 1,
+            "ks": {
+              "o": {
+                "a": 0,
+                "k": 100,
+                "ix": 11
+              },
+              "r": {
+                "a": 0,
+                "k": 0,
+                "ix": 10
+              },
+              "p": {
+                "a": 1,
+                "k": [
+                  {
+                    "i": {
+                      "x": 0,
+                      "y": 1
+                    },
+                    "o": {
+                      "x": 0.012,
+                      "y": 0
+                    },
+                    "t": 10,
+                    "s": [
+                      960,
+                      730,
+                      0
+                    ],
+                    "to": [
+                      0,
+                      29.167,
+                      0
+                    ],
+                    "ti": [
+                      0,
+                      -29.167,
+                      0
+                    ]
+                  },
+                  {
+                    "i": {
+                      "x": 0,
+                      "y": 0
+                    },
+                    "o": {
+                      "x": 0.333,
+                      "y": 0.333
+                    },
+                    "t": 35,
+                    "s": [
+                      960,
+                      905,
+                      0
+                    ],
+                    "to": [
+                      0,
+                      0,
+                      0
+                    ],
+                    "ti": [
+                      0,
+                      0,
+                      0
+                    ]
+                  },
+                  {
+                    "i": {
+                      "x": 0.882,
+                      "y": 1
+                    },
+                    "o": {
+                      "x": 1,
+                      "y": 0
+                    },
+                    "t": 111,
+                    "s": [
+                      960,
+                      905,
+                      0
+                    ],
+                    "to": [
+                      0,
+                      -29.167,
+                      0
+                    ],
+                    "ti": [
+                      0,
+                      29.167,
+                      0
+                    ]
+                  },
+                  {
+                    "t": 123,
+                    "s": [
+                      960,
+                      730,
+                      0
+                    ]
+                  }
+                ],
+                "ix": 2,
+                "l": 2
+              },
+              "a": {
+                "a": 0,
+                "k": [
+                  1.575,
+                  24.325,
+                  0
+                ],
+                "ix": 1,
+                "l": 2,
+                "x": "var $bm_rt;\nvar x, y;\nx = value[0];\ny = $bm_sum(thisLayer.sourceRectAtTime().top, $bm_div(thisLayer.sourceRectAtTime().height, 2)), $bm_rt = [\n    x,\n    y\n];"
+              },
+              "s": {
+                "a": 0,
+                "k": [
+                  100,
+                  100,
+                  100
+                ],
+                "ix": 6,
+                "l": 2
+              }
+            },
+            "ao": 0,
+            "t": {
+              "d": {
+                "k": [
+                  {
+                    "s": {
+                      "s": 50,
+                      "f": "Scada-Bold",
+                      "t": "Pie chart one text\rgoes here",
+                      "ca": 0,
+                      "j": 2,
+                      "tr": 0,
+                      "lh": 60.0000038146973,
+                      "ls": 0,
+                      "fc": [
+                        1,
+                        1,
+                        1
+                      ]
+                    },
+                    "t": 0
+                  }
+                ]
+              },
+              "p": {},
+              "m": {
+                "g": 1,
+                "a": {
+                  "a": 0,
+                  "k": [
+                    0,
+                    0
+                  ],
+                  "ix": 2
+                }
+              },
+              "a": []
+            },
+            "ip": 0,
+            "op": 125,
+            "st": 0,
+            "bm": 0
+          },
+          {
+            "ddd": 0,
+            "ind": 6,
+            "ty": 5,
+            "nm": ".arrowOneDir #arrowOneDir",
+            "ln": "arrowOneDir",
+            "cl": "arrowOneDir",
+            "sr": 1,
+            "ks": {
+              "o": {
+                "a": 0,
+                "k": 100,
+                "ix": 11
+              },
+              "r": {
+                "a": 0,
+                "k": 0,
+                "ix": 10
+              },
+              "p": {
+                "a": 0,
+                "k": [
+                  -224,
+                  278.8,
+                  0
+                ],
+                "ix": 2,
+                "l": 2
+              },
+              "a": {
+                "a": 0,
+                "k": [
+                  0,
+                  0,
+                  0
+                ],
+                "ix": 1,
+                "l": 2
+              },
+              "s": {
+                "a": 0,
+                "k": [
+                  100,
+                  100,
+                  100
+                ],
+                "ix": 6,
+                "l": 2
+              }
+            },
+            "ao": 0,
+            "t": {
+              "d": {
+                "k": [
+                  {
+                    "s": {
+                      "s": 60,
+                      "f": "Scada-Bold",
+                      "t": "up",
+                      "ca": 0,
+                      "j": 2,
+                      "tr": 0,
+                      "lh": 72,
+                      "ls": 0,
+                      "fc": [
+                        1,
+                        1,
+                        1
+                      ]
+                    },
+                    "t": 0
+                  }
+                ]
+              },
+              "p": {},
+              "m": {
+                "g": 1,
+                "a": {
+                  "a": 0,
+                  "k": [
+                    0,
+                    0
+                  ],
+                  "ix": 2
+                }
+              },
+              "a": []
+            },
+            "ip": 0,
+            "op": 125,
+            "st": 0,
+            "bm": 0
+          },
+          {
+            "ddd": 0,
+            "ind": 7,
+            "ty": 4,
+            "nm": "arrowOne",
+            "sr": 1,
+            "ks": {
+              "o": {
+                "a": 1,
+                "k": [
+                  {
+                    "i": {
+                      "x": [
+                        0.667
+                      ],
+                      "y": [
+                        1
+                      ]
+                    },
+                    "o": {
+                      "x": [
+                        0.333
+                      ],
+                      "y": [
+                        0
+                      ]
+                    },
+                    "t": 32,
+                    "s": [
+                      0
+                    ]
+                  },
+                  {
+                    "i": {
+                      "x": [
+                        0.667
+                      ],
+                      "y": [
+                        1
+                      ]
+                    },
+                    "o": {
+                      "x": [
+                        0.333
+                      ],
+                      "y": [
+                        0
+                      ]
+                    },
+                    "t": 44,
+                    "s": [
+                      100
+                    ]
+                  },
+                  {
+                    "i": {
+                      "x": [
+                        0.833
+                      ],
+                      "y": [
+                        1
+                      ]
+                    },
+                    "o": {
+                      "x": [
+                        0.333
+                      ],
+                      "y": [
+                        0
+                      ]
+                    },
+                    "t": 111,
+                    "s": [
+                      100
+                    ]
+                  },
+                  {
+                    "t": 118,
+                    "s": [
+                      0
+                    ]
+                  }
+                ],
+                "ix": 11
+              },
+              "r": {
+                "a": 0,
+                "k": 0,
+                "ix": 10
+              },
+              "p": {
+                "a": 0,
+                "k": [
+                  960,
+                  528,
+                  0
+                ],
+                "ix": 2,
+                "l": 2
+              },
+              "a": {
+                "a": 0,
+                "k": [
+                  0,
+                  0,
+                  0
+                ],
+                "ix": 1,
+                "l": 2
+              },
+              "s": {
+                "a": 0,
+                "k": [
+                  100,
+                  100,
+                  100
+                ],
+                "ix": 6,
+                "l": 2
+              }
+            },
+            "ao": 0,
+            "shapes": [
+              {
+                "ty": "gr",
+                "it": [
+                  {
+                    "ind": 0,
+                    "ty": "sh",
+                    "ix": 1,
+                    "ks": {
+                      "a": 0,
+                      "k": {
+                        "i": [
+                          [
+                            0,
+                            0
+                          ],
+                          [
+                            0,
+                            0
+                          ],
+                          [
+                            0,
+                            0
+                          ]
+                        ],
+                        "o": [
+                          [
+                            0,
+                            0
+                          ],
+                          [
+                            0,
+                            0
+                          ],
+                          [
+                            0,
+                            0
+                          ]
+                        ],
+                        "v": [
+                          [
+                            39.75,
+                            150
+                          ],
+                          [
+                            -40,
+                            150
+                          ],
+                          [
+                            0,
+                            100
+                          ]
+                        ],
+                        "c": true
+                      },
+                      "ix": 2
+                    },
+                    "nm": "Path 1",
+                    "mn": "ADBE Vector Shape - Group",
+                    "hd": false
+                  },
+                  {
+                    "ty": "fl",
+                    "c": {
+                      "a": 0,
+                      "k": [
+                        0.059238751729,
+                        0.839215686275,
+                        0.151000826967,
+                        1
+                      ],
+                      "ix": 4
+                    },
+                    "o": {
+                      "a": 0,
+                      "k": 100,
+                      "ix": 5
+                    },
+                    "r": 1,
+                    "bm": 0,
+                    "nm": "Fill 1",
+                    "mn": "ADBE Vector Graphic - Fill",
+                    "hd": false
+                  },
+                  {
+                    "ty": "tr",
+                    "p": {
+                      "a": 1,
+                      "k": [
+                        {
+                          "i": {
+                            "x": 0.021,
+                            "y": 1
+                          },
+                          "o": {
+                            "x": 0.03,
+                            "y": 0
+                          },
+                          "t": 29,
+                          "s": [
+                            0,
+                            78
+                          ],
+                          "to": [
+                            0,
+                            -13
+                          ],
+                          "ti": [
+                            0,
+                            13
+                          ]
+                        },
+                        {
+                          "i": {
+                            "x": 0.021,
+                            "y": 0.021
+                          },
+                          "o": {
+                            "x": 0.333,
+                            "y": 0.333
+                          },
+                          "t": 44,
+                          "s": [
+                            0,
+                            0
+                          ],
+                          "to": [
+                            0,
+                            0
+                          ],
+                          "ti": [
+                            0,
+                            0
+                          ]
+                        },
+                        {
+                          "i": {
+                            "x": 0.833,
+                            "y": 1
+                          },
+                          "o": {
+                            "x": 0.167,
+                            "y": 0
+                          },
+                          "t": 111,
+                          "s": [
+                            0,
+                            0
+                          ],
+                          "to": [
+                            0,
+                            13
+                          ],
+                          "ti": [
+                            0,
+                            -13
+                          ]
+                        },
+                        {
+                          "t": 123,
+                          "s": [
+                            0,
+                            78
+                          ]
+                        }
+                      ],
+                      "ix": 2
+                    },
+                    "a": {
+                      "a": 0,
+                      "k": [
+                        0,
+                        0
+                      ],
+                      "ix": 1
+                    },
+                    "s": {
+                      "a": 0,
+                      "k": [
+                        100,
+                        100
+                      ],
+                      "ix": 3
+                    },
+                    "r": {
+                      "a": 0,
+                      "k": 0,
+                      "ix": 6
+                    },
+                    "o": {
+                      "a": 0,
+                      "k": 100,
+                      "ix": 7,
+                      "x": "var $bm_rt;\nif (thisComp.layer('.arrowOneDir #arrowOneDir').text.sourceText == 'up') {\n    $bm_rt = 100;\n} else {\n    $bm_rt = 0;\n}"
+                    },
+                    "sk": {
+                      "a": 0,
+                      "k": 0,
+                      "ix": 4
+                    },
+                    "sa": {
+                      "a": 0,
+                      "k": 0,
+                      "ix": 5
+                    },
+                    "nm": "Transform"
+                  }
+                ],
+                "nm": "upOne",
+                "np": 3,
+                "cix": 2,
+                "bm": 0,
+                "ix": 1,
+                "mn": "ADBE Vector Group",
+                "hd": false
+              },
+              {
+                "ty": "gr",
+                "it": [
+                  {
+                    "ind": 0,
+                    "ty": "sh",
+                    "ix": 1,
+                    "ks": {
+                      "a": 0,
+                      "k": {
+                        "i": [
+                          [
+                            0,
+                            0
+                          ],
+                          [
+                            0,
+                            0
+                          ],
+                          [
+                            0,
+                            0
+                          ]
+                        ],
+                        "o": [
+                          [
+                            0,
+                            0
+                          ],
+                          [
+                            0,
+                            0
+                          ],
+                          [
+                            0,
+                            0
+                          ]
+                        ],
+                        "v": [
+                          [
+                            39.875,
+                            100
+                          ],
+                          [
+                            -40,
+                            100
+                          ],
+                          [
+                            0,
+                            149.5
+                          ]
+                        ],
+                        "c": true
+                      },
+                      "ix": 2
+                    },
+                    "nm": "Path 1",
+                    "mn": "ADBE Vector Shape - Group",
+                    "hd": false
+                  },
+                  {
+                    "ty": "fl",
+                    "c": {
+                      "a": 0,
+                      "k": [
+                        0.862745098039,
+                        0.282352941176,
+                        0.282352941176,
+                        1
+                      ],
+                      "ix": 4
+                    },
+                    "o": {
+                      "a": 0,
+                      "k": 100,
+                      "ix": 5
+                    },
+                    "r": 1,
+                    "bm": 0,
+                    "nm": "Fill 1",
+                    "mn": "ADBE Vector Graphic - Fill",
+                    "hd": false
+                  },
+                  {
+                    "ty": "tr",
+                    "p": {
+                      "a": 1,
+                      "k": [
+                        {
+                          "i": {
+                            "x": 0,
+                            "y": 1
+                          },
+                          "o": {
+                            "x": 0.044,
+                            "y": 0
+                          },
+                          "t": 29,
+                          "s": [
+                            0,
+                            -80
+                          ],
+                          "to": [
+                            0,
+                            13.333
+                          ],
+                          "ti": [
+                            0,
+                            -13.333
+                          ]
+                        },
+                        {
+                          "i": {
+                            "x": 0,
+                            "y": 0
+                          },
+                          "o": {
+                            "x": 0.333,
+                            "y": 0.333
+                          },
+                          "t": 44,
+                          "s": [
+                            0,
+                            0
+                          ],
+                          "to": [
+                            0,
+                            0
+                          ],
+                          "ti": [
+                            0,
+                            0
+                          ]
+                        },
+                        {
+                          "i": {
+                            "x": 0.833,
+                            "y": 1
+                          },
+                          "o": {
+                            "x": 0.333,
+                            "y": 0
+                          },
+                          "t": 111,
+                          "s": [
+                            0,
+                            0
+                          ],
+                          "to": [
+                            0,
+                            -13.333
+                          ],
+                          "ti": [
+                            0,
+                            13.333
+                          ]
+                        },
+                        {
+                          "t": 123,
+                          "s": [
+                            0,
+                            -80
+                          ]
+                        }
+                      ],
+                      "ix": 2
+                    },
+                    "a": {
+                      "a": 0,
+                      "k": [
+                        0,
+                        0
+                      ],
+                      "ix": 1
+                    },
+                    "s": {
+                      "a": 0,
+                      "k": [
+                        100,
+                        100
+                      ],
+                      "ix": 3
+                    },
+                    "r": {
+                      "a": 0,
+                      "k": 0,
+                      "ix": 6
+                    },
+                    "o": {
+                      "a": 0,
+                      "k": 100,
+                      "ix": 7,
+                      "x": "var $bm_rt;\nif (thisComp.layer('.arrowOneDir #arrowOneDir').text.sourceText == 'down') {\n    $bm_rt = 100;\n} else {\n    $bm_rt = 0;\n}"
+                    },
+                    "sk": {
+                      "a": 0,
+                      "k": 0,
+                      "ix": 4
+                    },
+                    "sa": {
+                      "a": 0,
+                      "k": 0,
+                      "ix": 5
+                    },
+                    "nm": "Transform"
+                  }
+                ],
+                "nm": "downOne",
+                "np": 3,
+                "cix": 2,
+                "bm": 0,
+                "ix": 2,
+                "mn": "ADBE Vector Group",
+                "hd": false
+              }
+            ],
+            "ip": 0,
+            "op": 125,
+            "st": 0,
+            "bm": 0
+          }
+        ]
+      },
+      {
+        "id": "comp_1",
+        "nm": "pieChartTwo",
+        "layers": [
+          {
+            "ddd": 0,
+            "ind": 1,
+            "ty": 5,
+            "nm": ".pieChartTwoPercSource #pieChartTwoPercSource",
+            "ln": "pieChartTwoPercSource",
+            "cl": "pieChartTwoPercSource",
+            "sr": 1,
+            "ks": {
+              "o": {
+                "a": 0,
+                "k": 100,
+                "ix": 11
+              },
+              "r": {
+                "a": 0,
+                "k": 0,
+                "ix": 10
+              },
+              "p": {
+                "a": 0,
+                "k": [
+                  -125.043,
+                  8.25,
+                  0
+                ],
+                "ix": 2,
+                "l": 2
+              },
+              "a": {
+                "a": 0,
+                "k": [
+                  0,
+                  -50.4,
+                  0
+                ],
+                "ix": 1,
+                "l": 2
+              },
+              "s": {
+                "a": 0,
+                "k": [
+                  100,
+                  100,
+                  100
+                ],
+                "ix": 6,
+                "l": 2
+              }
+            },
+            "ao": 0,
+            "t": {
+              "d": {
+                "k": [
+                  {
+                    "s": {
+                      "s": 144,
+                      "f": "Scada-Bold",
+                      "t": "20",
+                      "ca": 0,
+                      "j": 2,
+                      "tr": 0,
+                      "lh": 172.8,
+                      "ls": 0,
+                      "fc": [
+                        1,
+                        1,
+                        1
+                      ]
+                    },
+                    "t": 0
+                  }
+                ]
+              },
+              "p": {},
+              "m": {
+                "g": 1,
+                "a": {
+                  "a": 0,
+                  "k": [
+                    0,
+                    0
+                  ],
+                  "ix": 2
+                }
+              },
+              "a": []
+            },
+            "ip": 0,
+            "op": 125,
+            "st": 0,
+            "bm": 0
+          },
+          {
+            "ddd": 0,
+            "ind": 2,
+            "ty": 5,
+            "nm": ".pieChartTwoPercText #pieChartTwoPercText",
+            "ln": "pieChartTwoPercText",
+            "cl": "pieChartTwoPercText",
+            "sr": 1,
+            "ks": {
+              "o": {
+                "a": 1,
+                "k": [
+                  {
+                    "i": {
+                      "x": [
+                        0.667
+                      ],
+                      "y": [
+                        1
+                      ]
+                    },
+                    "o": {
+                      "x": [
+                        0.333
+                      ],
+                      "y": [
+                        0
+                      ]
+                    },
+                    "t": 6,
+                    "s": [
+                      0
+                    ]
+                  },
+                  {
+                    "i": {
+                      "x": [
+                        0.833
+                      ],
+                      "y": [
+                        1
+                      ]
+                    },
+                    "o": {
+                      "x": [
+                        0.333
+                      ],
+                      "y": [
+                        0
+                      ]
+                    },
+                    "t": 14,
+                    "s": [
+                      100
+                    ]
+                  },
+                  {
+                    "i": {
+                      "x": [
+                        0.833
+                      ],
+                      "y": [
+                        1
+                      ]
+                    },
+                    "o": {
+                      "x": [
+                        0.167
+                      ],
+                      "y": [
+                        0
+                      ]
+                    },
+                    "t": 111,
+                    "s": [
+                      100
+                    ]
+                  },
+                  {
+                    "t": 123,
+                    "s": [
+                      0
+                    ]
+                  }
+                ],
+                "ix": 11
+              },
+              "r": {
+                "a": 0,
+                "k": 0,
+                "ix": 10
+              },
+              "p": {
+                "a": 0,
+                "k": [
+                  220,
+                  361.6,
+                  0
+                ],
+                "ix": 2,
+                "l": 2,
+                "x": "var $bm_rt;\nvar x, y;\nx = thisComp.layer('pieChartTwo').transform.position[0];\ny = thisComp.layer('pieChartTwo').transform.position[1];\n$bm_rt = [\n    x,\n    y\n];"
+              },
+              "a": {
+                "a": 0,
+                "k": [
+                  0,
+                  -50.4,
+                  0
+                ],
+                "ix": 1,
+                "l": 2
+              },
+              "s": {
+                "a": 0,
+                "k": [
+                  100,
+                  100,
+                  100
+                ],
+                "ix": 6,
+                "l": 2,
+                "x": "var $bm_rt;\nvar targetSize, realSize, x, x, y;\ntargetSize = 300;\nrealSize = thisLayer.sourceRectAtTime().width;\nif (realSize > targetSize) {\n    x = $bm_mul($bm_div(targetSize, realSize), 100);\n} else {\n    x = 100;\n}\ny = value[1];\n$bm_rt = [\n    x,\n    y\n];"
+              }
+            },
+            "ao": 0,
+            "ef": [
+              {
+                "ty": 5,
+                "nm": "Slider Control",
+                "np": 3,
+                "mn": "ADBE Slider Control",
+                "ix": 1,
+                "en": 1,
+                "ef": [
+                  {
+                    "ty": 0,
+                    "nm": "Slider",
+                    "mn": "ADBE Slider Control-0001",
+                    "ix": 1,
+                    "v": {
+                      "a": 1,
+                      "k": [
+                        {
+                          "i": {
+                            "x": [
+                              0.667
+                            ],
+                            "y": [
+                              1
+                            ]
+                          },
+                          "o": {
+                            "x": [
+                              0.333
+                            ],
+                            "y": [
+                              0
+                            ]
+                          },
+                          "t": 9,
+                          "s": [
+                            0
+                          ]
+                        },
+                        {
+                          "t": 45,
+                          "s": [
+                            25
+                          ]
+                        }
+                      ],
+                      "ix": 1,
+                      "x": "var $bm_rt;\nvar t1, t2;\nt1 = key(1).time;\nt2 = key(2).time;\nvalue = Math.round(thisComp.layer('.pieChartTwoPercSource #pieChartTwoPercSource').text.sourceText);\n$bm_rt = ease(time, t1, t2, 0, value);"
+                    }
+                  }
+                ]
+              }
+            ],
+            "t": {
+              "d": {
+                "k": [
+                  {
+                    "s": {
+                      "s": 144,
+                      "f": "Scada-Bold",
+                      "t": "",
+                      "ca": 0,
+                      "j": 2,
+                      "tr": 0,
+                      "lh": 172.8,
+                      "ls": 0,
+                      "fc": [
+                        1,
+                        1,
+                        1
+                      ]
+                    },
+                    "t": 0
+                  }
+                ],
+                "x": "var $bm_rt;\n$bm_rt = $bm_sum(Math.round(effect('Slider Control')('Slider')), '%');"
+              },
+              "p": {},
+              "m": {
+                "g": 1,
+                "a": {
+                  "a": 0,
+                  "k": [
+                    0,
+                    0
+                  ],
+                  "ix": 2
+                }
+              },
+              "a": []
+            },
+            "ip": 6,
+            "op": 125,
+            "st": 0,
+            "bm": 0
+          },
+          {
+            "ddd": 0,
+            "ind": 3,
+            "ty": 4,
+            "nm": "pieChartTwo",
+            "sr": 1,
+            "ks": {
+              "o": {
+                "a": 0,
+                "k": 100,
+                "ix": 11
+              },
+              "r": {
+                "a": 0,
+                "k": 0,
+                "ix": 10
+              },
+              "p": {
+                "a": 0,
+                "k": [
+                  960,
+                  544,
+                  0
+                ],
+                "ix": 2,
+                "l": 2
+              },
+              "a": {
+                "a": 0,
+                "k": [
+                  0,
+                  0,
+                  0
+                ],
+                "ix": 1,
+                "l": 2
+              },
+              "s": {
+                "a": 0,
+                "k": [
+                  100,
+                  100,
+                  100
+                ],
+                "ix": 6,
+                "l": 2
+              }
+            },
+            "ao": 0,
+            "shapes": [
+              {
+                "ty": "gr",
+                "it": [
+                  {
+                    "ty": "gr",
+                    "it": [
+                      {
+                        "d": 1,
+                        "ty": "el",
+                        "s": {
+                          "a": 0,
+                          "k": [
+                            418,
+                            418
+                          ],
+                          "ix": 2
+                        },
+                        "p": {
+                          "a": 0,
+                          "k": [
+                            0,
+                            0
+                          ],
+                          "ix": 3
+                        },
+                        "nm": "Ellipse Path 1",
+                        "mn": "ADBE Vector Shape - Ellipse",
+                        "hd": false
+                      },
+                      {
+                        "ty": "st",
+                        "c": {
+                          "a": 0,
+                          "k": [
+                            0.784313976765,
+                            0,
+                            0.49827003479,
+                            1
+                          ],
+                          "ix": 3,
+                          "x": "var $bm_rt;\nvar txt, barOneColor;\nfunction hexToColor(theHex) {\n    var r = theHex >> 16;\n    var g = (theHex & 65280) >> 8;\n    var b = theHex & 255;\n    return [\n        r / 255,\n        g / 255,\n        b / 255,\n        1\n    ];\n}\ntxt = comp('pieChartMainStitch').layer('.barColors #barColors').text.sourceText.split(',')[1];\nbarOneColor = parseInt(txt, 16);\n$bm_rt = hexToColor(barOneColor);"
+                        },
+                        "o": {
+                          "a": 0,
+                          "k": 100,
+                          "ix": 4
+                        },
+                        "w": {
+                          "a": 0,
+                          "k": 85,
+                          "ix": 5
+                        },
+                        "lc": 1,
+                        "lj": 1,
+                        "ml": 4,
+                        "bm": 0,
+                        "nm": "Stroke 1",
+                        "mn": "ADBE Vector Graphic - Stroke",
+                        "hd": false
+                      },
+                      {
+                        "ty": "tr",
+                        "p": {
+                          "a": 0,
+                          "k": [
+                            0,
+                            0
+                          ],
+                          "ix": 2
+                        },
+                        "a": {
+                          "a": 0,
+                          "k": [
+                            0,
+                            0
+                          ],
+                          "ix": 1
+                        },
+                        "s": {
+                          "a": 0,
+                          "k": [
+                            100,
+                            100
+                          ],
+                          "ix": 3
+                        },
+                        "r": {
+                          "a": 0,
+                          "k": 0,
+                          "ix": 6
+                        },
+                        "o": {
+                          "a": 0,
+                          "k": 100,
+                          "ix": 7
+                        },
+                        "sk": {
+                          "a": 0,
+                          "k": 0,
+                          "ix": 4
+                        },
+                        "sa": {
+                          "a": 0,
+                          "k": 0,
+                          "ix": 5
+                        },
+                        "nm": "Transform"
+                      }
+                    ],
+                    "nm": "pieTwoM",
+                    "np": 3,
+                    "cix": 2,
+                    "bm": 0,
+                    "ix": 1,
+                    "mn": "ADBE Vector Group",
+                    "hd": false
+                  },
+                  {
+                    "ty": "tm",
+                    "s": {
+                      "a": 0,
+                      "k": 0,
+                      "ix": 1
+                    },
+                    "e": {
+                      "a": 1,
+                      "k": [
+                        {
+                          "i": {
+                            "x": [
+                              0
+                            ],
+                            "y": [
+                              1
+                            ]
+                          },
+                          "o": {
+                            "x": [
+                              0.023
+                            ],
+                            "y": [
+                              0
+                            ]
+                          },
+                          "t": 10,
+                          "s": [
+                            0
+                          ]
+                        },
+                        {
+                          "i": {
+                            "x": [
+                              0.667
+                            ],
+                            "y": [
+                              1
+                            ]
+                          },
+                          "o": {
+                            "x": [
+                              0.333
+                            ],
+                            "y": [
+                              0
+                            ]
+                          },
+                          "t": 35,
+                          "s": [
+                            63
+                          ]
+                        },
+                        {
+                          "i": {
+                            "x": [
+                              0.667
+                            ],
+                            "y": [
+                              1
+                            ]
+                          },
+                          "o": {
+                            "x": [
+                              0.333
+                            ],
+                            "y": [
+                              0
+                            ]
+                          },
+                          "t": 111,
+                          "s": [
+                            63
+                          ]
+                        },
+                        {
+                          "t": 123,
+                          "s": [
+                            63
+                          ]
+                        }
+                      ],
+                      "ix": 2,
+                      "x": "var $bm_rt;\nvar t1, t2, t3, t4;\nt1 = key(1).time;\nt2 = key(2).time;\nt3 = key(3).time;\nt4 = key(4).time;\n$bm_rt = value = Math.round(thisComp.layer('.pieChartTwoPercSource #pieChartTwoPercSource').text.sourceText.split('%')[0]);\nif (time < t2) {\n    $bm_rt = ease(time, t1, t2, 0, value);\n} else {\n    $bm_rt = ease(time, t3, t4, value, 0);\n}"
+                    },
+                    "o": {
+                      "a": 0,
+                      "k": 0,
+                      "ix": 3
+                    },
+                    "m": 1,
+                    "ix": 2,
+                    "nm": "trimPathsPieTwoM",
+                    "mn": "ADBE Vector Filter - Trim",
+                    "hd": false
+                  },
+                  {
+                    "ty": "tr",
+                    "p": {
+                      "a": 0,
+                      "k": [
+                        0,
+                        0
+                      ],
+                      "ix": 2
+                    },
+                    "a": {
+                      "a": 0,
+                      "k": [
+                        0,
+                        0
+                      ],
+                      "ix": 1
+                    },
+                    "s": {
+                      "a": 0,
+                      "k": [
+                        100,
+                        100
+                      ],
+                      "ix": 3
+                    },
+                    "r": {
+                      "a": 0,
+                      "k": 0,
+                      "ix": 6
+                    },
+                    "o": {
+                      "a": 0,
+                      "k": 100,
+                      "ix": 7
+                    },
+                    "sk": {
+                      "a": 0,
+                      "k": 0,
+                      "ix": 4
+                    },
+                    "sa": {
+                      "a": 0,
+                      "k": 0,
+                      "ix": 5
+                    },
+                    "nm": "Transform"
+                  }
+                ],
+                "nm": "pieTwoMain",
+                "np": 2,
+                "cix": 2,
+                "bm": 0,
+                "ix": 1,
+                "mn": "ADBE Vector Group",
+                "hd": false
+              },
+              {
+                "ty": "gr",
+                "it": [
+                  {
+                    "ty": "gr",
+                    "it": [
+                      {
+                        "d": 1,
+                        "ty": "el",
+                        "s": {
+                          "a": 0,
+                          "k": [
+                            452,
+                            452
+                          ],
+                          "ix": 2,
+                          "x": "var $bm_rt;\n$bm_rt = content('pieTwoMain').content('pieTwoM').content('Ellipse Path 1').size;"
+                        },
+                        "p": {
+                          "a": 0,
+                          "k": [
+                            0,
+                            0
+                          ],
+                          "ix": 3
+                        },
+                        "nm": "Ellipse Path 1",
+                        "mn": "ADBE Vector Shape - Ellipse",
+                        "hd": false
+                      },
+                      {
+                        "ty": "st",
+                        "c": {
+                          "a": 0,
+                          "k": [
+                            0,
+                            0.784313964844,
+                            0.166090004117,
+                            1
+                          ],
+                          "ix": 3,
+                          "x": "var $bm_rt;\n$bm_rt = content('pieTwoMain').content('pieTwoM').content('Stroke 1').color;"
+                        },
+                        "o": {
+                          "a": 0,
+                          "k": 40,
+                          "ix": 4
+                        },
+                        "w": {
+                          "a": 0,
+                          "k": 60,
+                          "ix": 5
+                        },
+                        "lc": 1,
+                        "lj": 1,
+                        "ml": 4,
+                        "bm": 0,
+                        "nm": "Stroke 1",
+                        "mn": "ADBE Vector Graphic - Stroke",
+                        "hd": false
+                      },
+                      {
+                        "ty": "tr",
+                        "p": {
+                          "a": 0,
+                          "k": [
+                            0,
+                            0
+                          ],
+                          "ix": 2
+                        },
+                        "a": {
+                          "a": 0,
+                          "k": [
+                            0,
+                            0
+                          ],
+                          "ix": 1
+                        },
+                        "s": {
+                          "a": 0,
+                          "k": [
+                            100,
+                            100
+                          ],
+                          "ix": 3
+                        },
+                        "r": {
+                          "a": 0,
+                          "k": 0,
+                          "ix": 6
+                        },
+                        "o": {
+                          "a": 0,
+                          "k": 100,
+                          "ix": 7
+                        },
+                        "sk": {
+                          "a": 0,
+                          "k": 0,
+                          "ix": 4
+                        },
+                        "sa": {
+                          "a": 0,
+                          "k": 0,
+                          "ix": 5
+                        },
+                        "nm": "Transform"
+                      }
+                    ],
+                    "nm": "pieTwoUnder",
+                    "np": 3,
+                    "cix": 2,
+                    "bm": 0,
+                    "ix": 1,
+                    "mn": "ADBE Vector Group",
+                    "hd": false
+                  },
+                  {
+                    "ty": "tm",
+                    "s": {
+                      "a": 0,
+                      "k": 0,
+                      "ix": 1
+                    },
+                    "e": {
+                      "a": 1,
+                      "k": [
+                        {
+                          "i": {
+                            "x": [
+                              0
+                            ],
+                            "y": [
+                              1
+                            ]
+                          },
+                          "o": {
+                            "x": [
+                              0.033
+                            ],
+                            "y": [
+                              0
+                            ]
+                          },
+                          "t": 0,
+                          "s": [
+                            0
+                          ]
+                        },
+                        {
+                          "i": {
+                            "x": [
+                              0.833
+                            ],
+                            "y": [
+                              1
+                            ]
+                          },
+                          "o": {
+                            "x": [
+                              0.167
+                            ],
+                            "y": [
+                              0
+                            ]
+                          },
+                          "t": 20,
+                          "s": [
+                            100
+                          ]
+                        },
+                        {
+                          "i": {
+                            "x": [
+                              0.833
+                            ],
+                            "y": [
+                              1
+                            ]
+                          },
+                          "o": {
+                            "x": [
+                              0.167
+                            ],
+                            "y": [
+                              0
+                            ]
+                          },
+                          "t": 107,
+                          "s": [
+                            100
+                          ]
+                        },
+                        {
+                          "t": 123,
+                          "s": [
+                            0
+                          ]
+                        }
+                      ],
+                      "ix": 2
+                    },
+                    "o": {
+                      "a": 0,
+                      "k": 0,
+                      "ix": 3
+                    },
+                    "m": 1,
+                    "ix": 2,
+                    "nm": "trimPathsPieTwoUnder",
+                    "mn": "ADBE Vector Filter - Trim",
+                    "hd": false
+                  },
+                  {
+                    "ty": "tr",
+                    "p": {
+                      "a": 0,
+                      "k": [
+                        0,
+                        0
+                      ],
+                      "ix": 2
+                    },
+                    "a": {
+                      "a": 0,
+                      "k": [
+                        0,
+                        0
+                      ],
+                      "ix": 1
+                    },
+                    "s": {
+                      "a": 0,
+                      "k": [
+                        100,
+                        100
+                      ],
+                      "ix": 3
+                    },
+                    "r": {
+                      "a": 0,
+                      "k": 0,
+                      "ix": 6
+                    },
+                    "o": {
+                      "a": 0,
+                      "k": 100,
+                      "ix": 7
+                    },
+                    "sk": {
+                      "a": 0,
+                      "k": 0,
+                      "ix": 4
+                    },
+                    "sa": {
+                      "a": 0,
+                      "k": 0,
+                      "ix": 5
+                    },
+                    "nm": "Transform"
+                  }
+                ],
+                "nm": "pieTwoUnderlay",
+                "np": 2,
+                "cix": 2,
+                "bm": 0,
+                "ix": 2,
+                "mn": "ADBE Vector Group",
+                "hd": false
+              }
+            ],
+            "ip": 0,
+            "op": 125,
+            "st": 0,
+            "bm": 0
+          },
+          {
+            "ddd": 0,
+            "ind": 4,
+            "ty": 4,
+            "nm": "textTwoMatte",
+            "td": 1,
+            "sr": 1,
+            "ks": {
+              "o": {
+                "a": 0,
+                "k": 100,
+                "ix": 11
+              },
+              "r": {
+                "a": 0,
+                "k": 0,
+                "ix": 10
+              },
+              "p": {
+                "a": 0,
+                "k": [
+                  960,
+                  540,
+                  0
+                ],
+                "ix": 2,
+                "l": 2
+              },
+              "a": {
+                "a": 0,
+                "k": [
+                  0,
+                  0,
+                  0
+                ],
+                "ix": 1,
+                "l": 2
+              },
+              "s": {
+                "a": 0,
+                "k": [
+                  100,
+                  100,
+                  100
+                ],
+                "ix": 6,
+                "l": 2
+              }
+            },
+            "ao": 0,
+            "shapes": [
+              {
+                "ty": "gr",
+                "it": [
+                  {
+                    "ty": "rc",
+                    "d": 1,
+                    "s": {
+                      "a": 0,
+                      "k": [
+                        1920,
+                        160
+                      ],
+                      "ix": 2
+                    },
+                    "p": {
+                      "a": 0,
+                      "k": [
+                        0,
+                        0
+                      ],
+                      "ix": 3
+                    },
+                    "r": {
+                      "a": 0,
+                      "k": 0,
+                      "ix": 4
+                    },
+                    "nm": "Rectangle Path 1",
+                    "mn": "ADBE Vector Shape - Rect",
+                    "hd": false
+                  },
+                  {
+                    "ty": "fl",
+                    "c": {
+                      "a": 0,
+                      "k": [
+                        0.059238998563,
+                        0.839215985466,
+                        0.151001006482,
+                        1
+                      ],
+                      "ix": 4
+                    },
+                    "o": {
+                      "a": 0,
+                      "k": 100,
+                      "ix": 5
+                    },
+                    "r": 1,
+                    "bm": 0,
+                    "nm": "Fill 1",
+                    "mn": "ADBE Vector Graphic - Fill",
+                    "hd": false
+                  },
+                  {
+                    "ty": "tr",
+                    "p": {
+                      "a": 0,
+                      "k": [
+                        0,
+                        363
+                      ],
+                      "ix": 2
+                    },
+                    "a": {
+                      "a": 0,
+                      "k": [
+                        0,
+                        0
+                      ],
+                      "ix": 1
+                    },
+                    "s": {
+                      "a": 0,
+                      "k": [
+                        100,
+                        100
+                      ],
+                      "ix": 3
+                    },
+                    "r": {
+                      "a": 0,
+                      "k": 0,
+                      "ix": 6
+                    },
+                    "o": {
+                      "a": 0,
+                      "k": 100,
+                      "ix": 7
+                    },
+                    "sk": {
+                      "a": 0,
+                      "k": 0,
+                      "ix": 4
+                    },
+                    "sa": {
+                      "a": 0,
+                      "k": 0,
+                      "ix": 5
+                    },
+                    "nm": "Transform"
+                  }
+                ],
+                "nm": "Rectangle 1",
+                "np": 3,
+                "cix": 2,
+                "bm": 0,
+                "ix": 1,
+                "mn": "ADBE Vector Group",
+                "hd": false
+              }
+            ],
+            "ip": 0,
+            "op": 125,
+            "st": 0,
+            "bm": 0
+          },
+          {
+            "ddd": 0,
+            "ind": 5,
+            "ty": 5,
+            "nm": ".pieChartTwoText #pieChartTwoText",
+            "ln": "pieChartTwoText",
+            "cl": "pieChartTwoText",
+            "tt": 1,
+            "sr": 1,
+            "ks": {
+              "o": {
+                "a": 0,
+                "k": 100,
+                "ix": 11
+              },
+              "r": {
+                "a": 0,
+                "k": 0,
+                "ix": 10
+              },
+              "p": {
+                "a": 1,
+                "k": [
+                  {
+                    "i": {
+                      "x": 0,
+                      "y": 1
+                    },
+                    "o": {
+                      "x": 0.012,
+                      "y": 0
+                    },
+                    "t": 10,
+                    "s": [
+                      960,
+                      730,
+                      0
+                    ],
+                    "to": [
+                      0,
+                      29.167,
+                      0
+                    ],
+                    "ti": [
+                      0,
+                      -29.167,
+                      0
+                    ]
+                  },
+                  {
+                    "i": {
+                      "x": 0,
+                      "y": 0
+                    },
+                    "o": {
+                      "x": 0.333,
+                      "y": 0.333
+                    },
+                    "t": 35,
+                    "s": [
+                      960,
+                      905,
+                      0
+                    ],
+                    "to": [
+                      0,
+                      0,
+                      0
+                    ],
+                    "ti": [
+                      0,
+                      0,
+                      0
+                    ]
+                  },
+                  {
+                    "i": {
+                      "x": 0.882,
+                      "y": 1
+                    },
+                    "o": {
+                      "x": 1,
+                      "y": 0
+                    },
+                    "t": 111,
+                    "s": [
+                      960,
+                      905,
+                      0
+                    ],
+                    "to": [
+                      0,
+                      -29.167,
+                      0
+                    ],
+                    "ti": [
+                      0,
+                      29.167,
+                      0
+                    ]
+                  },
+                  {
+                    "t": 123,
+                    "s": [
+                      960,
+                      730,
+                      0
+                    ]
+                  }
+                ],
+                "ix": 2,
+                "l": 2
+              },
+              "a": {
+                "a": 0,
+                "k": [
+                  1.575,
+                  24.325,
+                  0
+                ],
+                "ix": 1,
+                "l": 2,
+                "x": "var $bm_rt;\nvar x, y;\nx = value[0];\ny = $bm_sum(thisLayer.sourceRectAtTime().top, $bm_div(thisLayer.sourceRectAtTime().height, 2)), $bm_rt = [\n    x,\n    y\n];"
+              },
+              "s": {
+                "a": 0,
+                "k": [
+                  100,
+                  100,
+                  100
+                ],
+                "ix": 6,
+                "l": 2
+              }
+            },
+            "ao": 0,
+            "t": {
+              "d": {
+                "k": [
+                  {
+                    "s": {
+                      "s": 50,
+                      "f": "Scada-Bold",
+                      "t": "Pie chart two text\rgoes here",
+                      "ca": 0,
+                      "j": 2,
+                      "tr": 0,
+                      "lh": 60.0000038146973,
+                      "ls": 0,
+                      "fc": [
+                        1,
+                        1,
+                        1
+                      ]
+                    },
+                    "t": 0
+                  }
+                ]
+              },
+              "p": {},
+              "m": {
+                "g": 1,
+                "a": {
+                  "a": 0,
+                  "k": [
+                    0,
+                    0
+                  ],
+                  "ix": 2
+                }
+              },
+              "a": []
+            },
+            "ip": 0,
+            "op": 125,
+            "st": 0,
+            "bm": 0
+          },
+          {
+            "ddd": 0,
+            "ind": 6,
+            "ty": 5,
+            "nm": ".arrowTwoDir #arrowTwoDir",
+            "ln": "arrowTwoDir",
+            "cl": "arrowTwoDir",
+            "sr": 1,
+            "ks": {
+              "o": {
+                "a": 0,
+                "k": 100,
+                "ix": 11
+              },
+              "r": {
+                "a": 0,
+                "k": 0,
+                "ix": 10
+              },
+              "p": {
+                "a": 0,
+                "k": [
+                  -192,
+                  360,
+                  0
+                ],
+                "ix": 2,
+                "l": 2
+              },
+              "a": {
+                "a": 0,
+                "k": [
+                  0,
+                  0,
+                  0
+                ],
+                "ix": 1,
+                "l": 2
+              },
+              "s": {
+                "a": 0,
+                "k": [
+                  100,
+                  100,
+                  100
+                ],
+                "ix": 6,
+                "l": 2
+              }
+            },
+            "ao": 0,
+            "t": {
+              "d": {
+                "k": [
+                  {
+                    "s": {
+                      "s": 60,
+                      "f": "Scada-Bold",
+                      "t": "up",
+                      "ca": 0,
+                      "j": 2,
+                      "tr": 0,
+                      "lh": 72,
+                      "ls": 0,
+                      "fc": [
+                        1,
+                        1,
+                        1
+                      ]
+                    },
+                    "t": 0
+                  }
+                ]
+              },
+              "p": {},
+              "m": {
+                "g": 1,
+                "a": {
+                  "a": 0,
+                  "k": [
+                    0,
+                    0
+                  ],
+                  "ix": 2
+                }
+              },
+              "a": []
+            },
+            "ip": 0,
+            "op": 125,
+            "st": 0,
+            "bm": 0
+          },
+          {
+            "ddd": 0,
+            "ind": 7,
+            "ty": 4,
+            "nm": "arrowTwo",
+            "sr": 1,
+            "ks": {
+              "o": {
+                "a": 1,
+                "k": [
+                  {
+                    "i": {
+                      "x": [
+                        0.667
+                      ],
+                      "y": [
+                        1
+                      ]
+                    },
+                    "o": {
+                      "x": [
+                        0.333
+                      ],
+                      "y": [
+                        0
+                      ]
+                    },
+                    "t": 32,
+                    "s": [
+                      0
+                    ]
+                  },
+                  {
+                    "i": {
+                      "x": [
+                        0.667
+                      ],
+                      "y": [
+                        1
+                      ]
+                    },
+                    "o": {
+                      "x": [
+                        0.333
+                      ],
+                      "y": [
+                        0
+                      ]
+                    },
+                    "t": 44,
+                    "s": [
+                      100
+                    ]
+                  },
+                  {
+                    "i": {
+                      "x": [
+                        0.833
+                      ],
+                      "y": [
+                        1
+                      ]
+                    },
+                    "o": {
+                      "x": [
+                        0.333
+                      ],
+                      "y": [
+                        0
+                      ]
+                    },
+                    "t": 111,
+                    "s": [
+                      100
+                    ]
+                  },
+                  {
+                    "t": 118,
+                    "s": [
+                      0
+                    ]
+                  }
+                ],
+                "ix": 11
+              },
+              "r": {
+                "a": 0,
+                "k": 0,
+                "ix": 10
+              },
+              "p": {
+                "a": 0,
+                "k": [
+                  960,
+                  528,
+                  0
+                ],
+                "ix": 2,
+                "l": 2
+              },
+              "a": {
+                "a": 0,
+                "k": [
+                  0,
+                  0,
+                  0
+                ],
+                "ix": 1,
+                "l": 2
+              },
+              "s": {
+                "a": 0,
+                "k": [
+                  100,
+                  100,
+                  100
+                ],
+                "ix": 6,
+                "l": 2
+              }
+            },
+            "ao": 0,
+            "shapes": [
+              {
+                "ty": "gr",
+                "it": [
+                  {
+                    "ind": 0,
+                    "ty": "sh",
+                    "ix": 1,
+                    "ks": {
+                      "a": 0,
+                      "k": {
+                        "i": [
+                          [
+                            0,
+                            0
+                          ],
+                          [
+                            0,
+                            0
+                          ],
+                          [
+                            0,
+                            0
+                          ]
+                        ],
+                        "o": [
+                          [
+                            0,
+                            0
+                          ],
+                          [
+                            0,
+                            0
+                          ],
+                          [
+                            0,
+                            0
+                          ]
+                        ],
+                        "v": [
+                          [
+                            39.75,
+                            150
+                          ],
+                          [
+                            -40,
+                            150
+                          ],
+                          [
+                            0,
+                            100
+                          ]
+                        ],
+                        "c": true
+                      },
+                      "ix": 2
+                    },
+                    "nm": "Path 1",
+                    "mn": "ADBE Vector Shape - Group",
+                    "hd": false
+                  },
+                  {
+                    "ty": "fl",
+                    "c": {
+                      "a": 0,
+                      "k": [
+                        0.059238751729,
+                        0.839215686275,
+                        0.151000826967,
+                        1
+                      ],
+                      "ix": 4
+                    },
+                    "o": {
+                      "a": 0,
+                      "k": 100,
+                      "ix": 5
+                    },
+                    "r": 1,
+                    "bm": 0,
+                    "nm": "Fill 1",
+                    "mn": "ADBE Vector Graphic - Fill",
+                    "hd": false
+                  },
+                  {
+                    "ty": "tr",
+                    "p": {
+                      "a": 1,
+                      "k": [
+                        {
+                          "i": {
+                            "x": 0.021,
+                            "y": 1
+                          },
+                          "o": {
+                            "x": 0.03,
+                            "y": 0
+                          },
+                          "t": 29,
+                          "s": [
+                            0,
+                            78
+                          ],
+                          "to": [
+                            0,
+                            -13
+                          ],
+                          "ti": [
+                            0,
+                            13
+                          ]
+                        },
+                        {
+                          "i": {
+                            "x": 0.021,
+                            "y": 0.021
+                          },
+                          "o": {
+                            "x": 0.333,
+                            "y": 0.333
+                          },
+                          "t": 44,
+                          "s": [
+                            0,
+                            0
+                          ],
+                          "to": [
+                            0,
+                            0
+                          ],
+                          "ti": [
+                            0,
+                            0
+                          ]
+                        },
+                        {
+                          "i": {
+                            "x": 0.833,
+                            "y": 1
+                          },
+                          "o": {
+                            "x": 0.167,
+                            "y": 0
+                          },
+                          "t": 111,
+                          "s": [
+                            0,
+                            0
+                          ],
+                          "to": [
+                            0,
+                            13
+                          ],
+                          "ti": [
+                            0,
+                            -13
+                          ]
+                        },
+                        {
+                          "t": 123,
+                          "s": [
+                            0,
+                            78
+                          ]
+                        }
+                      ],
+                      "ix": 2
+                    },
+                    "a": {
+                      "a": 0,
+                      "k": [
+                        0,
+                        0
+                      ],
+                      "ix": 1
+                    },
+                    "s": {
+                      "a": 0,
+                      "k": [
+                        100,
+                        100
+                      ],
+                      "ix": 3
+                    },
+                    "r": {
+                      "a": 0,
+                      "k": 0,
+                      "ix": 6
+                    },
+                    "o": {
+                      "a": 0,
+                      "k": 100,
+                      "ix": 7,
+                      "x": "var $bm_rt;\nif (thisComp.layer('.arrowTwoDir #arrowTwoDir').text.sourceText == 'up') {\n    $bm_rt = 100;\n} else {\n    $bm_rt = 0;\n}"
+                    },
+                    "sk": {
+                      "a": 0,
+                      "k": 0,
+                      "ix": 4
+                    },
+                    "sa": {
+                      "a": 0,
+                      "k": 0,
+                      "ix": 5
+                    },
+                    "nm": "Transform"
+                  }
+                ],
+                "nm": "upTwo",
+                "np": 3,
+                "cix": 2,
+                "bm": 0,
+                "ix": 1,
+                "mn": "ADBE Vector Group",
+                "hd": false
+              },
+              {
+                "ty": "gr",
+                "it": [
+                  {
+                    "ind": 0,
+                    "ty": "sh",
+                    "ix": 1,
+                    "ks": {
+                      "a": 0,
+                      "k": {
+                        "i": [
+                          [
+                            0,
+                            0
+                          ],
+                          [
+                            0,
+                            0
+                          ],
+                          [
+                            0,
+                            0
+                          ]
+                        ],
+                        "o": [
+                          [
+                            0,
+                            0
+                          ],
+                          [
+                            0,
+                            0
+                          ],
+                          [
+                            0,
+                            0
+                          ]
+                        ],
+                        "v": [
+                          [
+                            39.875,
+                            100
+                          ],
+                          [
+                            -40,
+                            100
+                          ],
+                          [
+                            0,
+                            149.5
+                          ]
+                        ],
+                        "c": true
+                      },
+                      "ix": 2
+                    },
+                    "nm": "Path 1",
+                    "mn": "ADBE Vector Shape - Group",
+                    "hd": false
+                  },
+                  {
+                    "ty": "fl",
+                    "c": {
+                      "a": 0,
+                      "k": [
+                        0.862745098039,
+                        0.282352941176,
+                        0.282352941176,
+                        1
+                      ],
+                      "ix": 4
+                    },
+                    "o": {
+                      "a": 0,
+                      "k": 100,
+                      "ix": 5
+                    },
+                    "r": 1,
+                    "bm": 0,
+                    "nm": "Fill 1",
+                    "mn": "ADBE Vector Graphic - Fill",
+                    "hd": false
+                  },
+                  {
+                    "ty": "tr",
+                    "p": {
+                      "a": 1,
+                      "k": [
+                        {
+                          "i": {
+                            "x": 0,
+                            "y": 1
+                          },
+                          "o": {
+                            "x": 0.044,
+                            "y": 0
+                          },
+                          "t": 29,
+                          "s": [
+                            0,
+                            -80
+                          ],
+                          "to": [
+                            0,
+                            13.333
+                          ],
+                          "ti": [
+                            0,
+                            -13.333
+                          ]
+                        },
+                        {
+                          "i": {
+                            "x": 0,
+                            "y": 0
+                          },
+                          "o": {
+                            "x": 0.333,
+                            "y": 0.333
+                          },
+                          "t": 44,
+                          "s": [
+                            0,
+                            0
+                          ],
+                          "to": [
+                            0,
+                            0
+                          ],
+                          "ti": [
+                            0,
+                            0
+                          ]
+                        },
+                        {
+                          "i": {
+                            "x": 0.833,
+                            "y": 1
+                          },
+                          "o": {
+                            "x": 0.333,
+                            "y": 0
+                          },
+                          "t": 111,
+                          "s": [
+                            0,
+                            0
+                          ],
+                          "to": [
+                            0,
+                            -13.333
+                          ],
+                          "ti": [
+                            0,
+                            13.333
+                          ]
+                        },
+                        {
+                          "t": 123,
+                          "s": [
+                            0,
+                            -80
+                          ]
+                        }
+                      ],
+                      "ix": 2
+                    },
+                    "a": {
+                      "a": 0,
+                      "k": [
+                        0,
+                        0
+                      ],
+                      "ix": 1
+                    },
+                    "s": {
+                      "a": 0,
+                      "k": [
+                        100,
+                        100
+                      ],
+                      "ix": 3
+                    },
+                    "r": {
+                      "a": 0,
+                      "k": 0,
+                      "ix": 6
+                    },
+                    "o": {
+                      "a": 0,
+                      "k": 100,
+                      "ix": 7,
+                      "x": "var $bm_rt;\nif (thisComp.layer('.arrowTwoDir #arrowTwoDir').text.sourceText == 'down') {\n    $bm_rt = 100;\n} else {\n    $bm_rt = 0;\n}"
+                    },
+                    "sk": {
+                      "a": 0,
+                      "k": 0,
+                      "ix": 4
+                    },
+                    "sa": {
+                      "a": 0,
+                      "k": 0,
+                      "ix": 5
+                    },
+                    "nm": "Transform"
+                  }
+                ],
+                "nm": "downTwo",
+                "np": 3,
+                "cix": 2,
+                "bm": 0,
+                "ix": 2,
+                "mn": "ADBE Vector Group",
+                "hd": false
+              }
+            ],
+            "ip": 0,
+            "op": 125,
+            "st": 0,
+            "bm": 0
+          }
+        ]
+      },
+      {
+        "id": "comp_2",
+        "nm": "pieChartThree",
+        "layers": [
+          {
+            "ddd": 0,
+            "ind": 1,
+            "ty": 5,
+            "nm": ".pieChartThreePercSource #pieChartThreePercSource",
+            "ln": "pieChartThreePercSource",
+            "cl": "pieChartThreePercSource",
+            "sr": 1,
+            "ks": {
+              "o": {
+                "a": 0,
+                "k": 100,
+                "ix": 11
+              },
+              "r": {
+                "a": 0,
+                "k": 0,
+                "ix": 10
+              },
+              "p": {
+                "a": 0,
+                "k": [
+                  -201.043,
+                  126.16,
+                  0
+                ],
+                "ix": 2,
+                "l": 2
+              },
+              "a": {
+                "a": 0,
+                "k": [
+                  0,
+                  -50.4,
+                  0
+                ],
+                "ix": 1,
+                "l": 2
+              },
+              "s": {
+                "a": 0,
+                "k": [
+                  100,
+                  100,
+                  100
+                ],
+                "ix": 6,
+                "l": 2
+              }
+            },
+            "ao": 0,
+            "t": {
+              "d": {
+                "k": [
+                  {
+                    "s": {
+                      "s": 144,
+                      "f": "Scada-Bold",
+                      "t": "90",
+                      "ca": 0,
+                      "j": 2,
+                      "tr": 0,
+                      "lh": 172.8,
+                      "ls": 0,
+                      "fc": [
+                        1,
+                        1,
+                        1
+                      ]
+                    },
+                    "t": 0
+                  }
+                ]
+              },
+              "p": {},
+              "m": {
+                "g": 1,
+                "a": {
+                  "a": 0,
+                  "k": [
+                    0,
+                    0
+                  ],
+                  "ix": 2
+                }
+              },
+              "a": []
+            },
+            "ip": 0,
+            "op": 125,
+            "st": 0,
+            "bm": 0
+          },
+          {
+            "ddd": 0,
+            "ind": 2,
+            "ty": 5,
+            "nm": ".pieChartThreePercText #pieChartThreePercText",
+            "ln": "pieChartThreePercText",
+            "cl": "pieChartThreePercText",
+            "sr": 1,
+            "ks": {
+              "o": {
+                "a": 1,
+                "k": [
+                  {
+                    "i": {
+                      "x": [
+                        0.667
+                      ],
+                      "y": [
+                        1
+                      ]
+                    },
+                    "o": {
+                      "x": [
+                        0.333
+                      ],
+                      "y": [
+                        0
+                      ]
+                    },
+                    "t": 6,
+                    "s": [
+                      0
+                    ]
+                  },
+                  {
+                    "i": {
+                      "x": [
+                        0.833
+                      ],
+                      "y": [
+                        1
+                      ]
+                    },
+                    "o": {
+                      "x": [
+                        0.333
+                      ],
+                      "y": [
+                        0
+                      ]
+                    },
+                    "t": 14,
+                    "s": [
+                      100
+                    ]
+                  },
+                  {
+                    "i": {
+                      "x": [
+                        0.833
+                      ],
+                      "y": [
+                        1
+                      ]
+                    },
+                    "o": {
+                      "x": [
+                        0.167
+                      ],
+                      "y": [
+                        0
+                      ]
+                    },
+                    "t": 111,
+                    "s": [
+                      100
+                    ]
+                  },
+                  {
+                    "t": 123,
+                    "s": [
+                      0
+                    ]
+                  }
+                ],
+                "ix": 11
+              },
+              "r": {
+                "a": 0,
+                "k": 0,
+                "ix": 10
+              },
+              "p": {
+                "a": 0,
+                "k": [
+                  220,
+                  361.6,
+                  0
+                ],
+                "ix": 2,
+                "l": 2,
+                "x": "var $bm_rt;\nvar x, y;\nx = thisComp.layer('pieChartThree').transform.position[0];\ny = thisComp.layer('pieChartThree').transform.position[1];\n$bm_rt = [\n    x,\n    y\n];"
+              },
+              "a": {
+                "a": 0,
+                "k": [
+                  0,
+                  -50.4,
+                  0
+                ],
+                "ix": 1,
+                "l": 2
+              },
+              "s": {
+                "a": 0,
+                "k": [
+                  100,
+                  100,
+                  100
+                ],
+                "ix": 6,
+                "l": 2,
+                "x": "var $bm_rt;\nvar targetSize, realSize, x, x, y;\ntargetSize = 300;\nrealSize = thisLayer.sourceRectAtTime().width;\nif (realSize > targetSize) {\n    x = $bm_mul($bm_div(targetSize, realSize), 100);\n} else {\n    x = 100;\n}\ny = value[1];\n$bm_rt = [\n    x,\n    y\n];"
+              }
+            },
+            "ao": 0,
+            "ef": [
+              {
+                "ty": 5,
+                "nm": "Slider Control",
+                "np": 3,
+                "mn": "ADBE Slider Control",
+                "ix": 1,
+                "en": 1,
+                "ef": [
+                  {
+                    "ty": 0,
+                    "nm": "Slider",
+                    "mn": "ADBE Slider Control-0001",
+                    "ix": 1,
+                    "v": {
+                      "a": 1,
+                      "k": [
+                        {
+                          "i": {
+                            "x": [
+                              0.667
+                            ],
+                            "y": [
+                              1
+                            ]
+                          },
+                          "o": {
+                            "x": [
+                              0.333
+                            ],
+                            "y": [
+                              0
+                            ]
+                          },
+                          "t": 9,
+                          "s": [
+                            0
+                          ]
+                        },
+                        {
+                          "t": 45,
+                          "s": [
+                            25
+                          ]
+                        }
+                      ],
+                      "ix": 1,
+                      "x": "var $bm_rt;\nvar t1, t2;\nt1 = key(1).time;\nt2 = key(2).time;\nvalue = Math.round(thisComp.layer('.pieChartThreePercSource #pieChartThreePercSource').text.sourceText);\n$bm_rt = ease(time, t1, t2, 0, value);"
+                    }
+                  }
+                ]
+              }
+            ],
+            "t": {
+              "d": {
+                "k": [
+                  {
+                    "s": {
+                      "s": 144,
+                      "f": "Scada-Bold",
+                      "t": "",
+                      "ca": 0,
+                      "j": 2,
+                      "tr": 0,
+                      "lh": 172.8,
+                      "ls": 0,
+                      "fc": [
+                        1,
+                        1,
+                        1
+                      ]
+                    },
+                    "t": 0
+                  }
+                ],
+                "x": "var $bm_rt;\n$bm_rt = $bm_sum(Math.round(effect('Slider Control')('Slider')), '%');"
+              },
+              "p": {},
+              "m": {
+                "g": 1,
+                "a": {
+                  "a": 0,
+                  "k": [
+                    0,
+                    0
+                  ],
+                  "ix": 2
+                }
+              },
+              "a": []
+            },
+            "ip": 6,
+            "op": 125,
+            "st": 0,
+            "bm": 0
+          },
+          {
+            "ddd": 0,
+            "ind": 3,
+            "ty": 4,
+            "nm": "pieChartThree",
+            "sr": 1,
+            "ks": {
+              "o": {
+                "a": 0,
+                "k": 100,
+                "ix": 11
+              },
+              "r": {
+                "a": 0,
+                "k": 0,
+                "ix": 10
+              },
+              "p": {
+                "a": 0,
+                "k": [
+                  960,
+                  544,
+                  0
+                ],
+                "ix": 2,
+                "l": 2
+              },
+              "a": {
+                "a": 0,
+                "k": [
+                  0,
+                  0,
+                  0
+                ],
+                "ix": 1,
+                "l": 2
+              },
+              "s": {
+                "a": 0,
+                "k": [
+                  100,
+                  100,
+                  100
+                ],
+                "ix": 6,
+                "l": 2
+              }
+            },
+            "ao": 0,
+            "shapes": [
+              {
+                "ty": "gr",
+                "it": [
+                  {
+                    "ty": "gr",
+                    "it": [
+                      {
+                        "d": 1,
+                        "ty": "el",
+                        "s": {
+                          "a": 0,
+                          "k": [
+                            418,
+                            418
+                          ],
+                          "ix": 2
+                        },
+                        "p": {
+                          "a": 0,
+                          "k": [
+                            0,
+                            0
+                          ],
+                          "ix": 3
+                        },
+                        "nm": "Ellipse Path 1",
+                        "mn": "ADBE Vector Shape - Ellipse",
+                        "hd": false
+                      },
+                      {
+                        "ty": "st",
+                        "c": {
+                          "a": 0,
+                          "k": [
+                            0,
+                            0.221453174949,
+                            0.784313976765,
+                            1
+                          ],
+                          "ix": 3,
+                          "x": "var $bm_rt;\nvar txt, barOneColor;\nfunction hexToColor(theHex) {\n    var r = theHex >> 16;\n    var g = (theHex & 65280) >> 8;\n    var b = theHex & 255;\n    return [\n        r / 255,\n        g / 255,\n        b / 255,\n        1\n    ];\n}\ntxt = comp('pieChartMainStitch').layer('.barColors #barColors').text.sourceText.split(',')[2];\nbarOneColor = parseInt(txt, 16);\n$bm_rt = hexToColor(barOneColor);"
+                        },
+                        "o": {
+                          "a": 0,
+                          "k": 100,
+                          "ix": 4
+                        },
+                        "w": {
+                          "a": 0,
+                          "k": 85,
+                          "ix": 5
+                        },
+                        "lc": 1,
+                        "lj": 1,
+                        "ml": 4,
+                        "bm": 0,
+                        "nm": "Stroke 1",
+                        "mn": "ADBE Vector Graphic - Stroke",
+                        "hd": false
+                      },
+                      {
+                        "ty": "tr",
+                        "p": {
+                          "a": 0,
+                          "k": [
+                            0,
+                            0
+                          ],
+                          "ix": 2
+                        },
+                        "a": {
+                          "a": 0,
+                          "k": [
+                            0,
+                            0
+                          ],
+                          "ix": 1
+                        },
+                        "s": {
+                          "a": 0,
+                          "k": [
+                            100,
+                            100
+                          ],
+                          "ix": 3
+                        },
+                        "r": {
+                          "a": 0,
+                          "k": 0,
+                          "ix": 6
+                        },
+                        "o": {
+                          "a": 0,
+                          "k": 100,
+                          "ix": 7
+                        },
+                        "sk": {
+                          "a": 0,
+                          "k": 0,
+                          "ix": 4
+                        },
+                        "sa": {
+                          "a": 0,
+                          "k": 0,
+                          "ix": 5
+                        },
+                        "nm": "Transform"
+                      }
+                    ],
+                    "nm": "pieTwoM",
+                    "np": 3,
+                    "cix": 2,
+                    "bm": 0,
+                    "ix": 1,
+                    "mn": "ADBE Vector Group",
+                    "hd": false
+                  },
+                  {
+                    "ty": "tm",
+                    "s": {
+                      "a": 0,
+                      "k": 0,
+                      "ix": 1
+                    },
+                    "e": {
+                      "a": 1,
+                      "k": [
+                        {
+                          "i": {
+                            "x": [
+                              0
+                            ],
+                            "y": [
+                              1
+                            ]
+                          },
+                          "o": {
+                            "x": [
+                              0.023
+                            ],
+                            "y": [
+                              0
+                            ]
+                          },
+                          "t": 10,
+                          "s": [
+                            0
+                          ]
+                        },
+                        {
+                          "i": {
+                            "x": [
+                              0.667
+                            ],
+                            "y": [
+                              1
+                            ]
+                          },
+                          "o": {
+                            "x": [
+                              0.333
+                            ],
+                            "y": [
+                              0
+                            ]
+                          },
+                          "t": 35,
+                          "s": [
+                            63
+                          ]
+                        },
+                        {
+                          "i": {
+                            "x": [
+                              0.667
+                            ],
+                            "y": [
+                              1
+                            ]
+                          },
+                          "o": {
+                            "x": [
+                              0.333
+                            ],
+                            "y": [
+                              0
+                            ]
+                          },
+                          "t": 111,
+                          "s": [
+                            63
+                          ]
+                        },
+                        {
+                          "t": 123,
+                          "s": [
+                            63
+                          ]
+                        }
+                      ],
+                      "ix": 2,
+                      "x": "var $bm_rt;\nvar t1, t2, t3, t4;\nt1 = key(1).time;\nt2 = key(2).time;\nt3 = key(3).time;\nt4 = key(4).time;\n$bm_rt = value = Math.round(thisComp.layer('.pieChartThreePercSource #pieChartThreePercSource').text.sourceText.split('%')[0]);\nif (time < t2) {\n    $bm_rt = ease(time, t1, t2, 0, value);\n} else {\n    $bm_rt = ease(time, t3, t4, value, 0);\n}"
+                    },
+                    "o": {
+                      "a": 0,
+                      "k": 0,
+                      "ix": 3
+                    },
+                    "m": 1,
+                    "ix": 2,
+                    "nm": "trimPathsPieTwoM",
+                    "mn": "ADBE Vector Filter - Trim",
+                    "hd": false
+                  },
+                  {
+                    "ty": "tr",
+                    "p": {
+                      "a": 0,
+                      "k": [
+                        0,
+                        0
+                      ],
+                      "ix": 2
+                    },
+                    "a": {
+                      "a": 0,
+                      "k": [
+                        0,
+                        0
+                      ],
+                      "ix": 1
+                    },
+                    "s": {
+                      "a": 0,
+                      "k": [
+                        100,
+                        100
+                      ],
+                      "ix": 3
+                    },
+                    "r": {
+                      "a": 0,
+                      "k": 0,
+                      "ix": 6
+                    },
+                    "o": {
+                      "a": 0,
+                      "k": 100,
+                      "ix": 7
+                    },
+                    "sk": {
+                      "a": 0,
+                      "k": 0,
+                      "ix": 4
+                    },
+                    "sa": {
+                      "a": 0,
+                      "k": 0,
+                      "ix": 5
+                    },
+                    "nm": "Transform"
+                  }
+                ],
+                "nm": "pieTwoMain",
+                "np": 2,
+                "cix": 2,
+                "bm": 0,
+                "ix": 1,
+                "mn": "ADBE Vector Group",
+                "hd": false
+              },
+              {
+                "ty": "gr",
+                "it": [
+                  {
+                    "ty": "gr",
+                    "it": [
+                      {
+                        "d": 1,
+                        "ty": "el",
+                        "s": {
+                          "a": 0,
+                          "k": [
+                            452,
+                            452
+                          ],
+                          "ix": 2,
+                          "x": "var $bm_rt;\n$bm_rt = content('pieTwoMain').content('pieTwoM').content('Ellipse Path 1').size;"
+                        },
+                        "p": {
+                          "a": 0,
+                          "k": [
+                            0,
+                            0
+                          ],
+                          "ix": 3
+                        },
+                        "nm": "Ellipse Path 1",
+                        "mn": "ADBE Vector Shape - Ellipse",
+                        "hd": false
+                      },
+                      {
+                        "ty": "st",
+                        "c": {
+                          "a": 0,
+                          "k": [
+                            0,
+                            0.784313964844,
+                            0.166090004117,
+                            1
+                          ],
+                          "ix": 3,
+                          "x": "var $bm_rt;\n$bm_rt = content('pieTwoMain').content('pieTwoM').content('Stroke 1').color;"
+                        },
+                        "o": {
+                          "a": 0,
+                          "k": 40,
+                          "ix": 4
+                        },
+                        "w": {
+                          "a": 0,
+                          "k": 60,
+                          "ix": 5
+                        },
+                        "lc": 1,
+                        "lj": 1,
+                        "ml": 4,
+                        "bm": 0,
+                        "nm": "Stroke 1",
+                        "mn": "ADBE Vector Graphic - Stroke",
+                        "hd": false
+                      },
+                      {
+                        "ty": "tr",
+                        "p": {
+                          "a": 0,
+                          "k": [
+                            0,
+                            0
+                          ],
+                          "ix": 2
+                        },
+                        "a": {
+                          "a": 0,
+                          "k": [
+                            0,
+                            0
+                          ],
+                          "ix": 1
+                        },
+                        "s": {
+                          "a": 0,
+                          "k": [
+                            100,
+                            100
+                          ],
+                          "ix": 3
+                        },
+                        "r": {
+                          "a": 0,
+                          "k": 0,
+                          "ix": 6
+                        },
+                        "o": {
+                          "a": 0,
+                          "k": 100,
+                          "ix": 7
+                        },
+                        "sk": {
+                          "a": 0,
+                          "k": 0,
+                          "ix": 4
+                        },
+                        "sa": {
+                          "a": 0,
+                          "k": 0,
+                          "ix": 5
+                        },
+                        "nm": "Transform"
+                      }
+                    ],
+                    "nm": "pieTwoUnder",
+                    "np": 3,
+                    "cix": 2,
+                    "bm": 0,
+                    "ix": 1,
+                    "mn": "ADBE Vector Group",
+                    "hd": false
+                  },
+                  {
+                    "ty": "tm",
+                    "s": {
+                      "a": 0,
+                      "k": 0,
+                      "ix": 1
+                    },
+                    "e": {
+                      "a": 1,
+                      "k": [
+                        {
+                          "i": {
+                            "x": [
+                              0
+                            ],
+                            "y": [
+                              1
+                            ]
+                          },
+                          "o": {
+                            "x": [
+                              0.033
+                            ],
+                            "y": [
+                              0
+                            ]
+                          },
+                          "t": 0,
+                          "s": [
+                            0
+                          ]
+                        },
+                        {
+                          "i": {
+                            "x": [
+                              0.833
+                            ],
+                            "y": [
+                              1
+                            ]
+                          },
+                          "o": {
+                            "x": [
+                              0.167
+                            ],
+                            "y": [
+                              0
+                            ]
+                          },
+                          "t": 20,
+                          "s": [
+                            100
+                          ]
+                        },
+                        {
+                          "i": {
+                            "x": [
+                              0.833
+                            ],
+                            "y": [
+                              1
+                            ]
+                          },
+                          "o": {
+                            "x": [
+                              0.167
+                            ],
+                            "y": [
+                              0
+                            ]
+                          },
+                          "t": 107,
+                          "s": [
+                            100
+                          ]
+                        },
+                        {
+                          "t": 123,
+                          "s": [
+                            0
+                          ]
+                        }
+                      ],
+                      "ix": 2
+                    },
+                    "o": {
+                      "a": 0,
+                      "k": 0,
+                      "ix": 3
+                    },
+                    "m": 1,
+                    "ix": 2,
+                    "nm": "trimPathsPieTwoUnder",
+                    "mn": "ADBE Vector Filter - Trim",
+                    "hd": false
+                  },
+                  {
+                    "ty": "tr",
+                    "p": {
+                      "a": 0,
+                      "k": [
+                        0,
+                        0
+                      ],
+                      "ix": 2
+                    },
+                    "a": {
+                      "a": 0,
+                      "k": [
+                        0,
+                        0
+                      ],
+                      "ix": 1
+                    },
+                    "s": {
+                      "a": 0,
+                      "k": [
+                        100,
+                        100
+                      ],
+                      "ix": 3
+                    },
+                    "r": {
+                      "a": 0,
+                      "k": 0,
+                      "ix": 6
+                    },
+                    "o": {
+                      "a": 0,
+                      "k": 100,
+                      "ix": 7
+                    },
+                    "sk": {
+                      "a": 0,
+                      "k": 0,
+                      "ix": 4
+                    },
+                    "sa": {
+                      "a": 0,
+                      "k": 0,
+                      "ix": 5
+                    },
+                    "nm": "Transform"
+                  }
+                ],
+                "nm": "pieTwoUnderlay",
+                "np": 2,
+                "cix": 2,
+                "bm": 0,
+                "ix": 2,
+                "mn": "ADBE Vector Group",
+                "hd": false
+              }
+            ],
+            "ip": 0,
+            "op": 125,
+            "st": 0,
+            "bm": 0
+          },
+          {
+            "ddd": 0,
+            "ind": 4,
+            "ty": 4,
+            "nm": "textThreeMatte",
+            "td": 1,
+            "sr": 1,
+            "ks": {
+              "o": {
+                "a": 0,
+                "k": 100,
+                "ix": 11
+              },
+              "r": {
+                "a": 0,
+                "k": 0,
+                "ix": 10
+              },
+              "p": {
+                "a": 0,
+                "k": [
+                  960,
+                  540,
+                  0
+                ],
+                "ix": 2,
+                "l": 2
+              },
+              "a": {
+                "a": 0,
+                "k": [
+                  0,
+                  0,
+                  0
+                ],
+                "ix": 1,
+                "l": 2
+              },
+              "s": {
+                "a": 0,
+                "k": [
+                  100,
+                  100,
+                  100
+                ],
+                "ix": 6,
+                "l": 2
+              }
+            },
+            "ao": 0,
+            "shapes": [
+              {
+                "ty": "gr",
+                "it": [
+                  {
+                    "ty": "rc",
+                    "d": 1,
+                    "s": {
+                      "a": 0,
+                      "k": [
+                        1920,
+                        160
+                      ],
+                      "ix": 2
+                    },
+                    "p": {
+                      "a": 0,
+                      "k": [
+                        0,
+                        0
+                      ],
+                      "ix": 3
+                    },
+                    "r": {
+                      "a": 0,
+                      "k": 0,
+                      "ix": 4
+                    },
+                    "nm": "Rectangle Path 1",
+                    "mn": "ADBE Vector Shape - Rect",
+                    "hd": false
+                  },
+                  {
+                    "ty": "fl",
+                    "c": {
+                      "a": 0,
+                      "k": [
+                        0.059238998563,
+                        0.839215985466,
+                        0.151001006482,
+                        1
+                      ],
+                      "ix": 4
+                    },
+                    "o": {
+                      "a": 0,
+                      "k": 100,
+                      "ix": 5
+                    },
+                    "r": 1,
+                    "bm": 0,
+                    "nm": "Fill 1",
+                    "mn": "ADBE Vector Graphic - Fill",
+                    "hd": false
+                  },
+                  {
+                    "ty": "tr",
+                    "p": {
+                      "a": 0,
+                      "k": [
+                        0,
+                        363
+                      ],
+                      "ix": 2
+                    },
+                    "a": {
+                      "a": 0,
+                      "k": [
+                        0,
+                        0
+                      ],
+                      "ix": 1
+                    },
+                    "s": {
+                      "a": 0,
+                      "k": [
+                        100,
+                        100
+                      ],
+                      "ix": 3
+                    },
+                    "r": {
+                      "a": 0,
+                      "k": 0,
+                      "ix": 6
+                    },
+                    "o": {
+                      "a": 0,
+                      "k": 100,
+                      "ix": 7
+                    },
+                    "sk": {
+                      "a": 0,
+                      "k": 0,
+                      "ix": 4
+                    },
+                    "sa": {
+                      "a": 0,
+                      "k": 0,
+                      "ix": 5
+                    },
+                    "nm": "Transform"
+                  }
+                ],
+                "nm": "Rectangle 1",
+                "np": 3,
+                "cix": 2,
+                "bm": 0,
+                "ix": 1,
+                "mn": "ADBE Vector Group",
+                "hd": false
+              }
+            ],
+            "ip": 0,
+            "op": 125,
+            "st": 0,
+            "bm": 0
+          },
+          {
+            "ddd": 0,
+            "ind": 5,
+            "ty": 5,
+            "nm": ".pieChartThreeText #pieChartThreeText",
+            "ln": "pieChartThreeText",
+            "cl": "pieChartThreeText",
+            "tt": 1,
+            "sr": 1,
+            "ks": {
+              "o": {
+                "a": 0,
+                "k": 100,
+                "ix": 11
+              },
+              "r": {
+                "a": 0,
+                "k": 0,
+                "ix": 10
+              },
+              "p": {
+                "a": 1,
+                "k": [
+                  {
+                    "i": {
+                      "x": 0,
+                      "y": 1
+                    },
+                    "o": {
+                      "x": 0.012,
+                      "y": 0
+                    },
+                    "t": 10,
+                    "s": [
+                      960,
+                      730,
+                      0
+                    ],
+                    "to": [
+                      0,
+                      29.167,
+                      0
+                    ],
+                    "ti": [
+                      0,
+                      -29.167,
+                      0
+                    ]
+                  },
+                  {
+                    "i": {
+                      "x": 0,
+                      "y": 0
+                    },
+                    "o": {
+                      "x": 0.333,
+                      "y": 0.333
+                    },
+                    "t": 35,
+                    "s": [
+                      960,
+                      905,
+                      0
+                    ],
+                    "to": [
+                      0,
+                      0,
+                      0
+                    ],
+                    "ti": [
+                      0,
+                      0,
+                      0
+                    ]
+                  },
+                  {
+                    "i": {
+                      "x": 0.882,
+                      "y": 1
+                    },
+                    "o": {
+                      "x": 1,
+                      "y": 0
+                    },
+                    "t": 111,
+                    "s": [
+                      960,
+                      905,
+                      0
+                    ],
+                    "to": [
+                      0,
+                      -29.167,
+                      0
+                    ],
+                    "ti": [
+                      0,
+                      29.167,
+                      0
+                    ]
+                  },
+                  {
+                    "t": 123,
+                    "s": [
+                      960,
+                      730,
+                      0
+                    ]
+                  }
+                ],
+                "ix": 2,
+                "l": 2
+              },
+              "a": {
+                "a": 0,
+                "k": [
+                  1.575,
+                  24.325,
+                  0
+                ],
+                "ix": 1,
+                "l": 2,
+                "x": "var $bm_rt;\nvar x, y;\nx = value[0];\ny = $bm_sum(thisLayer.sourceRectAtTime().top, $bm_div(thisLayer.sourceRectAtTime().height, 2)), $bm_rt = [\n    x,\n    y\n];"
+              },
+              "s": {
+                "a": 0,
+                "k": [
+                  100,
+                  100,
+                  100
+                ],
+                "ix": 6,
+                "l": 2
+              }
+            },
+            "ao": 0,
+            "t": {
+              "d": {
+                "k": [
+                  {
+                    "s": {
+                      "s": 50,
+                      "f": "Scada-Bold",
+                      "t": "Pie chart three\rtext goes here",
+                      "ca": 0,
+                      "j": 2,
+                      "tr": 0,
+                      "lh": 60.0000038146973,
+                      "ls": 0,
+                      "fc": [
+                        1,
+                        1,
+                        1
+                      ]
+                    },
+                    "t": 0
+                  }
+                ]
+              },
+              "p": {},
+              "m": {
+                "g": 1,
+                "a": {
+                  "a": 0,
+                  "k": [
+                    0,
+                    0
+                  ],
+                  "ix": 2
+                }
+              },
+              "a": []
+            },
+            "ip": 0,
+            "op": 125,
+            "st": 0,
+            "bm": 0
+          },
+          {
+            "ddd": 0,
+            "ind": 6,
+            "ty": 5,
+            "nm": ".arrowThreeDir #arrowThreeDir",
+            "ln": "arrowThreeDir",
+            "cl": "arrowThreeDir",
+            "sr": 1,
+            "ks": {
+              "o": {
+                "a": 0,
+                "k": 100,
+                "ix": 11
+              },
+              "r": {
+                "a": 0,
+                "k": 0,
+                "ix": 10
+              },
+              "p": {
+                "a": 0,
+                "k": [
+                  -192,
+                  360,
+                  0
+                ],
+                "ix": 2,
+                "l": 2
+              },
+              "a": {
+                "a": 0,
+                "k": [
+                  0,
+                  0,
+                  0
+                ],
+                "ix": 1,
+                "l": 2
+              },
+              "s": {
+                "a": 0,
+                "k": [
+                  100,
+                  100,
+                  100
+                ],
+                "ix": 6,
+                "l": 2
+              }
+            },
+            "ao": 0,
+            "t": {
+              "d": {
+                "k": [
+                  {
+                    "s": {
+                      "s": 60,
+                      "f": "Scada-Bold",
+                      "t": "up",
+                      "ca": 0,
+                      "j": 2,
+                      "tr": 0,
+                      "lh": 72,
+                      "ls": 0,
+                      "fc": [
+                        1,
+                        1,
+                        1
+                      ]
+                    },
+                    "t": 0
+                  }
+                ]
+              },
+              "p": {},
+              "m": {
+                "g": 1,
+                "a": {
+                  "a": 0,
+                  "k": [
+                    0,
+                    0
+                  ],
+                  "ix": 2
+                }
+              },
+              "a": []
+            },
+            "ip": 0,
+            "op": 125,
+            "st": 0,
+            "bm": 0
+          },
+          {
+            "ddd": 0,
+            "ind": 7,
+            "ty": 4,
+            "nm": "arrowThree",
+            "sr": 1,
+            "ks": {
+              "o": {
+                "a": 1,
+                "k": [
+                  {
+                    "i": {
+                      "x": [
+                        0.667
+                      ],
+                      "y": [
+                        1
+                      ]
+                    },
+                    "o": {
+                      "x": [
+                        0.333
+                      ],
+                      "y": [
+                        0
+                      ]
+                    },
+                    "t": 32,
+                    "s": [
+                      0
+                    ]
+                  },
+                  {
+                    "i": {
+                      "x": [
+                        0.667
+                      ],
+                      "y": [
+                        1
+                      ]
+                    },
+                    "o": {
+                      "x": [
+                        0.333
+                      ],
+                      "y": [
+                        0
+                      ]
+                    },
+                    "t": 44,
+                    "s": [
+                      100
+                    ]
+                  },
+                  {
+                    "i": {
+                      "x": [
+                        0.833
+                      ],
+                      "y": [
+                        1
+                      ]
+                    },
+                    "o": {
+                      "x": [
+                        0.333
+                      ],
+                      "y": [
+                        0
+                      ]
+                    },
+                    "t": 111,
+                    "s": [
+                      100
+                    ]
+                  },
+                  {
+                    "t": 118,
+                    "s": [
+                      0
+                    ]
+                  }
+                ],
+                "ix": 11
+              },
+              "r": {
+                "a": 0,
+                "k": 0,
+                "ix": 10
+              },
+              "p": {
+                "a": 0,
+                "k": [
+                  960,
+                  528,
+                  0
+                ],
+                "ix": 2,
+                "l": 2
+              },
+              "a": {
+                "a": 0,
+                "k": [
+                  0,
+                  0,
+                  0
+                ],
+                "ix": 1,
+                "l": 2
+              },
+              "s": {
+                "a": 0,
+                "k": [
+                  100,
+                  100,
+                  100
+                ],
+                "ix": 6,
+                "l": 2
+              }
+            },
+            "ao": 0,
+            "shapes": [
+              {
+                "ty": "gr",
+                "it": [
+                  {
+                    "ind": 0,
+                    "ty": "sh",
+                    "ix": 1,
+                    "ks": {
+                      "a": 0,
+                      "k": {
+                        "i": [
+                          [
+                            0,
+                            0
+                          ],
+                          [
+                            0,
+                            0
+                          ],
+                          [
+                            0,
+                            0
+                          ]
+                        ],
+                        "o": [
+                          [
+                            0,
+                            0
+                          ],
+                          [
+                            0,
+                            0
+                          ],
+                          [
+                            0,
+                            0
+                          ]
+                        ],
+                        "v": [
+                          [
+                            39.75,
+                            150
+                          ],
+                          [
+                            -40,
+                            150
+                          ],
+                          [
+                            0,
+                            100
+                          ]
+                        ],
+                        "c": true
+                      },
+                      "ix": 2
+                    },
+                    "nm": "Path 1",
+                    "mn": "ADBE Vector Shape - Group",
+                    "hd": false
+                  },
+                  {
+                    "ty": "fl",
+                    "c": {
+                      "a": 0,
+                      "k": [
+                        0.059238751729,
+                        0.839215686275,
+                        0.151000826967,
+                        1
+                      ],
+                      "ix": 4
+                    },
+                    "o": {
+                      "a": 0,
+                      "k": 100,
+                      "ix": 5
+                    },
+                    "r": 1,
+                    "bm": 0,
+                    "nm": "Fill 1",
+                    "mn": "ADBE Vector Graphic - Fill",
+                    "hd": false
+                  },
+                  {
+                    "ty": "tr",
+                    "p": {
+                      "a": 1,
+                      "k": [
+                        {
+                          "i": {
+                            "x": 0.021,
+                            "y": 1
+                          },
+                          "o": {
+                            "x": 0.03,
+                            "y": 0
+                          },
+                          "t": 29,
+                          "s": [
+                            0,
+                            78
+                          ],
+                          "to": [
+                            0,
+                            -13
+                          ],
+                          "ti": [
+                            0,
+                            13
+                          ]
+                        },
+                        {
+                          "i": {
+                            "x": 0.021,
+                            "y": 0.021
+                          },
+                          "o": {
+                            "x": 0.333,
+                            "y": 0.333
+                          },
+                          "t": 44,
+                          "s": [
+                            0,
+                            0
+                          ],
+                          "to": [
+                            0,
+                            0
+                          ],
+                          "ti": [
+                            0,
+                            0
+                          ]
+                        },
+                        {
+                          "i": {
+                            "x": 0.833,
+                            "y": 1
+                          },
+                          "o": {
+                            "x": 0.167,
+                            "y": 0
+                          },
+                          "t": 111,
+                          "s": [
+                            0,
+                            0
+                          ],
+                          "to": [
+                            0,
+                            13
+                          ],
+                          "ti": [
+                            0,
+                            -13
+                          ]
+                        },
+                        {
+                          "t": 123,
+                          "s": [
+                            0,
+                            78
+                          ]
+                        }
+                      ],
+                      "ix": 2
+                    },
+                    "a": {
+                      "a": 0,
+                      "k": [
+                        0,
+                        0
+                      ],
+                      "ix": 1
+                    },
+                    "s": {
+                      "a": 0,
+                      "k": [
+                        100,
+                        100
+                      ],
+                      "ix": 3
+                    },
+                    "r": {
+                      "a": 0,
+                      "k": 0,
+                      "ix": 6
+                    },
+                    "o": {
+                      "a": 0,
+                      "k": 100,
+                      "ix": 7,
+                      "x": "var $bm_rt;\nif (thisComp.layer('.arrowThreeDir #arrowThreeDir').text.sourceText == 'up') {\n    $bm_rt = 100;\n} else {\n    $bm_rt = 0;\n}"
+                    },
+                    "sk": {
+                      "a": 0,
+                      "k": 0,
+                      "ix": 4
+                    },
+                    "sa": {
+                      "a": 0,
+                      "k": 0,
+                      "ix": 5
+                    },
+                    "nm": "Transform"
+                  }
+                ],
+                "nm": "upTwo",
+                "np": 3,
+                "cix": 2,
+                "bm": 0,
+                "ix": 1,
+                "mn": "ADBE Vector Group",
+                "hd": false
+              },
+              {
+                "ty": "gr",
+                "it": [
+                  {
+                    "ind": 0,
+                    "ty": "sh",
+                    "ix": 1,
+                    "ks": {
+                      "a": 0,
+                      "k": {
+                        "i": [
+                          [
+                            0,
+                            0
+                          ],
+                          [
+                            0,
+                            0
+                          ],
+                          [
+                            0,
+                            0
+                          ]
+                        ],
+                        "o": [
+                          [
+                            0,
+                            0
+                          ],
+                          [
+                            0,
+                            0
+                          ],
+                          [
+                            0,
+                            0
+                          ]
+                        ],
+                        "v": [
+                          [
+                            39.875,
+                            100
+                          ],
+                          [
+                            -40,
+                            100
+                          ],
+                          [
+                            0,
+                            149.5
+                          ]
+                        ],
+                        "c": true
+                      },
+                      "ix": 2
+                    },
+                    "nm": "Path 1",
+                    "mn": "ADBE Vector Shape - Group",
+                    "hd": false
+                  },
+                  {
+                    "ty": "fl",
+                    "c": {
+                      "a": 0,
+                      "k": [
+                        0.862745098039,
+                        0.282352941176,
+                        0.282352941176,
+                        1
+                      ],
+                      "ix": 4
+                    },
+                    "o": {
+                      "a": 0,
+                      "k": 100,
+                      "ix": 5
+                    },
+                    "r": 1,
+                    "bm": 0,
+                    "nm": "Fill 1",
+                    "mn": "ADBE Vector Graphic - Fill",
+                    "hd": false
+                  },
+                  {
+                    "ty": "tr",
+                    "p": {
+                      "a": 1,
+                      "k": [
+                        {
+                          "i": {
+                            "x": 0,
+                            "y": 1
+                          },
+                          "o": {
+                            "x": 0.044,
+                            "y": 0
+                          },
+                          "t": 29,
+                          "s": [
+                            0,
+                            -80
+                          ],
+                          "to": [
+                            0,
+                            13.333
+                          ],
+                          "ti": [
+                            0,
+                            -13.333
+                          ]
+                        },
+                        {
+                          "i": {
+                            "x": 0,
+                            "y": 0
+                          },
+                          "o": {
+                            "x": 0.333,
+                            "y": 0.333
+                          },
+                          "t": 44,
+                          "s": [
+                            0,
+                            0
+                          ],
+                          "to": [
+                            0,
+                            0
+                          ],
+                          "ti": [
+                            0,
+                            0
+                          ]
+                        },
+                        {
+                          "i": {
+                            "x": 0.833,
+                            "y": 1
+                          },
+                          "o": {
+                            "x": 0.333,
+                            "y": 0
+                          },
+                          "t": 111,
+                          "s": [
+                            0,
+                            0
+                          ],
+                          "to": [
+                            0,
+                            -13.333
+                          ],
+                          "ti": [
+                            0,
+                            13.333
+                          ]
+                        },
+                        {
+                          "t": 123,
+                          "s": [
+                            0,
+                            -80
+                          ]
+                        }
+                      ],
+                      "ix": 2
+                    },
+                    "a": {
+                      "a": 0,
+                      "k": [
+                        0,
+                        0
+                      ],
+                      "ix": 1
+                    },
+                    "s": {
+                      "a": 0,
+                      "k": [
+                        100,
+                        100
+                      ],
+                      "ix": 3
+                    },
+                    "r": {
+                      "a": 0,
+                      "k": 0,
+                      "ix": 6
+                    },
+                    "o": {
+                      "a": 0,
+                      "k": 100,
+                      "ix": 7,
+                      "x": "var $bm_rt;\nif (thisComp.layer('.arrowThreeDir #arrowThreeDir').text.sourceText == 'down') {\n    $bm_rt = 100;\n} else {\n    $bm_rt = 0;\n}"
+                    },
+                    "sk": {
+                      "a": 0,
+                      "k": 0,
+                      "ix": 4
+                    },
+                    "sa": {
+                      "a": 0,
+                      "k": 0,
+                      "ix": 5
+                    },
+                    "nm": "Transform"
+                  }
+                ],
+                "nm": "downTwo",
+                "np": 3,
+                "cix": 2,
+                "bm": 0,
+                "ix": 2,
+                "mn": "ADBE Vector Group",
+                "hd": false
+              }
+            ],
+            "ip": 0,
+            "op": 125,
+            "st": 0,
+            "bm": 0
+          }
+        ]
+      }
+    ],
+    "fonts": {
+      "list": [
+        {
+            "origin": 0,
+            "fPath": "",
+            "fClass": "",
+            "fFamily": "Barlow Condensed",
+            "fWeight": "",
+            "fStyle": "SemiBold",
+            "fName": "",
+            "ascent": 69.9996948242188
+        },
+        // {
+        //   "origin": 1,
+        //   "fPath": "",
+        //   "fClass": "",
+        //   "fFamily": "Scada",
+        //   "fWeight": "",
+        //   "fStyle": "Bold",
+        //   "fName": "Scada-Bold",
+        //   "ascent": 69.9996948242188
+        // }
+      ]
+    },
+    "layers": [
+      {
+        "ddd": 0,
+        "ind": 1,
+        "ty": 4,
+        "nm": "titleMatte",
+        "td": 1,
+        "sr": 1,
+        "ks": {
+          "o": {
+            "a": 0,
+            "k": 100,
+            "ix": 11
+          },
+          "r": {
+            "a": 0,
+            "k": 0,
+            "ix": 10
+          },
+          "p": {
+            "a": 0,
+            "k": [
+              0,
+              0,
+              0
+            ],
+            "ix": 2,
+            "l": 2
+          },
+          "a": {
+            "a": 0,
+            "k": [
+              0,
+              0,
+              0
+            ],
+            "ix": 1,
+            "l": 2
+          },
+          "s": {
+            "a": 0,
+            "k": [
+              100,
+              100,
+              100
+            ],
+            "ix": 6,
+            "l": 2
+          }
+        },
+        "ao": 0,
+        "shapes": [
+          {
+            "ty": "gr",
+            "it": [
+              {
+                "ty": "rc",
+                "d": 1,
+                "s": {
+                  "a": 0,
+                  "k": [
+                    462,
+                    150
+                  ],
+                  "ix": 2,
+                  "x": "var $bm_rt;\nvar x, y;\nx = thisComp.layer('.pieChartHeadline #pieChartHeadline').sourceRectAtTime().width;\ny = thisComp.layer('.pieChartHeadline #pieChartHeadline').sourceRectAtTime().height;\n$bm_rt = [\n    x,\n    y\n];"
+                },
+                "p": {
+                  "a": 0,
+                  "k": [
+                    0,
+                    0
+                  ],
+                  "ix": 3
+                },
+                "r": {
+                  "a": 0,
+                  "k": 0,
+                  "ix": 4
+                },
+                "nm": "Rectangle Path 1",
+                "mn": "ADBE Vector Shape - Rect",
+                "hd": false
+              },
+              {
+                "ty": "fl",
+                "c": {
+                  "a": 0,
+                  "k": [
+                    0.282353001015,
+                    0.282353001015,
+                    0.282353001015,
+                    1
+                  ],
+                  "ix": 4
+                },
+                "o": {
+                  "a": 0,
+                  "k": 100,
+                  "ix": 5
+                },
+                "r": 1,
+                "bm": 0,
+                "nm": "Fill 1",
+                "mn": "ADBE Vector Graphic - Fill",
+                "hd": false
+              },
+              {
+                "ty": "tr",
+                "p": {
+                  "a": 0,
+                  "k": [
+                    0,
+                    0
+                  ],
+                  "ix": 2,
+                  "x": "var $bm_rt;\nvar x, y;\nx = thisComp.layer('.pieChartHeadline #pieChartHeadline').transform.position[0];\ny = thisComp.layer('.pieChartHeadline #pieChartHeadline').transform.position[1];\n$bm_rt = [\n    x,\n    y\n];"
+                },
+                "a": {
+                  "a": 0,
+                  "k": [
+                    0,
+                    0
+                  ],
+                  "ix": 1
+                },
+                "s": {
+                  "a": 1,
+                  "k": [
+                    {
+                      "i": {
+                        "x": [
+                          0,
+                          0.667
+                        ],
+                        "y": [
+                          1,
+                          1
+                        ]
+                      },
+                      "o": {
+                        "x": [
+                          0.058,
+                          0.333
+                        ],
+                        "y": [
+                          0,
+                          0
+                        ]
+                      },
+                      "t": 0,
+                      "s": [
+                        0,
+                        120
+                      ]
+                    },
+                    {
+                      "i": {
+                        "x": [
+                          0.833,
+                          0.833
+                        ],
+                        "y": [
+                          1,
+                          1
+                        ]
+                      },
+                      "o": {
+                        "x": [
+                          0.333,
+                          0.333
+                        ],
+                        "y": [
+                          0,
+                          0
+                        ]
+                      },
+                      "t": 20,
+                      "s": [
+                        110,
+                        120
+                      ]
+                    },
+                    {
+                      "i": {
+                        "x": [
+                          0.667,
+                          0.667
+                        ],
+                        "y": [
+                          1,
+                          1
+                        ]
+                      },
+                      "o": {
+                        "x": [
+                          0.167,
+                          0.167
+                        ],
+                        "y": [
+                          0,
+                          0
+                        ]
+                      },
+                      "t": 111,
+                      "s": [
+                        110,
+                        120
+                      ]
+                    },
+                    {
+                      "t": 123,
+                      "s": [
+                        0,
+                        120
+                      ]
+                    }
+                  ],
+                  "ix": 3
+                },
+                "r": {
+                  "a": 0,
+                  "k": 0,
+                  "ix": 6
+                },
+                "o": {
+                  "a": 0,
+                  "k": 100,
+                  "ix": 7
+                },
+                "sk": {
+                  "a": 0,
+                  "k": 0,
+                  "ix": 4
+                },
+                "sa": {
+                  "a": 0,
+                  "k": 0,
+                  "ix": 5
+                },
+                "nm": "Transform"
+              }
+            ],
+            "nm": "titleMatte",
+            "np": 3,
+            "cix": 2,
+            "bm": 0,
+            "ix": 1,
+            "mn": "ADBE Vector Group",
+            "hd": false
+          }
+        ],
+        "ip": 0,
+        "op": 125,
+        "st": 0,
+        "bm": 0
+      },
+      {
+        "ddd": 0,
+        "ind": 2,
+        "ty": 5,
+        "nm": ".pieChartHeadline #pieChartHeadline",
+        "ln": "pieChartHeadline",
+        "cl": "pieChartHeadline",
+        "tt": 1,
+        "sr": 1,
+        "ks": {
+          "o": {
+            "a": 0,
+            "k": 100,
+            "ix": 11
+          },
+          "r": {
+            "a": 0,
+            "k": 0,
+            "ix": 10
+          },
+          "p": {
+            "a": 0,
+            "k": [
+              960.562,
+              178.325,
+              0
+            ],
+            "ix": 2,
+            "l": 2
+          },
+          "a": {
+            "a": 0,
+            "k": [
+              1.575,
+              24.325,
+              0
+            ],
+            "ix": 1,
+            "l": 2,
+            "x": "var $bm_rt;\nvar x, y;\nx = value[0];\ny = $bm_sum(thisLayer.sourceRectAtTime().top, $bm_div(thisLayer.sourceRectAtTime().height, 2)), $bm_rt = [\n    x,\n    y\n];"
+          },
+          "s": {
+            "a": 0,
+            "k": [
+              100,
+              100,
+              100
+            ],
+            "ix": 6,
+            "l": 2
+          }
+        },
+        "ao": 0,
+        "t": {
+          "d": {
+            "k": [
+              {
+                "s": {
+                  "s": 70,
+                  "f": "Scada-Bold",
+                  "t": "Pie chart headline\rgoes here",
+                  "ca": 0,
+                  "j": 2,
+                  "tr": 0,
+                  "lh": 84,
+                  "ls": 0,
+                  "fc": [
+                    1,
+                    1,
+                    1
+                  ]
+                },
+                "t": 0
+              }
+            ]
+          },
+          "p": {},
+          "m": {
+            "g": 1,
+            "a": {
+              "a": 0,
+              "k": [
+                0,
+                0
+              ],
+              "ix": 2
+            }
+          },
+          "a": []
+        },
+        "ip": 0,
+        "op": 125,
+        "st": 0,
+        "bm": 0
+      },
+      {
+        "ddd": 0,
+        "ind": 3,
+        "ty": 0,
+        "nm": "pieChartOne",
+        "refId": "comp_0",
+        "sr": 1,
+        "ks": {
+          "o": {
+            "a": 0,
+            "k": 100,
+            "ix": 11
+          },
+          "r": {
+            "a": 0,
+            "k": 0,
+            "ix": 10
+          },
+          "p": {
+            "a": 0,
+            "k": [
+              960,
+              540,
+              0
+            ],
+            "ix": 2,
+            "l": 2,
+            "x": "var $bm_rt;\nvar percValOne, percValTwo, percValThree, x, x, x, y;\npercValOne = comp('pieChartOne').layer('.pieChartOnePercSource #pieChartOnePercSource').text.sourceText;\npercValTwo = comp('pieChartTwo').layer('.pieChartTwoPercSource #pieChartTwoPercSource').text.sourceText;\npercValThree = comp('pieChartThree').layer('.pieChartThreePercSource #pieChartThreePercSource').text.sourceText;\nif (percValThree != '0' && percValTwo != '0' && percValOne != '0')\n    x = 385;\nelse if (percValThree == '0' && percValTwo != '0')\n    x = 640;\nelse\n    x = value[0];\ny = value[1];\n$bm_rt = [\n    x,\n    y\n];"
+          },
+          "a": {
+            "a": 0,
+            "k": [
+              960,
+              540,
+              0
+            ],
+            "ix": 1,
+            "l": 2
+          },
+          "s": {
+            "a": 0,
+            "k": [
+              100,
+              100,
+              100
+            ],
+            "ix": 6,
+            "l": 2
+          }
+        },
+        "ao": 0,
+        "w": 1920,
+        "h": 1080,
+        "ip": 0,
+        "op": 125,
+        "st": 0,
+        "bm": 0
+      },
+      {
+        "ddd": 0,
+        "ind": 4,
+        "ty": 0,
+        "nm": "pieChartTwo",
+        "refId": "comp_1",
+        "sr": 1,
+        "ks": {
+          "o": {
+            "a": 0,
+            "k": 100,
+            "ix": 11
+          },
+          "r": {
+            "a": 0,
+            "k": 0,
+            "ix": 10
+          },
+          "p": {
+            "a": 0,
+            "k": [
+              1320,
+              540,
+              0
+            ],
+            "ix": 2,
+            "l": 2,
+            "x": "var $bm_rt;\nvar percValOne, percValThree, percValTwo, x, x, x, y;\npercValOne = comp('pieChartOne').layer('.pieChartOnePercSource #pieChartOnePercSource').text.sourceText;\npercValThree = comp('pieChartThree').layer('.pieChartThreePercSource #pieChartThreePercSource').text.sourceText;\npercValTwo = comp('pieChartTwo').layer('.pieChartTwoPercSource #pieChartTwoPercSource').text.sourceText;\nif (percValTwo == '0' || percValOne == '0')\n    x = 2600;\nelse if (percValOne != '0' && percValThree != '0')\n    x = 960;\nelse\n    x = 1280;\ny = value[1];\n$bm_rt = [\n    x,\n    y\n];"
+          },
+          "a": {
+            "a": 0,
+            "k": [
+              960,
+              540,
+              0
+            ],
+            "ix": 1,
+            "l": 2
+          },
+          "s": {
+            "a": 0,
+            "k": [
+              100,
+              100,
+              100
+            ],
+            "ix": 6,
+            "l": 2
+          }
+        },
+        "ao": 0,
+        "w": 1920,
+        "h": 1080,
+        "ip": 0,
+        "op": 125,
+        "st": 0,
+        "bm": 0
+      },
+      {
+        "ddd": 0,
+        "ind": 5,
+        "ty": 0,
+        "nm": "pieChartThree",
+        "refId": "comp_2",
+        "sr": 1,
+        "ks": {
+          "o": {
+            "a": 0,
+            "k": 100,
+            "ix": 11
+          },
+          "r": {
+            "a": 0,
+            "k": 0,
+            "ix": 10
+          },
+          "p": {
+            "a": 0,
+            "k": [
+              960,
+              540,
+              0
+            ],
+            "ix": 2,
+            "l": 2,
+            "x": "var $bm_rt;\nvar percValOne, percValTwo, percValThree, x, x, y;\npercValOne = comp('pieChartOne').layer('.pieChartOnePercSource #pieChartOnePercSource').text.sourceText;\npercValTwo = comp('pieChartTwo').layer('.pieChartTwoPercSource #pieChartTwoPercSource').text.sourceText;\npercValThree = comp('pieChartThree').layer('.pieChartThreePercSource #pieChartThreePercSource').text.sourceText;\nif (percValThree != '0' && percValOne != '0' && percValTwo != '0')\n    x = 1535;\nelse\n    x = 2600;\ny = value[1];\n$bm_rt = [\n    x,\n    y\n];"
+          },
+          "a": {
+            "a": 0,
+            "k": [
+              960,
+              540,
+              0
+            ],
+            "ix": 1,
+            "l": 2
+          },
+          "s": {
+            "a": 0,
+            "k": [
+              100,
+              100,
+              100
+            ],
+            "ix": 6,
+            "l": 2
+          }
+        },
+        "ao": 0,
+        "w": 1920,
+        "h": 1080,
+        "ip": 0,
+        "op": 125,
+        "st": 0,
+        "bm": 0
+      },
+      {
+        "ddd": 0,
+        "ind": 6,
+        "ty": 5,
+        "nm": ".barColors #barColors",
+        "ln": "barColors",
+        "cl": "barColors",
+        "sr": 1,
+        "ks": {
+          "o": {
+            "a": 0,
+            "k": 0,
+            "ix": 11
+          },
+          "r": {
+            "a": 0,
+            "k": 0,
+            "ix": 10
+          },
+          "p": {
+            "a": 0,
+            "k": [
+              1540,
+              76,
+              0
+            ],
+            "ix": 2,
+            "l": 2
+          },
+          "a": {
+            "a": 0,
+            "k": [
+              0,
+              0,
+              0
+            ],
+            "ix": 1,
+            "l": 2
+          },
+          "s": {
+            "a": 0,
+            "k": [
+              100,
+              100,
+              100
+            ],
+            "ix": 6,
+            "l": 2
+          }
+        },
+        "ao": 0,
+        "t": {
+          "d": {
+            "k": [
+              {
+                "s": {
+                  "s": 45,
+                  "f": "Scada-Bold",
+                  "t": "DC4848,8648DC,48DC8D",
+                  "ca": 0,
+                  "j": 2,
+                  "tr": 0,
+                  "lh": 54,
+                  "ls": 0,
+                  "fc": [
+                    1,
+                    1,
+                    1
+                  ]
+                },
+                "t": 0
+              }
+            ]
+          },
+          "p": {},
+          "m": {
+            "g": 1,
+            "a": {
+              "a": 0,
+              "k": [
+                0,
+                0
+              ],
+              "ix": 2
+            }
+          },
+          "a": []
+        },
+        "ip": 0,
+        "op": 125,
+        "st": 0,
+        "bm": 0
+      },
+      {
+        "ddd": 0,
+        "ind": 7,
+        "ty": 1,
+        "nm": "semiTransBkg",
+        "sr": 1,
+        "ks": {
+          "o": {
+            "a": 1,
+            "k": [
+              {
+                "i": {
+                  "x": [
+                    0.833
+                  ],
+                  "y": [
+                    0.833
+                  ]
+                },
+                "o": {
+                  "x": [
+                    0.167
+                  ],
+                  "y": [
+                    0.167
+                  ]
+                },
+                "t": 0,
+                "s": [
+                  0
+                ]
+              },
+              {
+                "i": {
+                  "x": [
+                    0.833
+                  ],
+                  "y": [
+                    0.833
+                  ]
+                },
+                "o": {
+                  "x": [
+                    0.167
+                  ],
+                  "y": [
+                    0.167
+                  ]
+                },
+                "t": 6,
+                "s": [
+                  40
+                ]
+              },
+              {
+                "i": {
+                  "x": [
+                    0.833
+                  ],
+                  "y": [
+                    0.833
+                  ]
+                },
+                "o": {
+                  "x": [
+                    0.167
+                  ],
+                  "y": [
+                    0.167
+                  ]
+                },
+                "t": 117,
+                "s": [
+                  40
+                ]
+              },
+              {
+                "t": 123,
+                "s": [
+                  0
+                ]
+              }
+            ],
+            "ix": 11
+          },
+          "r": {
+            "a": 0,
+            "k": 0,
+            "ix": 10
+          },
+          "p": {
+            "a": 0,
+            "k": [
+              960,
+              540,
+              0
+            ],
+            "ix": 2,
+            "l": 2
+          },
+          "a": {
+            "a": 0,
+            "k": [
+              960,
+              540,
+              0
+            ],
+            "ix": 1,
+            "l": 2
+          },
+          "s": {
+            "a": 0,
+            "k": [
+              100,
+              100,
+              100
+            ],
+            "ix": 6,
+            "l": 2
+          }
+        },
+        "ao": 0,
+        "sw": 1920,
+        "sh": 1080,
+        "sc": "#000000",
+        "ip": 0,
+        "op": 125,
+        "st": 0,
+        "bm": 0
+      },
+      {
+        "ddd": 0,
+        "ind": 8,
+        "ty": 3,
+        "nm": "Null 4",
+        "sr": 1,
+        "ks": {
+          "o": {
+            "a": 0,
+            "k": 0,
+            "ix": 11
+          },
+          "r": {
+            "a": 0,
+            "k": 0,
+            "ix": 10
+          },
+          "p": {
+            "a": 0,
+            "k": [
+              1200,
+              618,
+              0
+            ],
+            "ix": 2,
+            "l": 2
+          },
+          "a": {
+            "a": 0,
+            "k": [
+              0,
+              50,
+              0
+            ],
+            "ix": 1,
+            "l": 2
+          },
+          "s": {
+            "a": 0,
+            "k": [
+              240,
+              100,
+              100
+            ],
+            "ix": 6,
+            "l": 2
+          }
+        },
+        "ao": 0,
+        "ip": 0,
+        "op": 125,
+        "st": 0,
+        "bm": 0
+      }
+    ],
+    "markers": [
+      {
+        "tm": 0,
+        "cm": "{\r\n\"name\":\"animIn\"\r\n}",
+        "dr": 47
+      },
+      {
+        "tm": 48,
+        "cm": "{\r\n\"name\":\"animIdle\"\r\n}",
+        "dr": 54
+      },
+      {
+        "tm": 105,
+        "cm": "{\r\n\"name\":\"animOut\"\r\n}",
+        "dr": 19
+      }
+    ]
+  }
+
+//{"v":"5.7.13","fr":25,"ip":0,"op":125,"w":1920,"h":1080,"nm":"pieChartMainStitch","ddd":0,"assets":[{"id":"comp_0","nm":"pieChartOne","layers":[{"ddd":0,"ind":1,"ty":5,"nm":".pieChartOnePercSource #pieChartOnePercSource","ln":"pieChartOnePercSource","cl":"pieChartOnePercSource","sr":1,"ks":{"o":{"a":0,"k":100,"ix":11},"r":{"a":0,"k":0,"ix":10},"p":{"a":0,"k":[-245.043,32.25,0],"ix":2,"l":2},"a":{"a":0,"k":[0,-50.4,0],"ix":1,"l":2},"s":{"a":0,"k":[100,100,100],"ix":6,"l":2}},"ao":0,"t":{"d":{"k":[{"s":{"s":144,"f":"Scada-Bold","t":"50","ca":0,"j":2,"tr":0,"lh":172.8,"ls":0,"fc":[1,1,1]},"t":0}]},"p":{},"m":{"g":1,"a":{"a":0,"k":[0,0],"ix":2}},"a":[]},"ip":0,"op":125,"st":0,"bm":0},{"ddd":0,"ind":2,"ty":5,"nm":".pieChartOnePercText #pieChartOnePercText","ln":"pieChartOnePercText","cl":"pieChartOnePercText","sr":1,"ks":{"o":{"a":1,"k":[{"i":{"x":[0.667],"y":[1]},"o":{"x":[0.333],"y":[0]},"t":6,"s":[0]},{"i":{"x":[0.833],"y":[1]},"o":{"x":[0.333],"y":[0]},"t":14,"s":[100]},{"i":{"x":[0.833],"y":[1]},"o":{"x":[0.167],"y":[0]},"t":111,"s":[100]},{"t":123,"s":[0]}],"ix":11},"r":{"a":0,"k":0,"ix":10},"p":{"a":0,"k":[220,361.6,0],"ix":2,"l":2,"x":"var $bm_rt;\nvar x, y;\nx = thisComp.layer('pieChartOne').transform.position[0];\ny = thisComp.layer('pieChartOne').transform.position[1];\n$bm_rt = [\n    x,\n    y\n];"},"a":{"a":0,"k":[0,-50.4,0],"ix":1,"l":2},"s":{"a":0,"k":[100,100,100],"ix":6,"l":2,"x":"var $bm_rt;\nvar targetSize, realSize, x, x, y;\ntargetSize = 300;\nrealSize = thisLayer.sourceRectAtTime().width;\nif (realSize > targetSize) {\n    x = $bm_mul($bm_div(targetSize, realSize), 100);\n} else {\n    x = 100;\n}\ny = value[1];\n$bm_rt = [\n    x,\n    y\n];"}},"ao":0,"ef":[{"ty":5,"nm":"Slider Control","np":3,"mn":"ADBE Slider Control","ix":1,"en":1,"ef":[{"ty":0,"nm":"Slider","mn":"ADBE Slider Control-0001","ix":1,"v":{"a":1,"k":[{"i":{"x":[0.667],"y":[1]},"o":{"x":[0.333],"y":[0]},"t":9,"s":[0]},{"t":45,"s":[25]}],"ix":1,"x":"var $bm_rt;\nvar t1, t2;\nt1 = key(1).time;\nt2 = key(2).time;\nvalue = Math.round(thisComp.layer('.pieChartOnePercSource #pieChartOnePercSource').text.sourceText);\n$bm_rt = ease(time, t1, t2, 0, value);"}}]}],"t":{"d":{"k":[{"s":{"s":144,"f":"Scada-Bold","t":"","ca":0,"j":2,"tr":0,"lh":172.8,"ls":0,"fc":[1,1,1]},"t":0}],"x":"var $bm_rt;\n$bm_rt = $bm_sum(Math.round(effect('Slider Control')('Slider')), '%');"},"p":{},"m":{"g":1,"a":{"a":0,"k":[0,0],"ix":2}},"a":[]},"ip":6,"op":125,"st":0,"bm":0},{"ddd":0,"ind":3,"ty":4,"nm":"pieChartOne","sr":1,"ks":{"o":{"a":0,"k":100,"ix":11},"r":{"a":0,"k":0,"ix":10},"p":{"a":0,"k":[960,544,0],"ix":2,"l":2},"a":{"a":0,"k":[0,0,0],"ix":1,"l":2},"s":{"a":0,"k":[100,100,100],"ix":6,"l":2}},"ao":0,"shapes":[{"ty":"gr","it":[{"ty":"gr","it":[{"d":1,"ty":"el","s":{"a":0,"k":[418,418],"ix":2},"p":{"a":0,"k":[0,0],"ix":3},"nm":"Ellipse Path 1","mn":"ADBE Vector Shape - Ellipse","hd":false},{"ty":"st","c":{"a":0,"k":[0.784313976765,0.572087824345,0,1],"ix":3,"x":"var $bm_rt;\nvar txt, barOneColor;\nfunction hexToColor(theHex) {\n    var r = theHex >> 16;\n    var g = (theHex & 65280) >> 8;\n    var b = theHex & 255;\n    return [\n        r / 255,\n        g / 255,\n        b / 255,\n        1\n    ];\n}\ntxt = comp('pieChartMainStitch').layer('.barColors #barColors').text.sourceText.split(',')[0];\nbarOneColor = parseInt(txt, 16);\n$bm_rt = hexToColor(barOneColor);"},"o":{"a":0,"k":100,"ix":4},"w":{"a":0,"k":85,"ix":5},"lc":1,"lj":1,"ml":4,"bm":0,"nm":"Stroke 1","mn":"ADBE Vector Graphic - Stroke","hd":false},{"ty":"tr","p":{"a":0,"k":[0,0],"ix":2},"a":{"a":0,"k":[0,0],"ix":1},"s":{"a":0,"k":[100,100],"ix":3},"r":{"a":0,"k":0,"ix":6},"o":{"a":0,"k":100,"ix":7},"sk":{"a":0,"k":0,"ix":4},"sa":{"a":0,"k":0,"ix":5},"nm":"Transform"}],"nm":"pieOneM","np":3,"cix":2,"bm":0,"ix":1,"mn":"ADBE Vector Group","hd":false},{"ty":"tm","s":{"a":0,"k":0,"ix":1},"e":{"a":1,"k":[{"i":{"x":[0],"y":[1]},"o":{"x":[0.023],"y":[0]},"t":10,"s":[0]},{"i":{"x":[0.667],"y":[1]},"o":{"x":[0.333],"y":[0]},"t":35,"s":[63]},{"i":{"x":[0.667],"y":[1]},"o":{"x":[0.333],"y":[0]},"t":111,"s":[63]},{"t":123,"s":[63]}],"ix":2,"x":"var $bm_rt;\nvar t1, t2, t3, t4;\nt1 = key(1).time;\nt2 = key(2).time;\nt3 = key(3).time;\nt4 = key(4).time;\n$bm_rt = value = Math.round(thisComp.layer('.pieChartOnePercSource #pieChartOnePercSource').text.sourceText.split('%')[0]);\nif (time < t2) {\n    $bm_rt = ease(time, t1, t2, 0, value);\n} else {\n    $bm_rt = ease(time, t3, t4, value, 0);\n}"},"o":{"a":0,"k":0,"ix":3},"m":1,"ix":2,"nm":"trimPathsPieOneM","mn":"ADBE Vector Filter - Trim","hd":false},{"ty":"tr","p":{"a":0,"k":[0,0],"ix":2},"a":{"a":0,"k":[0,0],"ix":1},"s":{"a":0,"k":[100,100],"ix":3},"r":{"a":0,"k":0,"ix":6},"o":{"a":0,"k":100,"ix":7},"sk":{"a":0,"k":0,"ix":4},"sa":{"a":0,"k":0,"ix":5},"nm":"Transform"}],"nm":"pieOneMain","np":2,"cix":2,"bm":0,"ix":1,"mn":"ADBE Vector Group","hd":false},{"ty":"gr","it":[{"ty":"gr","it":[{"d":1,"ty":"el","s":{"a":0,"k":[452,452],"ix":2,"x":"var $bm_rt;\n$bm_rt = content('pieOneMain').content('pieOneM').content('Ellipse Path 1').size;"},"p":{"a":0,"k":[0,0],"ix":3},"nm":"Ellipse Path 1","mn":"ADBE Vector Shape - Ellipse","hd":false},{"ty":"st","c":{"a":0,"k":[0,0.784313964844,0.166090004117,1],"ix":3,"x":"var $bm_rt;\n$bm_rt = content('pieOneMain').content('pieOneM').content('Stroke 1').color;"},"o":{"a":0,"k":40,"ix":4},"w":{"a":0,"k":60,"ix":5},"lc":1,"lj":1,"ml":4,"bm":0,"nm":"Stroke 1","mn":"ADBE Vector Graphic - Stroke","hd":false},{"ty":"tr","p":{"a":0,"k":[0,0],"ix":2},"a":{"a":0,"k":[0,0],"ix":1},"s":{"a":0,"k":[100,100],"ix":3},"r":{"a":0,"k":0,"ix":6},"o":{"a":0,"k":100,"ix":7},"sk":{"a":0,"k":0,"ix":4},"sa":{"a":0,"k":0,"ix":5},"nm":"Transform"}],"nm":"pieOneUnder","np":3,"cix":2,"bm":0,"ix":1,"mn":"ADBE Vector Group","hd":false},{"ty":"tm","s":{"a":0,"k":0,"ix":1},"e":{"a":1,"k":[{"i":{"x":[0],"y":[1]},"o":{"x":[0.033],"y":[0]},"t":0,"s":[0]},{"i":{"x":[0.833],"y":[1]},"o":{"x":[0.167],"y":[0]},"t":20,"s":[100]},{"i":{"x":[0.833],"y":[1]},"o":{"x":[0.167],"y":[0]},"t":107,"s":[100]},{"t":123,"s":[0]}],"ix":2},"o":{"a":0,"k":0,"ix":3},"m":1,"ix":2,"nm":"trimPathsPieOneUnder","mn":"ADBE Vector Filter - Trim","hd":false},{"ty":"tr","p":{"a":0,"k":[0,0],"ix":2},"a":{"a":0,"k":[0,0],"ix":1},"s":{"a":0,"k":[100,100],"ix":3},"r":{"a":0,"k":0,"ix":6},"o":{"a":0,"k":100,"ix":7},"sk":{"a":0,"k":0,"ix":4},"sa":{"a":0,"k":0,"ix":5},"nm":"Transform"}],"nm":"pieOneUnderlay","np":2,"cix":2,"bm":0,"ix":2,"mn":"ADBE Vector Group","hd":false}],"ip":0,"op":125,"st":0,"bm":0},{"ddd":0,"ind":4,"ty":4,"nm":"textThreeMatte","td":1,"sr":1,"ks":{"o":{"a":0,"k":100,"ix":11},"r":{"a":0,"k":0,"ix":10},"p":{"a":0,"k":[960,540,0],"ix":2,"l":2},"a":{"a":0,"k":[0,0,0],"ix":1,"l":2},"s":{"a":0,"k":[100,100,100],"ix":6,"l":2}},"ao":0,"shapes":[{"ty":"gr","it":[{"ty":"rc","d":1,"s":{"a":0,"k":[1920,160],"ix":2},"p":{"a":0,"k":[0,0],"ix":3},"r":{"a":0,"k":0,"ix":4},"nm":"Rectangle Path 1","mn":"ADBE Vector Shape - Rect","hd":false},{"ty":"fl","c":{"a":0,"k":[0.059238998563,0.839215985466,0.151001006482,1],"ix":4},"o":{"a":0,"k":100,"ix":5},"r":1,"bm":0,"nm":"Fill 1","mn":"ADBE Vector Graphic - Fill","hd":false},{"ty":"tr","p":{"a":0,"k":[0,363],"ix":2},"a":{"a":0,"k":[0,0],"ix":1},"s":{"a":0,"k":[100,100],"ix":3},"r":{"a":0,"k":0,"ix":6},"o":{"a":0,"k":100,"ix":7},"sk":{"a":0,"k":0,"ix":4},"sa":{"a":0,"k":0,"ix":5},"nm":"Transform"}],"nm":"Rectangle 1","np":3,"cix":2,"bm":0,"ix":1,"mn":"ADBE Vector Group","hd":false}],"ip":0,"op":125,"st":0,"bm":0},{"ddd":0,"ind":5,"ty":5,"nm":".pieChartOneText #pieChartOneText","ln":"pieChartOneText","cl":"pieChartOneText","tt":1,"sr":1,"ks":{"o":{"a":0,"k":100,"ix":11},"r":{"a":0,"k":0,"ix":10},"p":{"a":1,"k":[{"i":{"x":0,"y":1},"o":{"x":0.012,"y":0},"t":10,"s":[960,730,0],"to":[0,29.167,0],"ti":[0,-29.167,0]},{"i":{"x":0,"y":0},"o":{"x":0.333,"y":0.333},"t":35,"s":[960,905,0],"to":[0,0,0],"ti":[0,0,0]},{"i":{"x":0.882,"y":1},"o":{"x":1,"y":0},"t":111,"s":[960,905,0],"to":[0,-29.167,0],"ti":[0,29.167,0]},{"t":123,"s":[960,730,0]}],"ix":2,"l":2},"a":{"a":0,"k":[1.575,24.325,0],"ix":1,"l":2,"x":"var $bm_rt;\nvar x, y;\nx = value[0];\ny = $bm_sum(thisLayer.sourceRectAtTime().top, $bm_div(thisLayer.sourceRectAtTime().height, 2)), $bm_rt = [\n    x,\n    y\n];"},"s":{"a":0,"k":[100,100,100],"ix":6,"l":2}},"ao":0,"t":{"d":{"k":[{"s":{"s":50,"f":"Scada-Bold","t":"Pie chart one text\rgoes here","ca":0,"j":2,"tr":0,"lh":60.0000038146973,"ls":0,"fc":[1,1,1]},"t":0}]},"p":{},"m":{"g":1,"a":{"a":0,"k":[0,0],"ix":2}},"a":[]},"ip":0,"op":125,"st":0,"bm":0},{"ddd":0,"ind":6,"ty":5,"nm":".arrowOneDir #arrowOneDir","ln":"arrowOneDir","cl":"arrowOneDir","sr":1,"ks":{"o":{"a":0,"k":100,"ix":11},"r":{"a":0,"k":0,"ix":10},"p":{"a":0,"k":[-224,278.8,0],"ix":2,"l":2},"a":{"a":0,"k":[0,0,0],"ix":1,"l":2},"s":{"a":0,"k":[100,100,100],"ix":6,"l":2}},"ao":0,"t":{"d":{"k":[{"s":{"s":60,"f":"Scada-Bold","t":"up","ca":0,"j":2,"tr":0,"lh":72,"ls":0,"fc":[1,1,1]},"t":0}]},"p":{},"m":{"g":1,"a":{"a":0,"k":[0,0],"ix":2}},"a":[]},"ip":0,"op":125,"st":0,"bm":0},{"ddd":0,"ind":7,"ty":4,"nm":"arrowOne","sr":1,"ks":{"o":{"a":1,"k":[{"i":{"x":[0.667],"y":[1]},"o":{"x":[0.333],"y":[0]},"t":32,"s":[0]},{"i":{"x":[0.667],"y":[1]},"o":{"x":[0.333],"y":[0]},"t":44,"s":[100]},{"i":{"x":[0.833],"y":[1]},"o":{"x":[0.333],"y":[0]},"t":111,"s":[100]},{"t":118,"s":[0]}],"ix":11},"r":{"a":0,"k":0,"ix":10},"p":{"a":0,"k":[960,528,0],"ix":2,"l":2},"a":{"a":0,"k":[0,0,0],"ix":1,"l":2},"s":{"a":0,"k":[100,100,100],"ix":6,"l":2}},"ao":0,"shapes":[{"ty":"gr","it":[{"ind":0,"ty":"sh","ix":1,"ks":{"a":0,"k":{"i":[[0,0],[0,0],[0,0]],"o":[[0,0],[0,0],[0,0]],"v":[[39.75,150],[-40,150],[0,100]],"c":true},"ix":2},"nm":"Path 1","mn":"ADBE Vector Shape - Group","hd":false},{"ty":"fl","c":{"a":0,"k":[0.059238751729,0.839215686275,0.151000826967,1],"ix":4},"o":{"a":0,"k":100,"ix":5},"r":1,"bm":0,"nm":"Fill 1","mn":"ADBE Vector Graphic - Fill","hd":false},{"ty":"tr","p":{"a":1,"k":[{"i":{"x":0.021,"y":1},"o":{"x":0.03,"y":0},"t":29,"s":[0,78],"to":[0,-13],"ti":[0,13]},{"i":{"x":0.021,"y":0.021},"o":{"x":0.333,"y":0.333},"t":44,"s":[0,0],"to":[0,0],"ti":[0,0]},{"i":{"x":0.833,"y":1},"o":{"x":0.167,"y":0},"t":111,"s":[0,0],"to":[0,13],"ti":[0,-13]},{"t":123,"s":[0,78]}],"ix":2},"a":{"a":0,"k":[0,0],"ix":1},"s":{"a":0,"k":[100,100],"ix":3},"r":{"a":0,"k":0,"ix":6},"o":{"a":0,"k":100,"ix":7,"x":"var $bm_rt;\nif (thisComp.layer('.arrowOneDir #arrowOneDir').text.sourceText == 'up') {\n    $bm_rt = 100;\n} else {\n    $bm_rt = 0;\n}"},"sk":{"a":0,"k":0,"ix":4},"sa":{"a":0,"k":0,"ix":5},"nm":"Transform"}],"nm":"upOne","np":3,"cix":2,"bm":0,"ix":1,"mn":"ADBE Vector Group","hd":false},{"ty":"gr","it":[{"ind":0,"ty":"sh","ix":1,"ks":{"a":0,"k":{"i":[[0,0],[0,0],[0,0]],"o":[[0,0],[0,0],[0,0]],"v":[[39.875,100],[-40,100],[0,149.5]],"c":true},"ix":2},"nm":"Path 1","mn":"ADBE Vector Shape - Group","hd":false},{"ty":"fl","c":{"a":0,"k":[0.862745098039,0.282352941176,0.282352941176,1],"ix":4},"o":{"a":0,"k":100,"ix":5},"r":1,"bm":0,"nm":"Fill 1","mn":"ADBE Vector Graphic - Fill","hd":false},{"ty":"tr","p":{"a":1,"k":[{"i":{"x":0,"y":1},"o":{"x":0.044,"y":0},"t":29,"s":[0,-80],"to":[0,13.333],"ti":[0,-13.333]},{"i":{"x":0,"y":0},"o":{"x":0.333,"y":0.333},"t":44,"s":[0,0],"to":[0,0],"ti":[0,0]},{"i":{"x":0.833,"y":1},"o":{"x":0.333,"y":0},"t":111,"s":[0,0],"to":[0,-13.333],"ti":[0,13.333]},{"t":123,"s":[0,-80]}],"ix":2},"a":{"a":0,"k":[0,0],"ix":1},"s":{"a":0,"k":[100,100],"ix":3},"r":{"a":0,"k":0,"ix":6},"o":{"a":0,"k":100,"ix":7,"x":"var $bm_rt;\nif (thisComp.layer('.arrowOneDir #arrowOneDir').text.sourceText == 'down') {\n    $bm_rt = 100;\n} else {\n    $bm_rt = 0;\n}"},"sk":{"a":0,"k":0,"ix":4},"sa":{"a":0,"k":0,"ix":5},"nm":"Transform"}],"nm":"downOne","np":3,"cix":2,"bm":0,"ix":2,"mn":"ADBE Vector Group","hd":false}],"ip":0,"op":125,"st":0,"bm":0}]},{"id":"comp_1","nm":"pieChartTwo","layers":[{"ddd":0,"ind":1,"ty":5,"nm":".pieChartTwoPercSource #pieChartTwoPercSource","ln":"pieChartTwoPercSource","cl":"pieChartTwoPercSource","sr":1,"ks":{"o":{"a":0,"k":100,"ix":11},"r":{"a":0,"k":0,"ix":10},"p":{"a":0,"k":[-125.043,8.25,0],"ix":2,"l":2},"a":{"a":0,"k":[0,-50.4,0],"ix":1,"l":2},"s":{"a":0,"k":[100,100,100],"ix":6,"l":2}},"ao":0,"t":{"d":{"k":[{"s":{"s":144,"f":"Scada-Bold","t":"20","ca":0,"j":2,"tr":0,"lh":172.8,"ls":0,"fc":[1,1,1]},"t":0}]},"p":{},"m":{"g":1,"a":{"a":0,"k":[0,0],"ix":2}},"a":[]},"ip":0,"op":125,"st":0,"bm":0},{"ddd":0,"ind":2,"ty":5,"nm":".pieChartTwoPercText #pieChartTwoPercText","ln":"pieChartTwoPercText","cl":"pieChartTwoPercText","sr":1,"ks":{"o":{"a":1,"k":[{"i":{"x":[0.667],"y":[1]},"o":{"x":[0.333],"y":[0]},"t":6,"s":[0]},{"i":{"x":[0.833],"y":[1]},"o":{"x":[0.333],"y":[0]},"t":14,"s":[100]},{"i":{"x":[0.833],"y":[1]},"o":{"x":[0.167],"y":[0]},"t":111,"s":[100]},{"t":123,"s":[0]}],"ix":11},"r":{"a":0,"k":0,"ix":10},"p":{"a":0,"k":[220,361.6,0],"ix":2,"l":2,"x":"var $bm_rt;\nvar x, y;\nx = thisComp.layer('pieChartTwo').transform.position[0];\ny = thisComp.layer('pieChartTwo').transform.position[1];\n$bm_rt = [\n    x,\n    y\n];"},"a":{"a":0,"k":[0,-50.4,0],"ix":1,"l":2},"s":{"a":0,"k":[100,100,100],"ix":6,"l":2,"x":"var $bm_rt;\nvar targetSize, realSize, x, x, y;\ntargetSize = 300;\nrealSize = thisLayer.sourceRectAtTime().width;\nif (realSize > targetSize) {\n    x = $bm_mul($bm_div(targetSize, realSize), 100);\n} else {\n    x = 100;\n}\ny = value[1];\n$bm_rt = [\n    x,\n    y\n];"}},"ao":0,"ef":[{"ty":5,"nm":"Slider Control","np":3,"mn":"ADBE Slider Control","ix":1,"en":1,"ef":[{"ty":0,"nm":"Slider","mn":"ADBE Slider Control-0001","ix":1,"v":{"a":1,"k":[{"i":{"x":[0.667],"y":[1]},"o":{"x":[0.333],"y":[0]},"t":9,"s":[0]},{"t":45,"s":[25]}],"ix":1,"x":"var $bm_rt;\nvar t1, t2;\nt1 = key(1).time;\nt2 = key(2).time;\nvalue = Math.round(thisComp.layer('.pieChartTwoPercSource #pieChartTwoPercSource').text.sourceText);\n$bm_rt = ease(time, t1, t2, 0, value);"}}]}],"t":{"d":{"k":[{"s":{"s":144,"f":"Scada-Bold","t":"","ca":0,"j":2,"tr":0,"lh":172.8,"ls":0,"fc":[1,1,1]},"t":0}],"x":"var $bm_rt;\n$bm_rt = $bm_sum(Math.round(effect('Slider Control')('Slider')), '%');"},"p":{},"m":{"g":1,"a":{"a":0,"k":[0,0],"ix":2}},"a":[]},"ip":6,"op":125,"st":0,"bm":0},{"ddd":0,"ind":3,"ty":4,"nm":"pieChartTwo","sr":1,"ks":{"o":{"a":0,"k":100,"ix":11},"r":{"a":0,"k":0,"ix":10},"p":{"a":0,"k":[960,544,0],"ix":2,"l":2},"a":{"a":0,"k":[0,0,0],"ix":1,"l":2},"s":{"a":0,"k":[100,100,100],"ix":6,"l":2}},"ao":0,"shapes":[{"ty":"gr","it":[{"ty":"gr","it":[{"d":1,"ty":"el","s":{"a":0,"k":[418,418],"ix":2},"p":{"a":0,"k":[0,0],"ix":3},"nm":"Ellipse Path 1","mn":"ADBE Vector Shape - Ellipse","hd":false},{"ty":"st","c":{"a":0,"k":[0.784313976765,0,0.49827003479,1],"ix":3,"x":"var $bm_rt;\nvar txt, barOneColor;\nfunction hexToColor(theHex) {\n    var r = theHex >> 16;\n    var g = (theHex & 65280) >> 8;\n    var b = theHex & 255;\n    return [\n        r / 255,\n        g / 255,\n        b / 255,\n        1\n    ];\n}\ntxt = comp('pieChartMainStitch').layer('.barColors #barColors').text.sourceText.split(',')[1];\nbarOneColor = parseInt(txt, 16);\n$bm_rt = hexToColor(barOneColor);"},"o":{"a":0,"k":100,"ix":4},"w":{"a":0,"k":85,"ix":5},"lc":1,"lj":1,"ml":4,"bm":0,"nm":"Stroke 1","mn":"ADBE Vector Graphic - Stroke","hd":false},{"ty":"tr","p":{"a":0,"k":[0,0],"ix":2},"a":{"a":0,"k":[0,0],"ix":1},"s":{"a":0,"k":[100,100],"ix":3},"r":{"a":0,"k":0,"ix":6},"o":{"a":0,"k":100,"ix":7},"sk":{"a":0,"k":0,"ix":4},"sa":{"a":0,"k":0,"ix":5},"nm":"Transform"}],"nm":"pieTwoM","np":3,"cix":2,"bm":0,"ix":1,"mn":"ADBE Vector Group","hd":false},{"ty":"tm","s":{"a":0,"k":0,"ix":1},"e":{"a":1,"k":[{"i":{"x":[0],"y":[1]},"o":{"x":[0.023],"y":[0]},"t":10,"s":[0]},{"i":{"x":[0.667],"y":[1]},"o":{"x":[0.333],"y":[0]},"t":35,"s":[63]},{"i":{"x":[0.667],"y":[1]},"o":{"x":[0.333],"y":[0]},"t":111,"s":[63]},{"t":123,"s":[63]}],"ix":2,"x":"var $bm_rt;\nvar t1, t2, t3, t4;\nt1 = key(1).time;\nt2 = key(2).time;\nt3 = key(3).time;\nt4 = key(4).time;\n$bm_rt = value = Math.round(thisComp.layer('.pieChartTwoPercSource #pieChartTwoPercSource').text.sourceText.split('%')[0]);\nif (time < t2) {\n    $bm_rt = ease(time, t1, t2, 0, value);\n} else {\n    $bm_rt = ease(time, t3, t4, value, 0);\n}"},"o":{"a":0,"k":0,"ix":3},"m":1,"ix":2,"nm":"trimPathsPieTwoM","mn":"ADBE Vector Filter - Trim","hd":false},{"ty":"tr","p":{"a":0,"k":[0,0],"ix":2},"a":{"a":0,"k":[0,0],"ix":1},"s":{"a":0,"k":[100,100],"ix":3},"r":{"a":0,"k":0,"ix":6},"o":{"a":0,"k":100,"ix":7},"sk":{"a":0,"k":0,"ix":4},"sa":{"a":0,"k":0,"ix":5},"nm":"Transform"}],"nm":"pieTwoMain","np":2,"cix":2,"bm":0,"ix":1,"mn":"ADBE Vector Group","hd":false},{"ty":"gr","it":[{"ty":"gr","it":[{"d":1,"ty":"el","s":{"a":0,"k":[452,452],"ix":2,"x":"var $bm_rt;\n$bm_rt = content('pieTwoMain').content('pieTwoM').content('Ellipse Path 1').size;"},"p":{"a":0,"k":[0,0],"ix":3},"nm":"Ellipse Path 1","mn":"ADBE Vector Shape - Ellipse","hd":false},{"ty":"st","c":{"a":0,"k":[0,0.784313964844,0.166090004117,1],"ix":3,"x":"var $bm_rt;\n$bm_rt = content('pieTwoMain').content('pieTwoM').content('Stroke 1').color;"},"o":{"a":0,"k":40,"ix":4},"w":{"a":0,"k":60,"ix":5},"lc":1,"lj":1,"ml":4,"bm":0,"nm":"Stroke 1","mn":"ADBE Vector Graphic - Stroke","hd":false},{"ty":"tr","p":{"a":0,"k":[0,0],"ix":2},"a":{"a":0,"k":[0,0],"ix":1},"s":{"a":0,"k":[100,100],"ix":3},"r":{"a":0,"k":0,"ix":6},"o":{"a":0,"k":100,"ix":7},"sk":{"a":0,"k":0,"ix":4},"sa":{"a":0,"k":0,"ix":5},"nm":"Transform"}],"nm":"pieTwoUnder","np":3,"cix":2,"bm":0,"ix":1,"mn":"ADBE Vector Group","hd":false},{"ty":"tm","s":{"a":0,"k":0,"ix":1},"e":{"a":1,"k":[{"i":{"x":[0],"y":[1]},"o":{"x":[0.033],"y":[0]},"t":0,"s":[0]},{"i":{"x":[0.833],"y":[1]},"o":{"x":[0.167],"y":[0]},"t":20,"s":[100]},{"i":{"x":[0.833],"y":[1]},"o":{"x":[0.167],"y":[0]},"t":107,"s":[100]},{"t":123,"s":[0]}],"ix":2},"o":{"a":0,"k":0,"ix":3},"m":1,"ix":2,"nm":"trimPathsPieTwoUnder","mn":"ADBE Vector Filter - Trim","hd":false},{"ty":"tr","p":{"a":0,"k":[0,0],"ix":2},"a":{"a":0,"k":[0,0],"ix":1},"s":{"a":0,"k":[100,100],"ix":3},"r":{"a":0,"k":0,"ix":6},"o":{"a":0,"k":100,"ix":7},"sk":{"a":0,"k":0,"ix":4},"sa":{"a":0,"k":0,"ix":5},"nm":"Transform"}],"nm":"pieTwoUnderlay","np":2,"cix":2,"bm":0,"ix":2,"mn":"ADBE Vector Group","hd":false}],"ip":0,"op":125,"st":0,"bm":0},{"ddd":0,"ind":4,"ty":4,"nm":"textTwoMatte","td":1,"sr":1,"ks":{"o":{"a":0,"k":100,"ix":11},"r":{"a":0,"k":0,"ix":10},"p":{"a":0,"k":[960,540,0],"ix":2,"l":2},"a":{"a":0,"k":[0,0,0],"ix":1,"l":2},"s":{"a":0,"k":[100,100,100],"ix":6,"l":2}},"ao":0,"shapes":[{"ty":"gr","it":[{"ty":"rc","d":1,"s":{"a":0,"k":[1920,160],"ix":2},"p":{"a":0,"k":[0,0],"ix":3},"r":{"a":0,"k":0,"ix":4},"nm":"Rectangle Path 1","mn":"ADBE Vector Shape - Rect","hd":false},{"ty":"fl","c":{"a":0,"k":[0.059238998563,0.839215985466,0.151001006482,1],"ix":4},"o":{"a":0,"k":100,"ix":5},"r":1,"bm":0,"nm":"Fill 1","mn":"ADBE Vector Graphic - Fill","hd":false},{"ty":"tr","p":{"a":0,"k":[0,363],"ix":2},"a":{"a":0,"k":[0,0],"ix":1},"s":{"a":0,"k":[100,100],"ix":3},"r":{"a":0,"k":0,"ix":6},"o":{"a":0,"k":100,"ix":7},"sk":{"a":0,"k":0,"ix":4},"sa":{"a":0,"k":0,"ix":5},"nm":"Transform"}],"nm":"Rectangle 1","np":3,"cix":2,"bm":0,"ix":1,"mn":"ADBE Vector Group","hd":false}],"ip":0,"op":125,"st":0,"bm":0},{"ddd":0,"ind":5,"ty":5,"nm":".pieChartTwoText #pieChartTwoText","ln":"pieChartTwoText","cl":"pieChartTwoText","tt":1,"sr":1,"ks":{"o":{"a":0,"k":100,"ix":11},"r":{"a":0,"k":0,"ix":10},"p":{"a":1,"k":[{"i":{"x":0,"y":1},"o":{"x":0.012,"y":0},"t":10,"s":[960,730,0],"to":[0,29.167,0],"ti":[0,-29.167,0]},{"i":{"x":0,"y":0},"o":{"x":0.333,"y":0.333},"t":35,"s":[960,905,0],"to":[0,0,0],"ti":[0,0,0]},{"i":{"x":0.882,"y":1},"o":{"x":1,"y":0},"t":111,"s":[960,905,0],"to":[0,-29.167,0],"ti":[0,29.167,0]},{"t":123,"s":[960,730,0]}],"ix":2,"l":2},"a":{"a":0,"k":[1.575,24.325,0],"ix":1,"l":2,"x":"var $bm_rt;\nvar x, y;\nx = value[0];\ny = $bm_sum(thisLayer.sourceRectAtTime().top, $bm_div(thisLayer.sourceRectAtTime().height, 2)), $bm_rt = [\n    x,\n    y\n];"},"s":{"a":0,"k":[100,100,100],"ix":6,"l":2}},"ao":0,"t":{"d":{"k":[{"s":{"s":50,"f":"Scada-Bold","t":"Pie chart two text\rgoes here","ca":0,"j":2,"tr":0,"lh":60.0000038146973,"ls":0,"fc":[1,1,1]},"t":0}]},"p":{},"m":{"g":1,"a":{"a":0,"k":[0,0],"ix":2}},"a":[]},"ip":0,"op":125,"st":0,"bm":0},{"ddd":0,"ind":6,"ty":5,"nm":".arrowTwoDir #arrowTwoDir","ln":"arrowTwoDir","cl":"arrowTwoDir","sr":1,"ks":{"o":{"a":0,"k":100,"ix":11},"r":{"a":0,"k":0,"ix":10},"p":{"a":0,"k":[-192,360,0],"ix":2,"l":2},"a":{"a":0,"k":[0,0,0],"ix":1,"l":2},"s":{"a":0,"k":[100,100,100],"ix":6,"l":2}},"ao":0,"t":{"d":{"k":[{"s":{"s":60,"f":"Scada-Bold","t":"up","ca":0,"j":2,"tr":0,"lh":72,"ls":0,"fc":[1,1,1]},"t":0}]},"p":{},"m":{"g":1,"a":{"a":0,"k":[0,0],"ix":2}},"a":[]},"ip":0,"op":125,"st":0,"bm":0},{"ddd":0,"ind":7,"ty":4,"nm":"arrowTwo","sr":1,"ks":{"o":{"a":1,"k":[{"i":{"x":[0.667],"y":[1]},"o":{"x":[0.333],"y":[0]},"t":32,"s":[0]},{"i":{"x":[0.667],"y":[1]},"o":{"x":[0.333],"y":[0]},"t":44,"s":[100]},{"i":{"x":[0.833],"y":[1]},"o":{"x":[0.333],"y":[0]},"t":111,"s":[100]},{"t":118,"s":[0]}],"ix":11},"r":{"a":0,"k":0,"ix":10},"p":{"a":0,"k":[960,528,0],"ix":2,"l":2},"a":{"a":0,"k":[0,0,0],"ix":1,"l":2},"s":{"a":0,"k":[100,100,100],"ix":6,"l":2}},"ao":0,"shapes":[{"ty":"gr","it":[{"ind":0,"ty":"sh","ix":1,"ks":{"a":0,"k":{"i":[[0,0],[0,0],[0,0]],"o":[[0,0],[0,0],[0,0]],"v":[[39.75,150],[-40,150],[0,100]],"c":true},"ix":2},"nm":"Path 1","mn":"ADBE Vector Shape - Group","hd":false},{"ty":"fl","c":{"a":0,"k":[0.059238751729,0.839215686275,0.151000826967,1],"ix":4},"o":{"a":0,"k":100,"ix":5},"r":1,"bm":0,"nm":"Fill 1","mn":"ADBE Vector Graphic - Fill","hd":false},{"ty":"tr","p":{"a":1,"k":[{"i":{"x":0.021,"y":1},"o":{"x":0.03,"y":0},"t":29,"s":[0,78],"to":[0,-13],"ti":[0,13]},{"i":{"x":0.021,"y":0.021},"o":{"x":0.333,"y":0.333},"t":44,"s":[0,0],"to":[0,0],"ti":[0,0]},{"i":{"x":0.833,"y":1},"o":{"x":0.167,"y":0},"t":111,"s":[0,0],"to":[0,13],"ti":[0,-13]},{"t":123,"s":[0,78]}],"ix":2},"a":{"a":0,"k":[0,0],"ix":1},"s":{"a":0,"k":[100,100],"ix":3},"r":{"a":0,"k":0,"ix":6},"o":{"a":0,"k":100,"ix":7,"x":"var $bm_rt;\nif (thisComp.layer('.arrowTwoDir #arrowTwoDir').text.sourceText == 'up') {\n    $bm_rt = 100;\n} else {\n    $bm_rt = 0;\n}"},"sk":{"a":0,"k":0,"ix":4},"sa":{"a":0,"k":0,"ix":5},"nm":"Transform"}],"nm":"upTwo","np":3,"cix":2,"bm":0,"ix":1,"mn":"ADBE Vector Group","hd":false},{"ty":"gr","it":[{"ind":0,"ty":"sh","ix":1,"ks":{"a":0,"k":{"i":[[0,0],[0,0],[0,0]],"o":[[0,0],[0,0],[0,0]],"v":[[39.875,100],[-40,100],[0,149.5]],"c":true},"ix":2},"nm":"Path 1","mn":"ADBE Vector Shape - Group","hd":false},{"ty":"fl","c":{"a":0,"k":[0.862745098039,0.282352941176,0.282352941176,1],"ix":4},"o":{"a":0,"k":100,"ix":5},"r":1,"bm":0,"nm":"Fill 1","mn":"ADBE Vector Graphic - Fill","hd":false},{"ty":"tr","p":{"a":1,"k":[{"i":{"x":0,"y":1},"o":{"x":0.044,"y":0},"t":29,"s":[0,-80],"to":[0,13.333],"ti":[0,-13.333]},{"i":{"x":0,"y":0},"o":{"x":0.333,"y":0.333},"t":44,"s":[0,0],"to":[0,0],"ti":[0,0]},{"i":{"x":0.833,"y":1},"o":{"x":0.333,"y":0},"t":111,"s":[0,0],"to":[0,-13.333],"ti":[0,13.333]},{"t":123,"s":[0,-80]}],"ix":2},"a":{"a":0,"k":[0,0],"ix":1},"s":{"a":0,"k":[100,100],"ix":3},"r":{"a":0,"k":0,"ix":6},"o":{"a":0,"k":100,"ix":7,"x":"var $bm_rt;\nif (thisComp.layer('.arrowTwoDir #arrowTwoDir').text.sourceText == 'down') {\n    $bm_rt = 100;\n} else {\n    $bm_rt = 0;\n}"},"sk":{"a":0,"k":0,"ix":4},"sa":{"a":0,"k":0,"ix":5},"nm":"Transform"}],"nm":"downTwo","np":3,"cix":2,"bm":0,"ix":2,"mn":"ADBE Vector Group","hd":false}],"ip":0,"op":125,"st":0,"bm":0}]},{"id":"comp_2","nm":"pieChartThree","layers":[{"ddd":0,"ind":1,"ty":5,"nm":".pieChartThreePercSource #pieChartThreePercSource","ln":"pieChartThreePercSource","cl":"pieChartThreePercSource","sr":1,"ks":{"o":{"a":0,"k":100,"ix":11},"r":{"a":0,"k":0,"ix":10},"p":{"a":0,"k":[-201.043,126.16,0],"ix":2,"l":2},"a":{"a":0,"k":[0,-50.4,0],"ix":1,"l":2},"s":{"a":0,"k":[100,100,100],"ix":6,"l":2}},"ao":0,"t":{"d":{"k":[{"s":{"s":144,"f":"Scada-Bold","t":"90","ca":0,"j":2,"tr":0,"lh":172.8,"ls":0,"fc":[1,1,1]},"t":0}]},"p":{},"m":{"g":1,"a":{"a":0,"k":[0,0],"ix":2}},"a":[]},"ip":0,"op":125,"st":0,"bm":0},{"ddd":0,"ind":2,"ty":5,"nm":".pieChartThreePercText #pieChartThreePercText","ln":"pieChartThreePercText","cl":"pieChartThreePercText","sr":1,"ks":{"o":{"a":1,"k":[{"i":{"x":[0.667],"y":[1]},"o":{"x":[0.333],"y":[0]},"t":6,"s":[0]},{"i":{"x":[0.833],"y":[1]},"o":{"x":[0.333],"y":[0]},"t":14,"s":[100]},{"i":{"x":[0.833],"y":[1]},"o":{"x":[0.167],"y":[0]},"t":111,"s":[100]},{"t":123,"s":[0]}],"ix":11},"r":{"a":0,"k":0,"ix":10},"p":{"a":0,"k":[220,361.6,0],"ix":2,"l":2,"x":"var $bm_rt;\nvar x, y;\nx = thisComp.layer('pieChartThree').transform.position[0];\ny = thisComp.layer('pieChartThree').transform.position[1];\n$bm_rt = [\n    x,\n    y\n];"},"a":{"a":0,"k":[0,-50.4,0],"ix":1,"l":2},"s":{"a":0,"k":[100,100,100],"ix":6,"l":2,"x":"var $bm_rt;\nvar targetSize, realSize, x, x, y;\ntargetSize = 300;\nrealSize = thisLayer.sourceRectAtTime().width;\nif (realSize > targetSize) {\n    x = $bm_mul($bm_div(targetSize, realSize), 100);\n} else {\n    x = 100;\n}\ny = value[1];\n$bm_rt = [\n    x,\n    y\n];"}},"ao":0,"ef":[{"ty":5,"nm":"Slider Control","np":3,"mn":"ADBE Slider Control","ix":1,"en":1,"ef":[{"ty":0,"nm":"Slider","mn":"ADBE Slider Control-0001","ix":1,"v":{"a":1,"k":[{"i":{"x":[0.667],"y":[1]},"o":{"x":[0.333],"y":[0]},"t":9,"s":[0]},{"t":45,"s":[25]}],"ix":1,"x":"var $bm_rt;\nvar t1, t2;\nt1 = key(1).time;\nt2 = key(2).time;\nvalue = Math.round(thisComp.layer('.pieChartThreePercSource #pieChartThreePercSource').text.sourceText);\n$bm_rt = ease(time, t1, t2, 0, value);"}}]}],"t":{"d":{"k":[{"s":{"s":144,"f":"Scada-Bold","t":"","ca":0,"j":2,"tr":0,"lh":172.8,"ls":0,"fc":[1,1,1]},"t":0}],"x":"var $bm_rt;\n$bm_rt = $bm_sum(Math.round(effect('Slider Control')('Slider')), '%');"},"p":{},"m":{"g":1,"a":{"a":0,"k":[0,0],"ix":2}},"a":[]},"ip":6,"op":125,"st":0,"bm":0},{"ddd":0,"ind":3,"ty":4,"nm":"pieChartThree","sr":1,"ks":{"o":{"a":0,"k":100,"ix":11},"r":{"a":0,"k":0,"ix":10},"p":{"a":0,"k":[960,544,0],"ix":2,"l":2},"a":{"a":0,"k":[0,0,0],"ix":1,"l":2},"s":{"a":0,"k":[100,100,100],"ix":6,"l":2}},"ao":0,"shapes":[{"ty":"gr","it":[{"ty":"gr","it":[{"d":1,"ty":"el","s":{"a":0,"k":[418,418],"ix":2},"p":{"a":0,"k":[0,0],"ix":3},"nm":"Ellipse Path 1","mn":"ADBE Vector Shape - Ellipse","hd":false},{"ty":"st","c":{"a":0,"k":[0,0.221453174949,0.784313976765,1],"ix":3,"x":"var $bm_rt;\nvar txt, barOneColor;\nfunction hexToColor(theHex) {\n    var r = theHex >> 16;\n    var g = (theHex & 65280) >> 8;\n    var b = theHex & 255;\n    return [\n        r / 255,\n        g / 255,\n        b / 255,\n        1\n    ];\n}\ntxt = comp('pieChartMainStitch').layer('.barColors #barColors').text.sourceText.split(',')[2];\nbarOneColor = parseInt(txt, 16);\n$bm_rt = hexToColor(barOneColor);"},"o":{"a":0,"k":100,"ix":4},"w":{"a":0,"k":85,"ix":5},"lc":1,"lj":1,"ml":4,"bm":0,"nm":"Stroke 1","mn":"ADBE Vector Graphic - Stroke","hd":false},{"ty":"tr","p":{"a":0,"k":[0,0],"ix":2},"a":{"a":0,"k":[0,0],"ix":1},"s":{"a":0,"k":[100,100],"ix":3},"r":{"a":0,"k":0,"ix":6},"o":{"a":0,"k":100,"ix":7},"sk":{"a":0,"k":0,"ix":4},"sa":{"a":0,"k":0,"ix":5},"nm":"Transform"}],"nm":"pieTwoM","np":3,"cix":2,"bm":0,"ix":1,"mn":"ADBE Vector Group","hd":false},{"ty":"tm","s":{"a":0,"k":0,"ix":1},"e":{"a":1,"k":[{"i":{"x":[0],"y":[1]},"o":{"x":[0.023],"y":[0]},"t":10,"s":[0]},{"i":{"x":[0.667],"y":[1]},"o":{"x":[0.333],"y":[0]},"t":35,"s":[63]},{"i":{"x":[0.667],"y":[1]},"o":{"x":[0.333],"y":[0]},"t":111,"s":[63]},{"t":123,"s":[63]}],"ix":2,"x":"var $bm_rt;\nvar t1, t2, t3, t4;\nt1 = key(1).time;\nt2 = key(2).time;\nt3 = key(3).time;\nt4 = key(4).time;\n$bm_rt = value = Math.round(thisComp.layer('.pieChartThreePercSource #pieChartThreePercSource').text.sourceText.split('%')[0]);\nif (time < t2) {\n    $bm_rt = ease(time, t1, t2, 0, value);\n} else {\n    $bm_rt = ease(time, t3, t4, value, 0);\n}"},"o":{"a":0,"k":0,"ix":3},"m":1,"ix":2,"nm":"trimPathsPieTwoM","mn":"ADBE Vector Filter - Trim","hd":false},{"ty":"tr","p":{"a":0,"k":[0,0],"ix":2},"a":{"a":0,"k":[0,0],"ix":1},"s":{"a":0,"k":[100,100],"ix":3},"r":{"a":0,"k":0,"ix":6},"o":{"a":0,"k":100,"ix":7},"sk":{"a":0,"k":0,"ix":4},"sa":{"a":0,"k":0,"ix":5},"nm":"Transform"}],"nm":"pieTwoMain","np":2,"cix":2,"bm":0,"ix":1,"mn":"ADBE Vector Group","hd":false},{"ty":"gr","it":[{"ty":"gr","it":[{"d":1,"ty":"el","s":{"a":0,"k":[452,452],"ix":2,"x":"var $bm_rt;\n$bm_rt = content('pieTwoMain').content('pieTwoM').content('Ellipse Path 1').size;"},"p":{"a":0,"k":[0,0],"ix":3},"nm":"Ellipse Path 1","mn":"ADBE Vector Shape - Ellipse","hd":false},{"ty":"st","c":{"a":0,"k":[0,0.784313964844,0.166090004117,1],"ix":3,"x":"var $bm_rt;\n$bm_rt = content('pieTwoMain').content('pieTwoM').content('Stroke 1').color;"},"o":{"a":0,"k":40,"ix":4},"w":{"a":0,"k":60,"ix":5},"lc":1,"lj":1,"ml":4,"bm":0,"nm":"Stroke 1","mn":"ADBE Vector Graphic - Stroke","hd":false},{"ty":"tr","p":{"a":0,"k":[0,0],"ix":2},"a":{"a":0,"k":[0,0],"ix":1},"s":{"a":0,"k":[100,100],"ix":3},"r":{"a":0,"k":0,"ix":6},"o":{"a":0,"k":100,"ix":7},"sk":{"a":0,"k":0,"ix":4},"sa":{"a":0,"k":0,"ix":5},"nm":"Transform"}],"nm":"pieTwoUnder","np":3,"cix":2,"bm":0,"ix":1,"mn":"ADBE Vector Group","hd":false},{"ty":"tm","s":{"a":0,"k":0,"ix":1},"e":{"a":1,"k":[{"i":{"x":[0],"y":[1]},"o":{"x":[0.033],"y":[0]},"t":0,"s":[0]},{"i":{"x":[0.833],"y":[1]},"o":{"x":[0.167],"y":[0]},"t":20,"s":[100]},{"i":{"x":[0.833],"y":[1]},"o":{"x":[0.167],"y":[0]},"t":107,"s":[100]},{"t":123,"s":[0]}],"ix":2},"o":{"a":0,"k":0,"ix":3},"m":1,"ix":2,"nm":"trimPathsPieTwoUnder","mn":"ADBE Vector Filter - Trim","hd":false},{"ty":"tr","p":{"a":0,"k":[0,0],"ix":2},"a":{"a":0,"k":[0,0],"ix":1},"s":{"a":0,"k":[100,100],"ix":3},"r":{"a":0,"k":0,"ix":6},"o":{"a":0,"k":100,"ix":7},"sk":{"a":0,"k":0,"ix":4},"sa":{"a":0,"k":0,"ix":5},"nm":"Transform"}],"nm":"pieTwoUnderlay","np":2,"cix":2,"bm":0,"ix":2,"mn":"ADBE Vector Group","hd":false}],"ip":0,"op":125,"st":0,"bm":0},{"ddd":0,"ind":4,"ty":4,"nm":"textThreeMatte","td":1,"sr":1,"ks":{"o":{"a":0,"k":100,"ix":11},"r":{"a":0,"k":0,"ix":10},"p":{"a":0,"k":[960,540,0],"ix":2,"l":2},"a":{"a":0,"k":[0,0,0],"ix":1,"l":2},"s":{"a":0,"k":[100,100,100],"ix":6,"l":2}},"ao":0,"shapes":[{"ty":"gr","it":[{"ty":"rc","d":1,"s":{"a":0,"k":[1920,160],"ix":2},"p":{"a":0,"k":[0,0],"ix":3},"r":{"a":0,"k":0,"ix":4},"nm":"Rectangle Path 1","mn":"ADBE Vector Shape - Rect","hd":false},{"ty":"fl","c":{"a":0,"k":[0.059238998563,0.839215985466,0.151001006482,1],"ix":4},"o":{"a":0,"k":100,"ix":5},"r":1,"bm":0,"nm":"Fill 1","mn":"ADBE Vector Graphic - Fill","hd":false},{"ty":"tr","p":{"a":0,"k":[0,363],"ix":2},"a":{"a":0,"k":[0,0],"ix":1},"s":{"a":0,"k":[100,100],"ix":3},"r":{"a":0,"k":0,"ix":6},"o":{"a":0,"k":100,"ix":7},"sk":{"a":0,"k":0,"ix":4},"sa":{"a":0,"k":0,"ix":5},"nm":"Transform"}],"nm":"Rectangle 1","np":3,"cix":2,"bm":0,"ix":1,"mn":"ADBE Vector Group","hd":false}],"ip":0,"op":125,"st":0,"bm":0},{"ddd":0,"ind":5,"ty":5,"nm":".pieChartThreeText #pieChartThreeText","ln":"pieChartThreeText","cl":"pieChartThreeText","tt":1,"sr":1,"ks":{"o":{"a":0,"k":100,"ix":11},"r":{"a":0,"k":0,"ix":10},"p":{"a":1,"k":[{"i":{"x":0,"y":1},"o":{"x":0.012,"y":0},"t":10,"s":[960,730,0],"to":[0,29.167,0],"ti":[0,-29.167,0]},{"i":{"x":0,"y":0},"o":{"x":0.333,"y":0.333},"t":35,"s":[960,905,0],"to":[0,0,0],"ti":[0,0,0]},{"i":{"x":0.882,"y":1},"o":{"x":1,"y":0},"t":111,"s":[960,905,0],"to":[0,-29.167,0],"ti":[0,29.167,0]},{"t":123,"s":[960,730,0]}],"ix":2,"l":2},"a":{"a":0,"k":[1.575,24.325,0],"ix":1,"l":2,"x":"var $bm_rt;\nvar x, y;\nx = value[0];\ny = $bm_sum(thisLayer.sourceRectAtTime().top, $bm_div(thisLayer.sourceRectAtTime().height, 2)), $bm_rt = [\n    x,\n    y\n];"},"s":{"a":0,"k":[100,100,100],"ix":6,"l":2}},"ao":0,"t":{"d":{"k":[{"s":{"s":50,"f":"Scada-Bold","t":"Pie chart three\rtext goes here","ca":0,"j":2,"tr":0,"lh":60.0000038146973,"ls":0,"fc":[1,1,1]},"t":0}]},"p":{},"m":{"g":1,"a":{"a":0,"k":[0,0],"ix":2}},"a":[]},"ip":0,"op":125,"st":0,"bm":0},{"ddd":0,"ind":6,"ty":5,"nm":".arrowThreeDir #arrowThreeDir","ln":"arrowThreeDir","cl":"arrowThreeDir","sr":1,"ks":{"o":{"a":0,"k":100,"ix":11},"r":{"a":0,"k":0,"ix":10},"p":{"a":0,"k":[-192,360,0],"ix":2,"l":2},"a":{"a":0,"k":[0,0,0],"ix":1,"l":2},"s":{"a":0,"k":[100,100,100],"ix":6,"l":2}},"ao":0,"t":{"d":{"k":[{"s":{"s":60,"f":"Scada-Bold","t":"up","ca":0,"j":2,"tr":0,"lh":72,"ls":0,"fc":[1,1,1]},"t":0}]},"p":{},"m":{"g":1,"a":{"a":0,"k":[0,0],"ix":2}},"a":[]},"ip":0,"op":125,"st":0,"bm":0},{"ddd":0,"ind":7,"ty":4,"nm":"arrowThree","sr":1,"ks":{"o":{"a":1,"k":[{"i":{"x":[0.667],"y":[1]},"o":{"x":[0.333],"y":[0]},"t":32,"s":[0]},{"i":{"x":[0.667],"y":[1]},"o":{"x":[0.333],"y":[0]},"t":44,"s":[100]},{"i":{"x":[0.833],"y":[1]},"o":{"x":[0.333],"y":[0]},"t":111,"s":[100]},{"t":118,"s":[0]}],"ix":11},"r":{"a":0,"k":0,"ix":10},"p":{"a":0,"k":[960,528,0],"ix":2,"l":2},"a":{"a":0,"k":[0,0,0],"ix":1,"l":2},"s":{"a":0,"k":[100,100,100],"ix":6,"l":2}},"ao":0,"shapes":[{"ty":"gr","it":[{"ind":0,"ty":"sh","ix":1,"ks":{"a":0,"k":{"i":[[0,0],[0,0],[0,0]],"o":[[0,0],[0,0],[0,0]],"v":[[39.75,150],[-40,150],[0,100]],"c":true},"ix":2},"nm":"Path 1","mn":"ADBE Vector Shape - Group","hd":false},{"ty":"fl","c":{"a":0,"k":[0.059238751729,0.839215686275,0.151000826967,1],"ix":4},"o":{"a":0,"k":100,"ix":5},"r":1,"bm":0,"nm":"Fill 1","mn":"ADBE Vector Graphic - Fill","hd":false},{"ty":"tr","p":{"a":1,"k":[{"i":{"x":0.021,"y":1},"o":{"x":0.03,"y":0},"t":29,"s":[0,78],"to":[0,-13],"ti":[0,13]},{"i":{"x":0.021,"y":0.021},"o":{"x":0.333,"y":0.333},"t":44,"s":[0,0],"to":[0,0],"ti":[0,0]},{"i":{"x":0.833,"y":1},"o":{"x":0.167,"y":0},"t":111,"s":[0,0],"to":[0,13],"ti":[0,-13]},{"t":123,"s":[0,78]}],"ix":2},"a":{"a":0,"k":[0,0],"ix":1},"s":{"a":0,"k":[100,100],"ix":3},"r":{"a":0,"k":0,"ix":6},"o":{"a":0,"k":100,"ix":7,"x":"var $bm_rt;\nif (thisComp.layer('.arrowThreeDir #arrowThreeDir').text.sourceText == 'up') {\n    $bm_rt = 100;\n} else {\n    $bm_rt = 0;\n}"},"sk":{"a":0,"k":0,"ix":4},"sa":{"a":0,"k":0,"ix":5},"nm":"Transform"}],"nm":"upTwo","np":3,"cix":2,"bm":0,"ix":1,"mn":"ADBE Vector Group","hd":false},{"ty":"gr","it":[{"ind":0,"ty":"sh","ix":1,"ks":{"a":0,"k":{"i":[[0,0],[0,0],[0,0]],"o":[[0,0],[0,0],[0,0]],"v":[[39.875,100],[-40,100],[0,149.5]],"c":true},"ix":2},"nm":"Path 1","mn":"ADBE Vector Shape - Group","hd":false},{"ty":"fl","c":{"a":0,"k":[0.862745098039,0.282352941176,0.282352941176,1],"ix":4},"o":{"a":0,"k":100,"ix":5},"r":1,"bm":0,"nm":"Fill 1","mn":"ADBE Vector Graphic - Fill","hd":false},{"ty":"tr","p":{"a":1,"k":[{"i":{"x":0,"y":1},"o":{"x":0.044,"y":0},"t":29,"s":[0,-80],"to":[0,13.333],"ti":[0,-13.333]},{"i":{"x":0,"y":0},"o":{"x":0.333,"y":0.333},"t":44,"s":[0,0],"to":[0,0],"ti":[0,0]},{"i":{"x":0.833,"y":1},"o":{"x":0.333,"y":0},"t":111,"s":[0,0],"to":[0,-13.333],"ti":[0,13.333]},{"t":123,"s":[0,-80]}],"ix":2},"a":{"a":0,"k":[0,0],"ix":1},"s":{"a":0,"k":[100,100],"ix":3},"r":{"a":0,"k":0,"ix":6},"o":{"a":0,"k":100,"ix":7,"x":"var $bm_rt;\nif (thisComp.layer('.arrowThreeDir #arrowThreeDir').text.sourceText == 'down') {\n    $bm_rt = 100;\n} else {\n    $bm_rt = 0;\n}"},"sk":{"a":0,"k":0,"ix":4},"sa":{"a":0,"k":0,"ix":5},"nm":"Transform"}],"nm":"downTwo","np":3,"cix":2,"bm":0,"ix":2,"mn":"ADBE Vector Group","hd":false}],"ip":0,"op":125,"st":0,"bm":0}]}],"fonts":{"list":[{"origin":0,"fPath":"","fClass":"","fFamily":"Scada","fWeight":"","fStyle":"Bold","fName":"Scada-Bold","ascent":69.9996948242188}]},"layers":[{"ddd":0,"ind":1,"ty":4,"nm":"titleMatte","td":1,"sr":1,"ks":{"o":{"a":0,"k":100,"ix":11},"r":{"a":0,"k":0,"ix":10},"p":{"a":0,"k":[0,0,0],"ix":2,"l":2},"a":{"a":0,"k":[0,0,0],"ix":1,"l":2},"s":{"a":0,"k":[100,100,100],"ix":6,"l":2}},"ao":0,"shapes":[{"ty":"gr","it":[{"ty":"rc","d":1,"s":{"a":0,"k":[462,150],"ix":2,"x":"var $bm_rt;\nvar x, y;\nx = thisComp.layer('.pieChartHeadline #pieChartHeadline').sourceRectAtTime().width;\ny = thisComp.layer('.pieChartHeadline #pieChartHeadline').sourceRectAtTime().height;\n$bm_rt = [\n    x,\n    y\n];"},"p":{"a":0,"k":[0,0],"ix":3},"r":{"a":0,"k":0,"ix":4},"nm":"Rectangle Path 1","mn":"ADBE Vector Shape - Rect","hd":false},{"ty":"fl","c":{"a":0,"k":[0.282353001015,0.282353001015,0.282353001015,1],"ix":4},"o":{"a":0,"k":100,"ix":5},"r":1,"bm":0,"nm":"Fill 1","mn":"ADBE Vector Graphic - Fill","hd":false},{"ty":"tr","p":{"a":0,"k":[0,0],"ix":2,"x":"var $bm_rt;\nvar x, y;\nx = thisComp.layer('.pieChartHeadline #pieChartHeadline').transform.position[0];\ny = thisComp.layer('.pieChartHeadline #pieChartHeadline').transform.position[1];\n$bm_rt = [\n    x,\n    y\n];"},"a":{"a":0,"k":[0,0],"ix":1},"s":{"a":1,"k":[{"i":{"x":[0,0.667],"y":[1,1]},"o":{"x":[0.058,0.333],"y":[0,0]},"t":0,"s":[0,120]},{"i":{"x":[0.833,0.833],"y":[1,1]},"o":{"x":[0.333,0.333],"y":[0,0]},"t":20,"s":[110,120]},{"i":{"x":[0.667,0.667],"y":[1,1]},"o":{"x":[0.167,0.167],"y":[0,0]},"t":111,"s":[110,120]},{"t":123,"s":[0,120]}],"ix":3},"r":{"a":0,"k":0,"ix":6},"o":{"a":0,"k":100,"ix":7},"sk":{"a":0,"k":0,"ix":4},"sa":{"a":0,"k":0,"ix":5},"nm":"Transform"}],"nm":"titleMatte","np":3,"cix":2,"bm":0,"ix":1,"mn":"ADBE Vector Group","hd":false}],"ip":0,"op":125,"st":0,"bm":0},{"ddd":0,"ind":2,"ty":5,"nm":".pieChartHeadline #pieChartHeadline","ln":"pieChartHeadline","cl":"pieChartHeadline","tt":1,"sr":1,"ks":{"o":{"a":0,"k":100,"ix":11},"r":{"a":0,"k":0,"ix":10},"p":{"a":0,"k":[960.562,178.325,0],"ix":2,"l":2},"a":{"a":0,"k":[1.575,24.325,0],"ix":1,"l":2,"x":"var $bm_rt;\nvar x, y;\nx = value[0];\ny = $bm_sum(thisLayer.sourceRectAtTime().top, $bm_div(thisLayer.sourceRectAtTime().height, 2)), $bm_rt = [\n    x,\n    y\n];"},"s":{"a":0,"k":[100,100,100],"ix":6,"l":2}},"ao":0,"t":{"d":{"k":[{"s":{"s":70,"f":"Scada-Bold","t":"Pie chart headline\rgoes here","ca":0,"j":2,"tr":0,"lh":84,"ls":0,"fc":[1,1,1]},"t":0}]},"p":{},"m":{"g":1,"a":{"a":0,"k":[0,0],"ix":2}},"a":[]},"ip":0,"op":125,"st":0,"bm":0},{"ddd":0,"ind":3,"ty":0,"nm":"pieChartOne","refId":"comp_0","sr":1,"ks":{"o":{"a":0,"k":100,"ix":11},"r":{"a":0,"k":0,"ix":10},"p":{"a":0,"k":[960,540,0],"ix":2,"l":2,"x":"var $bm_rt;\nvar percValOne, percValTwo, percValThree, x, x, x, y;\npercValOne = comp('pieChartOne').layer('.pieChartOnePercSource #pieChartOnePercSource').text.sourceText;\npercValTwo = comp('pieChartTwo').layer('.pieChartTwoPercSource #pieChartTwoPercSource').text.sourceText;\npercValThree = comp('pieChartThree').layer('.pieChartThreePercSource #pieChartThreePercSource').text.sourceText;\nif (percValThree != '0' && percValTwo != '0' && percValOne != '0')\n    x = 385;\nelse if (percValThree == '0' && percValTwo != '0')\n    x = 640;\nelse\n    x = value[0];\ny = value[1];\n$bm_rt = [\n    x,\n    y\n];"},"a":{"a":0,"k":[960,540,0],"ix":1,"l":2},"s":{"a":0,"k":[100,100,100],"ix":6,"l":2}},"ao":0,"w":1920,"h":1080,"ip":0,"op":125,"st":0,"bm":0},{"ddd":0,"ind":4,"ty":0,"nm":"pieChartTwo","refId":"comp_1","sr":1,"ks":{"o":{"a":0,"k":100,"ix":11},"r":{"a":0,"k":0,"ix":10},"p":{"a":0,"k":[1320,540,0],"ix":2,"l":2,"x":"var $bm_rt;\nvar percValOne, percValThree, percValTwo, x, x, x, y;\npercValOne = comp('pieChartOne').layer('.pieChartOnePercSource #pieChartOnePercSource').text.sourceText;\npercValThree = comp('pieChartThree').layer('.pieChartThreePercSource #pieChartThreePercSource').text.sourceText;\npercValTwo = comp('pieChartTwo').layer('.pieChartTwoPercSource #pieChartTwoPercSource').text.sourceText;\nif (percValTwo == '0' || percValOne == '0')\n    x = 2600;\nelse if (percValOne != '0' && percValThree != '0')\n    x = 960;\nelse\n    x = 1280;\ny = value[1];\n$bm_rt = [\n    x,\n    y\n];"},"a":{"a":0,"k":[960,540,0],"ix":1,"l":2},"s":{"a":0,"k":[100,100,100],"ix":6,"l":2}},"ao":0,"w":1920,"h":1080,"ip":0,"op":125,"st":0,"bm":0},{"ddd":0,"ind":5,"ty":0,"nm":"pieChartThree","refId":"comp_2","sr":1,"ks":{"o":{"a":0,"k":100,"ix":11},"r":{"a":0,"k":0,"ix":10},"p":{"a":0,"k":[960,540,0],"ix":2,"l":2,"x":"var $bm_rt;\nvar percValOne, percValTwo, percValThree, x, x, y;\npercValOne = comp('pieChartOne').layer('.pieChartOnePercSource #pieChartOnePercSource').text.sourceText;\npercValTwo = comp('pieChartTwo').layer('.pieChartTwoPercSource #pieChartTwoPercSource').text.sourceText;\npercValThree = comp('pieChartThree').layer('.pieChartThreePercSource #pieChartThreePercSource').text.sourceText;\nif (percValThree != '0' && percValOne != '0' && percValTwo != '0')\n    x = 1535;\nelse\n    x = 2600;\ny = value[1];\n$bm_rt = [\n    x,\n    y\n];"},"a":{"a":0,"k":[960,540,0],"ix":1,"l":2},"s":{"a":0,"k":[100,100,100],"ix":6,"l":2}},"ao":0,"w":1920,"h":1080,"ip":0,"op":125,"st":0,"bm":0},{"ddd":0,"ind":6,"ty":5,"nm":".barColors #barColors","ln":"barColors","cl":"barColors","sr":1,"ks":{"o":{"a":0,"k":0,"ix":11},"r":{"a":0,"k":0,"ix":10},"p":{"a":0,"k":[1540,76,0],"ix":2,"l":2},"a":{"a":0,"k":[0,0,0],"ix":1,"l":2},"s":{"a":0,"k":[100,100,100],"ix":6,"l":2}},"ao":0,"t":{"d":{"k":[{"s":{"s":45,"f":"Scada-Bold","t":"DC4848,8648DC,48DC8D","ca":0,"j":2,"tr":0,"lh":54,"ls":0,"fc":[1,1,1]},"t":0}]},"p":{},"m":{"g":1,"a":{"a":0,"k":[0,0],"ix":2}},"a":[]},"ip":0,"op":125,"st":0,"bm":0},{"ddd":0,"ind":7,"ty":1,"nm":"semiTransBkg","sr":1,"ks":{"o":{"a":1,"k":[{"i":{"x":[0.833],"y":[0.833]},"o":{"x":[0.167],"y":[0.167]},"t":0,"s":[0]},{"i":{"x":[0.833],"y":[0.833]},"o":{"x":[0.167],"y":[0.167]},"t":6,"s":[40]},{"i":{"x":[0.833],"y":[0.833]},"o":{"x":[0.167],"y":[0.167]},"t":117,"s":[40]},{"t":123,"s":[0]}],"ix":11},"r":{"a":0,"k":0,"ix":10},"p":{"a":0,"k":[960,540,0],"ix":2,"l":2},"a":{"a":0,"k":[960,540,0],"ix":1,"l":2},"s":{"a":0,"k":[100,100,100],"ix":6,"l":2}},"ao":0,"sw":1920,"sh":1080,"sc":"#000000","ip":0,"op":125,"st":0,"bm":0},{"ddd":0,"ind":8,"ty":3,"nm":"Null 4","sr":1,"ks":{"o":{"a":0,"k":0,"ix":11},"r":{"a":0,"k":0,"ix":10},"p":{"a":0,"k":[1200,618,0],"ix":2,"l":2},"a":{"a":0,"k":[0,50,0],"ix":1,"l":2},"s":{"a":0,"k":[240,100,100],"ix":6,"l":2}},"ao":0,"ip":0,"op":125,"st":0,"bm":0}],"markers":[{"tm":0,"cm":"{\r\n\"name\":\"animIn\"\r\n}","dr":47},{"tm":48,"cm":"{\r\n\"name\":\"animIdle\"\r\n}","dr":54},{"tm":105,"cm":"{\r\n\"name\":\"animOut\"\r\n}","dr":19}]}
+
+
+
+

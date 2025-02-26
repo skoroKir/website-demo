@@ -1,0 +1,59 @@
+/*
+ * Selection color
+ */
+::-moz-selection {
+  background-color: #E6027D;
+}
+
+::selection {
+  background-color: #E6027D;
+}
+
+/* background color */
+.btn-primary,
+.loading-mask,
+.section-title h3::after,
+.hexagon-item:hover .hex-item div::before,
+.hexagon-item:hover .hex-item div::after,
+.progress .bar,
+.contact-social li:hover span {
+  background-color: #E6027D;
+}
+
+.nicescroll-cursors {
+  background: #E6027D !important;
+}
+
+/* color */
+.primary,
+.link:hover,
+.filter .active,
+.works-item h4,
+.msg-success {
+  color: #E6027D;
+}
+
+/* border color */
+.testimonials .owl-dot.active {
+  border-color: #E6027D;
+}
+
+/* border top color */
+.site-wrapper,
+.contact-social li:hover span::after,
+.contact-social-hex:hover::before {
+  border-top-color: #E6027D;
+}
+
+/* border bottom color */
+.filter .active,
+.contact-social li:hover span::before,
+.contact-social-hex:hover::after {
+  border-bottom-color: #E6027D;
+}
+
+/* fill color */
+.service-hex:hover .fill,
+.service-hex:hover .st1 {
+  fill: #E6027D;
+}

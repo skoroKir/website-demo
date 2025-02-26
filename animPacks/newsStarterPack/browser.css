@@ -1,0 +1,251 @@
+body{
+  background-color: rgb(56, 56, 56);
+  color:rgb(238, 238, 238);
+  font-size: 22px;
+}
+
+.formWrapper {
+  margin: auto;
+  max-width: 400px;
+  padding: 15px;
+  transform-origin: 50% 0%; 
+}
+
+.formWrapperOBS{
+  margin: auto;
+  max-width: 400px;
+  padding: 15px;
+  transform-origin: 50% 0%;
+  transform: scale(0.3);
+}
+
+#templateSelect{
+  padding: 2px 6px;
+}
+
+.sessionID{
+  color:#ffffff;
+  transition: all .2s ease-in-out;
+  word-wrap:break-word;
+}
+
+.sessionIDWrapper a:visited{
+  color: rgb(252, 175, 10);
+}
+
+.sessionID:hover{
+  color: rgb(252, 175, 10);
+
+}
+
+.sessionIDWrapper{
+  transition: all .2s ease-in-out;
+}
+.sessionIDWrapper:hover{
+  transform: scale(1.05);
+  
+}
+
+.btn{
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* .previewBtn{
+  background-color: #6e6969;
+  display: block;
+  width: 95%;
+  margin: auto;
+  border: 1px solid #ffffff;
+  border-radius: 4px 4px 4px 4px;
+  color: white;
+  padding: 0px 12px;
+  transition: all .2s ease-in-out;
+
+} */
+
+/* .previewBtn:hover{
+  background-color: #337ab7;
+  opacity: 1;
+  color: white;
+  transform: scale(1.05);
+} */
+
+.help-block{
+  margin: -22px 10px -5px;
+  padding-top: 5px;
+  font-size: 12px;
+  line-height: 1.1;
+}
+
+.animInBtn{
+  background-color: rgb(0, 170, 133);
+  margin: 10px;
+  transition: all .2s ease-in-out;
+  color: rgb(255, 255, 255);
+}
+
+.animOutBtn{
+  background-color: rgb(247, 130, 21);
+  margin: 10px;
+  transition: all .2s ease-in-out;
+  color: rgb(255, 255, 255);
+
+}
+
+.animInBtn:hover{
+  background-color: rgb(0, 170, 133);
+  opacity: 1;
+  color: white;
+  transform: scale(1.1);
+}
+
+.animInBtn:focus{
+  background-color: rgb(0, 170, 133);
+  opacity: 1;
+  color: white;
+}
+
+.animOutBtn:hover{
+  background-color: rgb(247, 130, 21);
+  opacity: 1;
+  color: white;
+  transform: scale(1.1);
+}
+
+.animOutBtn:focus{
+  background-color: rgb(247, 130, 21);
+  opacity: 1;
+  color: white;
+}
+
+/* #NarrativeForm1{
+  color: #555
+} */
+
+textarea{
+  padding: 6px 6px;
+  resize: none;
+  color: #555;
+  border-radius: 4px;
+  line-height: 110%;
+  margin-bottom: -5px;
+  
+}
+
+.title{
+  font-size: 34px;
+  margin: auto;
+  margin-top: 40px;
+  /* text-align: center; */
+}
+
+.divider{
+  margin-top: 15px;
+  margin-bottom: 5px;
+}
+
+.draggable.tab{
+  line-height: 0.5;
+  margin-bottom: 16px;
+  margin-right: 12px;
+  border: 1px solid #ffffff;
+  color: #ffffff;
+  border-radius: 4px 4px 4px 4px;
+  padding: 10px 6px;
+  font-weight: normal;
+  font-size: 22px;
+  cursor: context-menu;
+}
+
+.draggable.tab:hover{
+  background-color: #337ab7;
+  opacity: 1;
+  color: white;
+  transform: scale(1.1);
+}
+
+.nav.nav-tabs{
+margin-top: -18px;
+
+}
+
+
+._jsonform-array-deleteitem, ._jsonform-array-addmore{
+  padding: 2px 6px;
+  /* margin-top: 6px;
+  margin-bottom: 6px; */
+  margin: 6px 6px 0px 0px;
+}
+
+.form-group{
+  margin-top: 2px;
+  margin-bottom: 4px;
+}
+
+.form-control{
+  height: 45px;
+  padding: 6px 6px;
+  font-size: 24px;
+}
+
+label{
+  font-weight: normal;
+}
+
+.autoAnimOut{
+  margin: -15px 10px 10px;
+}
+
+.colorPic{
+  width: 85px;
+  height: 35px;
+  font-size: 18px;
+  color: rgb(255, 255, 255);
+  border-radius: 4px;
+  margin-bottom: 10px;
+  
+}
+
+.checkbox{
+  margin-top: 20px;
+  margin-left: 5px; 
+}
+
+.checkbox input{
+  margin-top: 3px;
+  margin-left: -35px !important;
+  width: 25px; 
+  height: 25px;
+}
+
+.colors{
+  display: block;
+  margin-top: 10px;
+  /* text-align: center; */
+}
+
+.colorgroup2{
+  white-space: nowrap;
+}
+
+.optimiseOBSlabel{
+  font-size: small;
+}
+
+/* toggle button */
+.toggle-on{
+  font-size: 24px !important;
+  font-weight: normal;
+}
+
+.OBS-switch-button{
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: -40px;
+  transform: scale(0.8);
+  
+}
+
+
+

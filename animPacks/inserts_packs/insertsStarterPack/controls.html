@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title >GFXPRO.TV | insertions captions control</title>
+  
+  <link rel="stylesheet" type="text/css" href="../../formsFiles/deps/opt/bootstrap.css" />
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/spectrum/1.8.0/spectrum.min.css">
+  <link type="text/css" href="../../formsFiles/bootstrap-toggle-master/css/bootstrap-toggle.min.css" rel="stylesheet">
+  <link type="text/css" href= "../../formsFiles/controlsCSS/browser.css"  rel="stylesheet" id="styleSet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/x-icon" href="../../../assets/favicon.png">
+</head>
+<body>
+  
+  <div class="formWrapper" id="formWrapper">
+      
+    <h1 id="title" class="title">Captions control</h1>
+    <h4 class="title">Insertions starter pack</h4>
+   
+    <div class="OBS-switch-button" id="OBS-switch-button">
+      <input class="optimiseOBS" id ="optimiseOBS" type="checkbox" checked data-toggle="toggle" data-on="Browser" data-off="OBS" data-height="40" onchange="optimiseOBS()"></input>
+      <!-- onchange="optimiseOBS()" -->
+      <!-- <label class="optimiseOBSlabel" for=""><span class="optimiseOBSlabelSpan">Optimise for OBS</span></label> -->
+    </div>
+
+      <selectTemplate onchange="getForm()";></selectTemplate>
+
+      <hr class="divider">
+    <div id="formToShow">
+      <form id='activeForm' class='activeForm'></form>
+    </div>
+
+    <!-- Original uploader buttons -->
+      <hr class="divider">
+      <!-- <div class="uploads">
+        <button class="js-open-uploaderInsertQuote_1 btn btn-default">img 1</button>
+        <button class="js-open-uploaderInsertQuote_2 btn btn-default">Background img</button>
+
+      </div>
+      <hr class="divider"> -->
+
+      <!-- <preview title="for preview right click GfXPreview layer and select Interact">
+      </preview> -->
+      <buttons></buttons>
+      <autoAnimOut>
+      </autoAnimOut> 
+      <p><b>Your preview/OBS/Vmix link:</b></p>
+      <div class="sessionIDWrapper">
+        <a target="_blank" id="sessionID" class="sessionID"></a>
+      </div>
+
+      <div class="uploader">
+        <div class="uploader__inputs">
+          <div class="drop drop_1" ondrop="dropHandler(event);" ondragover="dragHandler(event);">drop file here</div>
+          <span>or</span>
+          <label for="picUploadBtn" class="picUploadBtn">Select Image</label>
+          <!-- <input id="files" style="visibility:hidden;" type="file"> -->
+          <input id="picUploadBtn" class="uploader__input" type="file" style="display:none" onchange="uploadHandler(event)">
+          <!-- <input class="picUploadBtn" type="file" onchange="uploadHandler(event)"> -->
+
+          <!-- <button class="btn btn-default uploader__close">close</button> -->
+        </div>
+        <div class="uploader__crop uploader__crop_guide">
+          <img src="" alt="">
+          <button class="hidden btn btn-default uploader__rotate_left">rotate left</button>
+          <button class="hidden btn btn-default uploader__rotate_right">rotate right</button>
+          <button class="hidden btn btn-default uploader__save">save</button>
+        </div>
+        <button class="btn btn-default uploader__close">close</button>
+
+      </div>
+
+      <hr class="divider">
+      <span class="controlFooter"><a href="/index.html" style="color:#E6027D">GFXPRO.TV</a> || <a href="/contact.html" style="color:#E6027D">Contact us</a></span>
+  </div>
+</body>
+
+<!-- SECTION file uploading -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/croppie/2.6.5/croppie.min.css" integrity="sha512-zxBiDORGDEAYDdKLuYU9X/JaJo/DPzE42UubfBw9yg8Qvb2YRRIQ8v4KsGHOx2H1/+sdSXyXxLXv5r7tHc9ygg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/croppie/2.6.5/croppie.min.js" integrity="sha512-Gs+PsXsGkmr+15rqObPJbenQ2wB3qYvTHuJO6YJzPe/dTLvhy0fmae2BcnaozxDo5iaF8emzmCZWbQ1XXiX2Ig==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<link rel="stylesheet" href="../../uploader/uploader.css">
+
+<!-- <script src="../../uploader/uploader.js"></script> -->
+
+<!-- /SECTION for file uploading -->
+
+<script type="text/javascript" src="../../formsFiles/formsJS/selectTemplateForm_InsertsStarterPack.js"></script>
+<script type="text/javascript" src="../../formsFiles/formsJS/allForms_InsertsStarterPack.js"></script>
+<script type="text/javascript" src="../../formsFiles/formsJS/buttons.js"></script>  
+<script type="text/javascript" src="../../formsFiles/deps/jquery.min.js"></script>
+<script type="text/javascript" src="../../formsFiles/deps/underscore.js"></script>
+<script type="text/javascript" src="../../formsFiles/deps/opt/spectrum.js"></script>
+<script type="text/javascript" src="../../formsFiles/deps/opt/jsv.js"></script>
+<script type="text/javascript" src="../../formsFiles/lib/jsonform.js"></script>
+<script type="text/javascript" src="../../formsFiles/deps/opt/jscolor.min.js"></script>
+<script type="text/javascript" src="../../formsFiles/bootstrap-toggle-master/js/bootstrap-toggle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/spectrum/1.8.0/spectrum.min.js"></script>
+<script src="https://cdn.socket.io/4.4.0/socket.io.min.js" integrity="sha384-1fOn6VtTq3PWwfsOrk45LnYcGosJwzMHv+Xh/Jx5303FVOXzEnw0EpLv30mtjmlj" crossorigin="anonymous"></script>
+
+
+<!-- uploader script is moved to the end -->
+<!-- <script src="../../uploader/uploader.js"></script> --> 
+
+
+<script type="text/javascript">
+
+version = 'InsertsStarterPack'
+
+function optimiseOBS() {
+  if($("#optimiseOBS")[0].checked === true){
+    document.getElementById("styleSet").setAttribute ("href", "../../formsFiles/controlsCSS/browser.css");
+    // $("#formWrapper")[0].classList.replace("formWrapperOBS", "formWrapper");
+  } else {
+    document.getElementById("styleSet").setAttribute ("href", "../../formsFiles/controlsCSS/obs.css");
+    // $("#formWrapper")[0].classList.replace("formWrapper", "formWrapperOBS");
+  }
+}
+
+var InsertsStartSessionID;
+
+InsertsStartSessionID = localStorage.getItem('InsertsStartSessionID');
+let socket;
+console.log("session", InsertsStartSessionID, InsertsStartSessionID == 'null')
+if (!InsertsStartSessionID || InsertsStartSessionID == 'null') {
+  InsertsStartSessionID = version+"_"+ Math.random().toString(16).slice(8)
+    console.log(InsertsStartSessionID)
+    //localStorage.setItem('sessionId', FootbStartSessionID)
+    localStorage.setItem('InsertsStartSessionID', InsertsStartSessionID)
+}
+  var linkID = "https://gfxpro.tv/animPacks/inserts_packs/insertsStarterPack/insertsStarterPack.html?session=" + InsertsStartSessionID;
+  window.onload = function printID() {
+  document.getElementById("sessionID").innerHTML = linkID;
+  document.getElementById("sessionID").setAttribute ("href", linkID);
+  }
+
+  // var colorOne = $('#color1')[0].value.toString().replace(/#/g,"")//doesn't work
+
+
+  //show Dropdown menu
+    $('selectTemplate').jsonForm(
+        selectTemplate
+    )
+    //define without displaying the initial form
+
+    //Show the form depending on selection
+    availableForms = selectTemplate.schema.template.enum
+    
+    for (var i = 0; i < availableForms.length; i++) {
+    formName=availableForms[i].toLowerCase().replace(/ /g,'')
+    $('form').jsonForm(
+     
+      eval(formName+'Form_'+version)
+      )
+    }
+
+    $(document).ready(getForm);
+  
+
+  function getForm(){
+
+   selection = $('#templateSelect')[0].value;
+
+   formsToHide = availableForms.map(i => i.replace(/ /g,""));
+   formsToHide = formsToHide.map(i => i.toLowerCase())
+    formsToHide = formsToHide.map(i => '.' + i + 'Form')
+
+    //formsToHide = availableForms.map(i => '.' + i + 'Form')
+
+    formToShow = '.'+selection.replace(/ /g,'').toLowerCase()+'Form'
+
+
+    $(formsToHide.toString()).hide()
+    $(formToShow.toString()).show()
+    
+    // $("#barchartForm1_3").spectrum("reflow");
+
+  }
+  // Building the forms
+  $('buttons').jsonForm(buttons)
+  $('#animInBtn')[0].addEventListener('click', animateIn)
+  $('#animOutBtn')[0].addEventListener('click', animateOut)
+
+
+
+  $('autoAnimOut').jsonForm(autoAnimateOut)
+
+  var selectedTemplate = $('#templateSelect')[0].value.toLowerCase().replace(/ /g, "");
+
+
+  const uploaderBtn1 = document.querySelector('.js-open-uploaderInsertQuote_1')
+  const uploaderBtn2 = document.querySelector('.js-open-uploaderInsertQuote_2')
+
+ 
+  socket = io("https://gfxpro.tv/",  {path: '/socket/socket.io', query: {room: InsertsStartSessionID}});
+  // socket = io("ws://192.236.146.167:3000",  {path: '/socket.io', transports: ['websocket'], query: {room: sessionID}});
+  
+  //const bc = new BroadcastChannel('output'); //sends to indexOBS.html
+  function animateIn(evt){
+    evt.preventDefault();
+  
+    selectedTemplate = $('#templateSelect')[0].value.toLowerCase().replace(/ /g, "");
+    // colorOne = $('#color1')[0].value.toString().replace(/#/g,"");
+    // colorTwo = $('#color2')[0].value.toString().replace(/#/g,"");
+
+      //default images
+  defaultImage0="./images/img_0.png"
+  defaultImage1="./images/img_1.jpg"
+
+  //imageUploads=[`${defaultImage0}`, `${defaultImage1}`] //needs sorting out, should be mover to the uploader script
+    
+
+    color01 = document.getElementsByClassName(selection.toString().toLowerCase().replace(/ /g, "")+"color01")[0]?.value.replace(/#/g,"")
+    color02 = document.getElementsByClassName(selection.toString().toLowerCase().replace(/ /g, "")+"color02")[0]?.value.replace(/#/g,"")
+    color03 = document.getElementsByClassName(selection.toString().toLowerCase().replace(/ /g, "")+"color03")[0]?.value.replace(/#/g,"")
+    color04 = document.getElementsByClassName(selection.toString().toLowerCase().replace(/ /g, "")+"color04")[0]?.value.replace(/#/g,"")
+    
+    //color01 = $('#color01')[0].value.toString().replace(/#/g,"");
+    // color02 = $(#color02')[0].value.toString().replace(/#/g,"");
+    // color03 = $('#color03')[0].value.toString().replace(/#/g,"");
+    // color04 = $('#color04')[0].value.toString().replace(/#/g,"");
+    //newColors = colorOne.concat(',',colorTwo);
+    newColors = [color01,color02,color03,color04].toString();
+
+    ///Getting form values
+
+    //imageUploads = ["images/img_10.png", "images/img_19.png"]
+
+    var formDataArray = $("form :input:visible").serializeArray();
+    formValues = [];
+    for (i = 0; i < formDataArray.length; i++){
+    formValues[i] = formDataArray[i]["value"];
+    }
+    // console.log(JSON.stringify(['on', ...formValues, newColors, ...imageUploads, selectedTemplate]))//Includes pictures
+    console.log(JSON.stringify(['on', ...formValues, newColors, ...imageUploads, selectedTemplate]))
+    //CHECKING IF AUTO ANIMATE IS CHECKED
+    if ($('.autoAnimOutInput').is(':checked') == true){
+      socket.emit('message', JSON.stringify(['on', ...formValues, newColors, ...imageUploads, selectedTemplate]))
+      console.log("Animation IN command sent")
+      setTimeout(function(){
+        console.log("Animation OUT command sent")
+        selectedTemplate = $('#templateSelect')[0].value.toLowerCase().replace(/ /g, "");
+        socket.emit('message', JSON.stringify(['off',"", "", "", "", "", "", "", "", "", selectedTemplate]))
+      
+      //bc.postMessage(["off","", "", "", "", "", "", "", "", "", selectedTemplate])
+      }, 4000)
+    }else{
+
+    // socket.emit('message', JSON.stringify(['on', ...formValues, newColors, ...imageUploads, selectedTemplate]))//Includes pictures
+    socket.emit('message', JSON.stringify(['on', ...formValues, newColors, ...imageUploads, selectedTemplate]))
+
+    console.log("Animation In command sent")
+    }
+    // bc.postMessage(['on', ...formValues, newColors, selectedTemplate])//colorOne.concat(",",colorTwo)
+  
+
+  }
+  
+  function animateOut(){
+    selectedTemplate = $('#templateSelect')[0].value.toLowerCase().replace(/ /g, "");
+    //bc.postMessage(["off","", "", "", "", "", "", "", "", "", selectedTemplate])
+    console.log(JSON.stringify(['off',"", "", "", "", "", "", "", "", "", selectedTemplate]))
+
+    socket.emit('message', JSON.stringify(['off',"", "", "", "", "", "", "", "", "", selectedTemplate]))
+
+    console.log("Animation Out command sent")
+  }
+
+  // Color picker config
+  jscolor.presets.default = {format:'any', position:'bottom', previewSize:95, previewPadding: -92,
+        hideOnPaletteClick:true, backgroundColor:'rgba(101,101,101,1)', 
+        borderColor:'rgba(0,104,170,1)', borderRadius:3, padding:2, 
+        width:220, height:190, closeButton:true, 
+        buttonColor:'rgba(255,255,255,1)', buttonHeight:35, sliderSize:18, 
+        crossSize:15, }
+</script>
+
+<script src="../../uploader/uploaderInsertsQuote.js"></script>
+
+
+
+
+</html>

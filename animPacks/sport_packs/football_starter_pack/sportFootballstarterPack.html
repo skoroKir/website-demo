@@ -1,0 +1,721 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<meta charset="UTF-8">
+
+<head>
+    <link rel="icon" type="image/x-icon" href="../../../assets/favicon1.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Scada&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.6.10/lottie.js" integrity="sha256-j5t8yIha0IKq9Oajlw+yBTISHC7DMh1AVIC3v1Ka6S8=" crossorigin="anonymous"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.9.1/lottie.min.js" integrity="sha512-CWKGqmXoxo+9RjazbVIaiFcD+bYEIcUbBHwEzPlT0FilQq3TCUac+/uxZ5KDmvYiXJvp32O8rcgchkYw6J6zOA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <!-- animation data -->
+    <script src="animData/sportFtblSPOpener.js"></script>
+    <script src="animData/sportFtblSPScore.js"></script>
+    <script src="animData/sportFtblSPGoal.js"></script>
+    <script src="animData/sportFtblSPSub.js"></script>
+    
+    <div id="animationSet">  
+        <div id="score" class="score"></div>
+        <div id="goal" class="goal"></div>
+        <div id="substitution" class="substitution"></div>
+        <div id="opener" class="opener"></div>
+    </div>
+
+    <script src="https://cdn.socket.io/4.4.0/socket.io.min.js" integrity="sha384-1fOn6VtTq3PWwfsOrk45LnYcGosJwzMHv+Xh/Jx5303FVOXzEnw0EpLv30mtjmlj" crossorigin="anonymous"></script>
+
+    <script>
+
+        /////ANIMATION INSTANSES
+
+        //Common parameteres
+        var commonParams = {
+            renderer: 'svg',
+            loop: false,
+            autoplay: false,
+            autoloadSegments: false,
+            prerender: false,
+        }
+
+        //opener
+        var paramsOpener = {
+            container: document.getElementById('opener'),
+            animationData: sportFtblSPOpenerAnim,
+            rendererSettings: {
+                imagePreserveAspectRatio: 'xMidYMid meet'
+            },
+  
+        
+        };
+        paramsOpener = Object.assign(commonParams, paramsOpener);
+
+        var openerAnim;
+        openerAnim = lottie.loadAnimation(paramsOpener);
+
+        // score
+        var paramsScore = {
+            container: document.getElementById('score'),
+            animationData: sportFtblSPScoreAnim
+        };
+        
+        paramsScore = Object.assign(commonParams, paramsScore);
+        var scoreAnim;
+        scoreAnim = lottie.loadAnimation(paramsScore);
+
+        // goal
+        var paramsGoal = {
+            container: document.getElementById('goal'),
+            animationData: sportFtblSPGoalAnim
+        };
+        
+        paramsGoal = Object.assign(commonParams, paramsGoal);
+        var goalAnim;
+        goalAnim = lottie.loadAnimation(paramsGoal);
+
+        // sub
+        var paramsSub = {
+            container: document.getElementById('substitution'),
+            animationData: sportFtblSPSubAnim
+        };
+        
+        paramsSub = Object.assign(commonParams, paramsSub);
+        var subAnim;
+        subAnim = lottie.loadAnimation(paramsSub);
+
+        // opener TEXT UPDATING AND ANIMATION LOGIC
+        //defining editable elements
+        editableText0=openerAnim.renderer.elements[1].elements[0];
+        editableText1=openerAnim.renderer.elements[1].elements[1];
+        editableText2=openerAnim.renderer.elements[1].elements[2];
+        editableText3=openerAnim.renderer.elements[1].elements[3];
+        editableText4=openerAnim.renderer.elements[1].elements[4];
+        editableColor=openerAnim.renderer.elements[1].elements[15];    
+        editableImg0=document.getElementById('team1Pic').getElementsByTagName("image")[0];
+        editableImg1=document.getElementById('team2Pic').getElementsByTagName("image")[0];
+
+
+        //cleaning editables elements
+        function footballOpenerClear(){
+            editableText0.updateDocumentData({
+                t: ''
+            }, 0);
+            editableText1.updateDocumentData({
+                t: ''
+            }, 0);
+            editableText2.updateDocumentData({
+                t: ''
+            }, 0);
+            editableText3.updateDocumentData({
+                t: ''
+            }, 0);
+            editableText4.updateDocumentData({
+                t: ''
+            }, 0);
+            editableColor.updateDocumentData({
+                t: ''
+            }, 0);
+            editableImg0.setAttribute("href", 'images/img_0.jpg');
+            editableImg1.setAttribute("href", 'images/img_1.jpg');
+        }
+
+        //Animate in
+        function footballOpenerON(){
+                openerAnim.playSegments([0, 55], true);
+        }
+        //Animate out
+        function footballOpenerOUT(){
+            if (openerAnim.currentFrame != openerAnim.firstFrame) {
+                openerAnim.playSegments([100, 125], true);
+                    setTimeout(function() {
+                        openerAnim.firstFrame = 0;
+                        openerAnim.goToAndStop(openerAnim.firstFrame, true);
+                    }, 1500);
+                }
+        }
+
+        function opener(action, line0, line1, line2, line3, line4, color, teamLogo0, teamLogo1) {
+
+            function footballOpenerContentUpdate(){
+            editableText0.updateDocumentData({
+                t: line0
+            }, 0);
+            editableText1.updateDocumentData({
+                t: line1
+            }, 0);
+            editableText2.updateDocumentData({
+                t: line2
+            }, 0);
+            editableText3.updateDocumentData({
+                t: line3
+            }, 0);
+            editableText4.updateDocumentData({
+                t: line4
+            }, 0);
+            editableColor.updateDocumentData({
+                t: color
+            }, 0);
+            //editableImg0.setAttribute("href", teamLogo0);
+            editableImg0.setAttribute("href", teamLogo0);
+            editableImg1.setAttribute("href", teamLogo1);
+            }
+
+            function openerBasicLogicAnimIn(){
+                if (openerAnim.currentFrame <= 0) {                 
+                    footballOpenerContentUpdate()                     
+                    footballOpenerON();            
+                }
+                else if (line0 !== editableText0.layerElement.textContent ||line1 !== editableText1.layerElement.textContent || line2 !== editableText2.layerElement.textContent ||line3 !== editableText3.layerElement.textContent ||line4 !== editableText4.layerElement.textContent||teamLogo0 !== editableImg0.getAttribute("href")||teamLogo1 !== editableImg1.getAttribute("href")){
+                    footballOpenerOUT()
+                    setTimeout(function() {
+                        footballOpenerContentUpdate()
+                        footballOpenerON();
+                    }, 1500);
+                }                
+
+            }
+
+            function openerBasicLogicAnimOut(){
+                setTimeout(function(){
+                        footballOpenerClear()
+                        },1500)        
+                footballOpenerOUT();
+            }
+
+            switch (action){
+            case 'on':
+                if(scoreAnim.currentFrame>0){
+                    footballScoreOUT()
+                    setTimeout(function(){
+                        openerBasicLogicAnimIn()
+                    },
+                    900);
+                }
+                else if(subAnim.currentFrame>0){
+                    footballSubOUT()
+                    setTimeout(function(){
+                        openerBasicLogicAnimIn()
+                    },
+                    900);
+                }
+                else if(goalAnim.currentFrame>0){
+                    footballGoalOUT()
+                    setTimeout(function(){
+                        openerBasicLogicAnimIn()
+                    },
+                    1200);
+                }
+                else{
+                    openerBasicLogicAnimIn()
+                }
+
+                break;
+            case 'off':                    
+                openerBasicLogicAnimOut()
+                break
+            }
+        }
+
+
+///////////SCORE ANIMATION
+
+    scoreTeam1=scoreAnim.renderer.elements[0].elements[0];
+    scoreScore1=scoreAnim.renderer.elements[0].elements[1];
+    scoreTeam2=scoreAnim.renderer.elements[0].elements[2];
+    scoreScore2=scoreAnim.renderer.elements[0].elements[3];
+    scoreTiming=scoreAnim.renderer.elements[0].elements[6];
+    scoreColor=scoreAnim.renderer.elements[0].elements[9];
+        //editableImg0=document.getElementsByTagName("image")[2];
+
+        // scoreEditableImg0=document.getElementById('team1Pic').getElementsByTagName("image")[0]
+
+        // scoreEditableImg1=document.getElementById('team2Pic').getElementsByTagName("image")[0]
+
+    function footballScoreON(){
+        scoreAnim.loop=false; scoreAnim.playSegments([0, 30], true);
+        scoreAnim.loop=true; scoreAnim.playSegments([30, 55], false);
+        
+        //scoreAnim.loop=false; scoreAnim.goToAndPlay("animIn", true);
+
+    }
+
+    function footballScoreOUT(){
+    if (scoreAnim.currentFrame != scoreAnim.firstFrame) {
+        scoreAnim.loop=false; scoreAnim.playSegments([50, 75], true);
+            setTimeout(function() {
+                scoreAnim.firstFrame = 0;
+                scoreAnim.goToAndStop(scoreAnim.firstFrame, true);
+            }, 1500);
+        }
+    }
+
+    function footballScoreClear(){
+        scoreTeam1.updateDocumentData({
+            t: ''
+        }, 0);
+        scoreScore1.updateDocumentData({
+            t: ''
+        }, 0);
+        scoreTeam2.updateDocumentData({
+            t: ''
+        }, 0);
+        scoreScore2.updateDocumentData({
+            t: ''
+        }, 0);
+        // scoreTiming.updateDocumentData({
+        //     t: ''
+        // }, 0);
+        scoreColor.updateDocumentData({
+            t: ''
+        }, 0);
+        // scoreEditableImg0.setAttribute("href", 'images/img_0.jpg');
+        // scoreEditableImg1.setAttribute("href", 'images/img_1.jpg');
+    }
+
+    function score(action, team1, score1, team2, score2, timing, color) {
+
+        function footballScoreContentUpdate(){
+        scoreTeam1.updateDocumentData({
+            t: team1
+        }, 0);
+        scoreScore1.updateDocumentData({
+            t: score1
+        }, 0);
+        scoreTeam2.updateDocumentData({
+            t: team2
+        }, 0);
+        scoreScore2.updateDocumentData({
+            t: score2
+        }, 0);
+        scoreTiming.updateDocumentData({
+            t: timing
+        }, 0);
+
+        scoreColor.updateDocumentData({
+            t: color
+        }, 0);
+
+
+        // scoreEditableImg0.setAttribute("href", teamLogo0);
+        // scoreEditableImg1.setAttribute("href", teamLogo1);
+        }
+
+        function scoreBasicLogicAnimIn(){
+            if (scoreAnim.currentFrame <= 0) {                 
+                footballScoreContentUpdate()                     
+                footballScoreON();            
+            }
+            else if (team1 !== scoreTeam1.layerElement.textContent ||score1 !== scoreScore1.layerElement.textContent || team2 !== scoreTeam2.layerElement.textContent ||score2 !== scoreScore2.layerElement.textContent ||timing !== scoreTiming.layerElement.textContent){
+                footballScoreOUT()
+                setTimeout(function() {
+                    footballScoreContentUpdate()
+                    footballScoreON();
+                }, 1500);
+            }
+        }
+
+        function scoreBasicLogicAnimOut(){
+            setTimeout(function(){
+                    footballScoreClear()
+                    },1500)        
+            footballScoreOUT();
+        }
+        switch (action){
+        case 'on':          
+            if(openerAnim.currentFrame>0){
+                footballOpenerOUT()
+                setTimeout(function(){
+                    scoreBasicLogicAnimIn()
+                },
+                900);
+                
+            }
+            else{
+                scoreBasicLogicAnimIn()
+            }
+            break;
+        case 'off':                    
+            scoreBasicLogicAnimOut()
+            break
+        }
+    }
+
+//////////GAME EVENT ANIMATION
+    eventTeam1Name=goalAnim.renderer.elements[0].elements[0];
+    eventTeam1Num=goalAnim.renderer.elements[0].elements[1];
+    eventTeam2Name=goalAnim.renderer.elements[0].elements[2];
+    eventTeam2Num=goalAnim.renderer.elements[0].elements[3];
+    eventPlayerName=goalAnim.renderer.elements[0].elements[4];
+    eventPlayersTeam=goalAnim.renderer.elements[0].elements[5];
+    eventEvent=goalAnim.renderer.elements[0].elements[12];
+    eventColor=goalAnim.renderer.elements[0].elements[14];
+        //editableImg0=document.getElementsByTagName("image")[2];
+
+        // scoreEditableImg0=document.getElementById('team1Pic').getElementsByTagName("image")[0]
+
+        // scoreEditableImg1=document.getElementById('team2Pic').getElementsByTagName("image")[0]
+
+
+    function footballGoalON(){
+        goalAnim.playSegments([0, 33], true);
+    }
+
+    function footballGoalOUT(){
+    if (goalAnim.currentFrame != goalAnim.firstFrame) {
+        goalAnim.playSegments([38, 75], true);
+            setTimeout(function() {
+                goalAnim.firstFrame = 0;
+                goalAnim.goToAndStop(goalAnim.firstFrame, true);
+            }, 1500);
+        }
+    }
+
+    function footballGoalClear(){
+    eventTeam1Name.updateDocumentData({
+        t: ""
+    }, 0);
+    eventTeam1Num.updateDocumentData({
+        t: ""
+    }, 0);
+    eventTeam2Name.updateDocumentData({
+        t: ""
+    }, 0);
+    eventTeam2Num.updateDocumentData({
+        t: ""
+    }, 0);
+    eventPlayerName.updateDocumentData({
+        t: ""
+    }, 0);
+    eventPlayersTeam.updateDocumentData({
+        t: ""
+    }, 0);
+    eventEvent.updateDocumentData({
+        t: ""
+    }, 0);
+    eventColor.updateDocumentData({
+        t: ""
+    }, 0);
+    }
+    
+
+    function gameevent(action, team1Name, team1Num, team2Name, team2Num, playerName, playersTeam, event, color) {
+        function footballGoalContentUpdate(){
+        eventTeam1Name.updateDocumentData({
+            t: team1Name
+        }, 0);
+        eventTeam1Num.updateDocumentData({
+            t: team1Num
+        }, 0);
+        eventTeam2Name.updateDocumentData({
+            t: team2Name
+        }, 0);
+        eventTeam2Num.updateDocumentData({
+            t: team2Num
+        }, 0);
+        eventPlayerName.updateDocumentData({
+            t: playerName
+        }, 0);
+        eventPlayersTeam.updateDocumentData({
+            t: playersTeam
+        }, 0);
+        eventEvent.updateDocumentData({
+            t: event
+        }, 0);
+        eventColor.updateDocumentData({
+            t: color
+        }, 0);
+
+
+        // scoreEditableImg0.setAttribute("href", teamLogo0);
+        // scoreEditableImg1.setAttribute("href", teamLogo1);
+        }
+
+        function goalBasicLogicAnimIn(){
+            if (goalAnim.currentFrame <= 0) {                 
+                footballGoalContentUpdate()                     
+                footballGoalON();            
+            }
+            
+            else if (team1Name !== eventTeam1Name.layerElement.textContent ||team1Num !== eventTeam1Num.layerElement.textContent || team2Name !== eventTeam2Name.layerElement.textContent ||team2Num
+            !== eventTeam2Num.layerElement.textContent ||playerName !== eventPlayerName.layerElement.textContent ||playersTeam !== eventPlayersTeam.layerElement.textContent ||
+            event !== eventEvent.layerElement.textContent ||color !== eventColor.layerElement.textContent)
+            {       
+                footballGoalOUT()
+                setTimeout(function() {
+                    footballGoalContentUpdate()
+                    footballGoalON();
+                }, 1500);
+            }
+        }
+
+        function goalBasicLogicAnimOut(){
+            setTimeout(function(){
+                    footballGoalClear()
+                    },1500)        
+            footballGoalOUT();
+        }
+
+        switch (action){
+        case 'on':
+            if(openerAnim.currentFrame>0){
+                footballOpenerOUT()
+                setTimeout(function(){
+                    goalBasicLogicAnimIn()
+                },
+                1000);
+            }
+            else if(subAnim.currentFrame>0){
+                footballSubOUT()
+                setTimeout(function(){
+                    goalBasicLogicAnimIn()
+                },
+                1000);
+            }
+            else{
+                goalBasicLogicAnimIn()
+            }
+
+            break;
+        case 'off':                    
+            goalBasicLogicAnimOut()
+            break
+        }
+    }
+
+////////////////////SUBSTITUTION ANIMATION
+
+    subPlayerOutName=subAnim.renderer.elements[2];
+    subPlayerOutNumb=subAnim.renderer.elements[3];
+    subPlayerInName=subAnim.renderer.elements[5];
+    subPlayerInNumb=subAnim.renderer.elements[6];
+    subTeamName=subAnim.renderer.elements[8];
+    subTeamNumb=subAnim.renderer.elements[10];
+    subTeamColor=subAnim.renderer.elements[11];
+
+    //editableImg0=document.getElementsByTagName("image")[2];
+
+    // scoreEditableImg0=document.getElementById('team1Pic').getElementsByTagName("image")[0]
+
+    // scoreEditableImg1=document.getElementById('team2Pic').getElementsByTagName("image")[0]
+
+
+    function footballSubON(){
+            subAnim.playSegments([0, 40], true);
+    }
+
+    function footballSubOUT(){
+    if (subAnim.currentFrame != subAnim.firstFrame) {
+        subAnim.playSegments([55, 90], true);
+            setTimeout(function() {
+                subAnim.firstFrame = 0;
+                subAnim.goToAndStop(subAnim.firstFrame, true);
+            }, 1500);
+        }
+    }
+
+    function footballSubClear(){
+        subPlayerOutName.updateDocumentData({
+            t: ""
+        }, 0);
+        subPlayerOutNumb.updateDocumentData({
+            t: ""
+        }, 0);
+        subPlayerInName.updateDocumentData({
+            t: ""
+        }, 0);
+        subPlayerOutNumb.updateDocumentData({
+            t: ""
+        }, 0);
+        subTeamName.updateDocumentData({
+            t: ""
+        }, 0);
+        subTeamNumb.updateDocumentData({
+            t: ""
+        }, 0);
+        subTeamColor.updateDocumentData({
+            t: ""
+        }, 0);
+    }
+
+    function substitution(action, playerOutName, playerOutNumb, playerInName, playerInNumb, teamSubName, teamSubNumb, teamSubColor) {
+        function footballSubContentUpdate(){
+        subPlayerOutName.updateDocumentData({
+            t: playerOutName
+        }, 0);
+        subPlayerOutNumb.updateDocumentData({
+            t: playerOutNumb
+        }, 0);
+        subPlayerInName.updateDocumentData({
+            t: playerInName
+        }, 0);
+        subPlayerInNumb.updateDocumentData({
+            t: playerInNumb
+        }, 0);
+        subTeamName.updateDocumentData({
+            t: teamSubName
+        }, 0);
+        subTeamNumb.updateDocumentData({
+            t: teamSubNumb
+        }, 0);
+        subTeamColor.updateDocumentData({
+            t: teamSubColor
+        }, 0);
+
+        // scoreEditableImg0.setAttribute("href", teamLogo0);
+        // scoreEditableImg1.setAttribute("href", teamLogo1);
+        }
+
+        function goalBasicLogicAnimIn(){
+            if (goalAnim.currentFrame <= 0) {                 
+                footballGoalContentUpdate()                     
+                footballGoalON();            
+            }
+            
+            else if (team1Name !== eventTeam1Name.layerElement.textContent ||team1Num !== eventTeam1Num.layerElement.textContent || team2Name !== eventTeam2Name.layerElement.textContent ||team2Num
+            !== eventTeam2Num.layerElement.textContent ||playerName !== eventPlayerName.layerElement.textContent ||playersTeam !== eventPlayersTeam.layerElement.textContent ||
+            event !== eventEvent.layerElement.textContent ||color !== eventColor.layerElement.textContent)
+            {       
+                footballGoalOUT()
+                setTimeout(function() {
+                    footballGoalContentUpdate()
+                    footballGoalON();
+                }, 1500);
+            }
+        }
+
+        function subBasicLogicAnimIn(){
+            if (subAnim.currentFrame <= 0) {                 
+                footballSubContentUpdate()                     
+                footballSubON();            
+            }
+        
+            else if (playerOutName !== subPlayerOutName.layerElement.textContent ||playerOutNumb !== subPlayerOutNumb.layerElement.textContent || playerInName !== subPlayerInName.layerElement.textContent ||playerInNumb
+            !== subPlayerInNumb.layerElement.textContent ||teamSubName !== subTeamName.layerElement.textContent ||teamSubNumb !== subTeamNumb.layerElement.textContent ||teamSubColor !== subTeamColor.layerElement.textContent)
+            {    
+                 footballSubOUT()
+                 setTimeout(function() {
+                     footballSubContentUpdate()
+                     footballSubON();
+                 }, 1500);
+             }
+        }
+
+        function subBasicLogicAnimOut(){
+            setTimeout(function(){
+                    footballSubClear()
+                    },1500)        
+            footballSubOUT();
+        }
+
+        switch (action){
+        case 'on':
+            if(openerAnim.currentFrame>0){
+                footballOpenerOUT()
+                setTimeout(function(){
+                    subBasicLogicAnimIn()
+                },
+                1000);
+            }
+            else if(goalAnim.currentFrame>0){
+                footballGoalOUT()
+                setTimeout(function(){
+                    subBasicLogicAnimIn()
+                },
+                1500);
+            }
+            else{
+                subBasicLogicAnimIn()
+            }
+
+            break;
+        case 'off':                    
+            subBasicLogicAnimOut()
+            break
+        }
+    }
+
+
+//////////////////////////////////////////////
+
+
+ 
+        //document.getElementById("timing").innerHTML = "new text"
+
+       
+        //const bc = new BroadcastChannel('output'); //Receives from the source
+
+        const getQueryParam = param => {
+        const urlSearchParams = new URLSearchParams(window.location.search);
+        const value = urlSearchParams.get(param);
+        return value
+        }
+
+        const sessionID = getQueryParam('session')
+        console.log(sessionID)
+        var recievedMessage
+
+
+        const socket = io("https://gfxpro.tv", {path: '/socket/socket.io', query: {room: sessionID}});//ws://192.236.146.167:3000
+        socket.on('message', message => {
+            receivedMessage = JSON.parse(message)
+            console.log(receivedMessage);
+            templateSelected = receivedMessage[receivedMessage.length - 1]
+            eval(templateSelected)(...receivedMessage)
+        })
+        
+        // bc.addEventListener('message', function (event) {
+        //     console.log(event.data)
+        //     animAgumentsArr = event.data
+        //     templateSelected = animAgumentsArr[animAgumentsArr.length - 1]
+        //     eval(templateSelected)(...animAgumentsArr)
+
+        // });
+    </script>
+
+</body>
+
+<style>
+
+    /* @import url('https://fonts.googleapis.com/css2?family=Scada&display=swap'); */
+
+    body {
+        background-color: rgba(0, 189, 72, 0);
+        margin: 0px;
+        height: 100%;
+        overflow: hidden;
+        font-family: 'Scada', sans-serif;
+    }
+    
+    .score, .opener, .goal, .substitution, .timingComp{
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        background-color: rgba(81, 133, 245, 0);
+        width: 100%;
+        height: 100%;
+        display: block;
+        overflow: hidden;
+        transform: translate3d(0, 0, 0);
+        text-align: center;
+        opacity: 1;
+        font-family: scada-regular
+    }
+
+    
+    /* @font-face { font-family: scada-regular; 
+         src: url('font/Scada-Regular.ttf'); }
+    .position{
+        font-family: scada-regular;
+    }
+
+    @import url('https://fonts.googleapis.com/css2?family=Scada&display=swap'); */
+</style>
+
+</html>
+

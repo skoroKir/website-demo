@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reciever</title>
+</head>
+<body>
+    <h1>Reciever</h1>
+    <br>
+    <p id="recievedMessage"></p>
+    <br>
+    <p id="pictureName"></p>
+    <br>
+    <p id="sessionIDtext"></p>
+    <script src="https://cdn.socket.io/4.4.0/socket.io.min.js" integrity="sha384-1fOn6VtTq3PWwfsOrk45LnYcGosJwzMHv+Xh/Jx5303FVOXzEnw0EpLv30mtjmlj" crossorigin="anonymous"></script>
+
+</body>
+
+<script>
+  const getQueryParam = param => {
+    const urlSearchParams = new URLSearchParams(window.location.search);
+    const value = urlSearchParams.get(param);
+    return value
+  }
+
+  const sessionID = getQueryParam('session')
+  console.log(sessionID)
+  var recievedMessage
+
+  
+  const socket = io("https://gfxpro.tv", {path: '/socket/socket.io', query: {room: sessionID}});//ws://192.236.146.167:3000
+  socket.on('message', message => {
+    recievedMessage = receivedMessage = JSON.parse(message)
+    console.log(recievedMessage);
+    document.getElementById("recievedMessage").innerHTML = "Recieved Message: " + recievedMessage[0];
+    document.getElementById("pictureName").innerHTML = "Uploaded Picture Name: " + recievedMessage[1];
+    document.getElementById("sessionIDtext").innerHTML = "ID: " + recievedMessage[2];
+  })
+  
+
+</script>
+</html>

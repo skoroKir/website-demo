@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sender</title>
+</head>
+<body>
+    <h1>Sender</h1>
+    <span>text to send</span>
+    <br>
+    <input type="text" id="input1" name="input1"><br><br>
+    
+    <button type="button" onclick="printIt()">Send it!</button>
+
+    <br>
+    <p id="sessionIDtext"></p>
+    <script src="https://cdn.socket.io/4.4.0/socket.io.min.js" integrity="sha384-1fOn6VtTq3PWwfsOrk45LnYcGosJwzMHv+Xh/Jx5303FVOXzEnw0EpLv30mtjmlj" crossorigin="anonymous"></script>
+</body>
+
+<script>
+    var sessionID;
+    sessionID = localStorage.getItem('sessionId');
+    let socket;
+    window.onload = function assignID() {
+        if (!sessionID) {
+            sessionID = Math.random().toString(16).slice(2)
+            console.log(sessionID)
+            localStorage.setItem('sessionId', sessionID)
+        }
+        
+        document.getElementById("sessionIDtext").innerHTML = "This session ID: "+ sessionID;
+        socket = io("wss://gfxpro.tv/socket",  {query: {room: sessionID}});//ws://192.236.146.167:3000
+    };
+    
+    
+    //getting input value, printing in the console and sending it to reciever.html
+    function printIt() {
+        var message = document.getElementById("input1").value
+        
+        var arrayToSend = [];
+        arrayToSend.push(message, sessionID);
+
+        console.log(arrayToSend);
+        socket.emit('message', {
+            id: sessionID,
+            message: message
+        })
+        // const bc = new BroadcastChannel('output');
+        // bc.postMessage(arrayToSend)
+    }
+
+
+    
+</script>
+</html>
