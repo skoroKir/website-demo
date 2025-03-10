@@ -82,7 +82,8 @@
                                     <p>We produce interactive animated web illustrations and assets</p>
                                     <p>as well as infographics and TV/live streaming onscreen overlays in web format.</p>
                                     <p>Click the pictures below to watch the animation</p>
-
+                                    
+                                    <!-- BUTTONS  -->
                                     <ul class="nav nav-pills mb-3 nav-fill" id="pills-tab" role="tablist">
                                         <li class="nav-item" role="presentation">
                                           <button class="nav-link active" id="pills-icons-tab" data-bs-toggle="pill" data-bs-target="#pills-icons" type="button" role="tab" aria-controls="pills-icon" aria-selected="true"><i class="fas fa-shapes fa-fw me-2"></i>Animated Icons</button>
@@ -93,19 +94,23 @@
                                         <li class="nav-item" role="presentation">
                                           <button class="nav-link" id="pills-broadcast-tab" data-bs-toggle="pill" data-bs-target="#pills-broadcast" type="button" role="tab" aria-controls="pills-broadcast" aria-selected="false"><i class="fas fa-broadcast-tower fa-fw me-2"></i>Broadcasting</button>
                                         </li>
-                                      </ul>
+                                        <li class="nav-item" role="presentation">
+                                          <button class="nav-link" id="pills-explainer-tab" data-bs-toggle="pill" data-bs-target="#pills-explainers" type="button" role="tab" aria-controls="pills-explainer" aria-selected="false"><i class="fas fa-cubes fa-fw me-2"></i>Explainers</button>
+                                        </li>
+                                    </ul>
 
+                                    <!-- ANIMATIONS -->
                                     <div class="tab-content" id="pills-tabContent">
+                                        <!-- Animated Icons -->
                                         <div class="col-xs-12 col-md-12 col-lg-12 tab-pane fade show active" id="pills-icons" role="tabpanel" aria-labelledby="pills-icons-tab">
                                             <div class="col-xs-12 col-md-12 col-lg-12 lottieContainerFitness" id="lottieContainer0">
-                                                
                                                 <div id="lottieYoga" class="lottieYoga lottieFitness"> </div>
                                                 <div id="lottieWeightLift" class="lottieWeightLift lottieFitness"> </div> 
                                                 <div id="lottieBoxer" class="lottieBoxer lottieFitness"> </div>
                                                 <div id="lottieTreadmill" class="lottieTreadmill lottieFitness"> </div>
                                             </div>                                                                  
                                         </div>
-
+                                        <!-- Infographics -->
                                         <div class="col-xs-12 col-md-12 col-lg-12 tab-pane fade" id="pills-infograph" role="tabpanel" aria-labelledby="pills-infograph-tab">                                           
                                             <div class="col-xs-12 col-md-12 col-lg-12 lottieContainer0" id="lottieContainer1">
                                                 <div id="lottiePieChart" class="lottiePieChart lottieInfogr gridItem"> </div>
@@ -114,15 +119,20 @@
                                                 <div id="lottieMaleFemCompare" class="lottieMaleFemCompare lottieInfogr gridItem"> </div>
                                             </div>
                                         </div>
-                                        
+                                        <!-- Broadcasting -->
                                         <div class="col-xs-12 col-md-12 col-lg-12 tab-pane fade" id="pills-broadcast" role="tabpanel" aria-labelledby="pills-broadcast-tab">
                                             <div class="col-xs-12 col-md-12 col-lg-12 lottieContainer0" id="lottieContainer2">
                                                 <div id="lottieFootballGoal" class="lottieFootballGoal lottieBroadcast"> </div>
                                                 <div id="lottieFootballSub" class="lottieFootballSub lottieBroadcast"> </div>
                                                 <div id="lottieBroadcastLocator" class="lottieBroadcastLocator lottieBroadcast"> </div>
                                                 <div id="lottieBroadcastTitle" class="lottieBroadcastTitle lottieBroadcast"> </div>
-
-
+                                            </div>
+                                        </div>
+                                        <!-- Explainers -->
+                                        <div class="col-xs-12 col-md-12 col-lg-12 tab-pane fade" id="pills-explainers" role="tabpanel" aria-labelledby="pills-explainer-tab">
+                                            <div class="col-xs-12 col-md-12 col-lg-12 lottieContainer0" id="lottieContainerExplainers">
+                                                <div id="lottieNotreDam" class="lottieNotreDam lottieExplainerItem"> </div>
+                                            </div>
                                         </div>
 
                                     </div>
@@ -154,6 +164,8 @@
             </div> <!-- /.pt-table -->
         </main> <!-- /.site-wrapper -->
         
+
+
         <!-- ================================
         JavaScript Libraries
         ================================= -->
@@ -172,8 +184,6 @@
         <script src="js/demoAnimationData.js"></script>
         <script src="js/animPortfolioData.js"></script>
 
-        
-        
 
 
         <script>
@@ -186,7 +196,7 @@
             } 
             
 
-
+////////////FITNESS ANIMATION
             var paramsYoga = {
                 container: document.getElementById('lottieYoga'),
                 renderer: 'svg',
@@ -274,7 +284,7 @@
                 animTreadmill.playSegments([[0, 20], [0, 20], [0,20], [0,20]], false);
             },{once : false})
 
-            /////////////////////INFO GRAPHICS
+////////////INFO GRAPHICS
             //Pie chart
             var paramsPieChart = {
                 container: document.getElementById('lottiePieChart'),
@@ -379,7 +389,7 @@
                 maleFemCompareAnim.playSegments([[240, 250], [0, 120]], true);
             },{once : false});
 
-            ///////////////BROADCASTING
+///////////////BROADCASTING Animation
             var paramsFootballGoal = {
                 container: document.getElementById('lottieFootballGoal'),
                 renderer: 'svg',
@@ -430,7 +440,7 @@
                 broadcastLocatorAnim.playSegments([25,35], true)
                 broadcastTitleAnim.playSegments([25,35], true)
             });
-
+////////////Button action
             $('#pills-broadcast-tab')[0].addEventListener('click', function(event){
                 footballGoalAnim.playSegments([30,40], true) ;
                 footballSubstAnim.playSegments([40,50], true);
@@ -438,7 +448,7 @@
                 broadcastTitleAnim.playSegments([25,35], true)
             }            
             );
-
+////////////Animations played on click
             $("#lottieFootballGoal")[0].addEventListener('click', function(){
                 footballGoalAnim.playSegments([[40, 80], [0, 40]], true);
             },{once : false});
@@ -454,6 +464,91 @@
             $("#lottieBroadcastTitle")[0].addEventListener('click', function(){
                 broadcastTitleAnim.playSegments([[50, 75], [0, 40]], true);
             },{once : false});
+
+/////////EXPLAINER ANIMATION
+            var paramsNotreDam = {
+                    container: document.getElementById('lottieNotreDam'),
+                    renderer: 'svg',
+                    loop: false,
+                    autoplay: false,
+                    animationData: cathedralAnimData,
+                    // path: cathedralAnimData,
+                    // path: 'https://lottie.host/f888ea20-b2be-443a-ac61-6bbdca917ce2/UgoTqcCKZ3.json',
+                };
+            
+            var notreDamAnim;
+    
+            notreDamAnim = lottie.loadAnimation(paramsNotreDam);
+
+            notreDamAnimTime = 0;
+
+            function clickNotreDamAnimation1() {
+                notreDamAnim.goToAndPlay('animSegment1',true);
+                clickPoint1.style.cursor = 'default';
+                notreDamAnimTime = 1;
+            }
+
+            function clickNotreDamAnimation2() {
+                notreDamAnim.goToAndPlay('animSegment2',true);
+                clickPoint2.style.cursor = 'default';
+                notreDamAnimTime = 2;
+            }
+
+            function clickNotreDamAnimation3() {
+                notreDamAnim.goToAndPlay('animSegment3',true);
+                clickPoint3.style.cursor = 'default';
+                notreDamAnimTime = 3;
+            }
+
+            function clickNotreDamAnimation4() {
+                notreDamAnim.goToAndPlay('animSegment4',true);
+                clickPoint4.style.cursor = 'default';
+                notreDamAnimTime = 4;
+            }
+
+            let isClickPoint1ListenerAdded = false;
+            let isClickPoint2ListenerAdded = false;
+            let isClickPoint3ListenerAdded = false;
+            let isClickPoint4ListenerAdded = false;
+
+            setInterval(() => {
+                //let currentAnimFrame = anim.currentFrame;
+                //switch (anim.currentFrame){
+                switch (notreDamAnimTime){
+                    case 0:
+                        clickPoint1.style.cursor = 'pointer';
+                        if (!isClickPoint1ListenerAdded) {
+                        clickPoint1.addEventListener("click", clickNotreDamAnimation1, { once: true });
+                        isClickPoint1ListenerAdded = true;
+                        }
+                        break;
+                    //case 14:
+                    case 1:
+                        clickPoint2.style.cursor = 'pointer';
+                        if (!isClickPoint2ListenerAdded) {
+                        clickPoint2.addEventListener("click", clickNotreDamAnimation2, { once: true });
+                        isClickPoint2ListenerAdded = true;
+                        }
+                        break;
+                    //case 18:
+                    case 2: 
+                        clickPoint3.style.cursor = 'pointer';
+                        if (!isClickPoint3ListenerAdded) {
+                        clickPoint3.addEventListener("click", clickNotreDamAnimation3, { once: true });
+                        isClickPoint3ListenerAdded = true;
+                        }
+                        break;
+                    //case 16:
+                    case 3: 
+                        clickPoint4.style.cursor = 'pointer';
+                        if (!isClickPoint4ListenerAdded) {
+                        clickPoint4.addEventListener("click", clickNotreDamAnimation4, { once: true });
+                        isClickPoint4ListenerAdded = true;
+                        }
+                        break;
+                    }
+            }, 500);
+
         </script>
     
         <style>
