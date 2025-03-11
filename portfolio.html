@@ -129,6 +129,7 @@
                                             </div>
                                         </div>
                                         <!-- Explainers -->
+
                                         <div class="col-xs-12 col-md-12 col-lg-12 tab-pane fade" id="pills-explainers" role="tabpanel" aria-labelledby="pills-explainer-tab">
                                             <div class="col-xs-12 col-md-12 col-lg-12 lottieContainer0" id="lottieContainerExplainers">
                                                 <div id="lottieNotreDam" class="lottieNotreDam lottieExplainerItem"> </div>
@@ -472,7 +473,6 @@
                     loop: false,
                     autoplay: false,
                     animationData: cathedralAnimData,
-                    // path: cathedralAnimData,
                     // path: 'https://lottie.host/f888ea20-b2be-443a-ac61-6bbdca917ce2/UgoTqcCKZ3.json',
                 };
             
@@ -605,6 +605,11 @@
                 margin-top: 50px;
                 justify-content: space-between;
                 flex-wrap: wrap;
+                align-items: center;
+            }
+
+            .lottieContainer0:has(.lottieExplainerItem) {
+                justify-content: center;
             }
 
             .copyright {
@@ -650,6 +655,14 @@
               margin-top: 150px;
               height: 150px;
             }
+
+            .lottieNotreDam {
+                margin: 0 auto; /* Centers horizontally */
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
             .page-close{
             top: 5px;
             }
