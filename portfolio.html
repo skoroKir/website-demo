@@ -101,14 +101,23 @@
 
                                     <!-- ANIMATIONS -->
                                     <div class="tab-content" id="pills-tabContent">
-                                        <!-- Animated Icons -->
                                         <div class="col-xs-12 col-md-12 col-lg-12 tab-pane fade show active" id="pills-icons" role="tabpanel" aria-labelledby="pills-icons-tab">
+                                            <!-- World Leaders Animation -->
+                                            <div class="col-xs-12 col-md-12 col-lg-12 lottieContainerWorldLeaders" id="lottieContainerWorldLeaders">
+                                                <div id="lottieTrump" class="lottieTrump lottieWorldLeaders"> </div>
+                                                <div id="lottieXi" class="lottieXi lottieWorldLeaders"> </div> 
+                                                <div id="lottieModi" class="lottieModi lottieWorldLeaders"> </div>
+                                                <div id="lottieMacron" class="lottieMacron lottieWorldLeaders"> </div>
+                                            </div>  
+                                            <!-- Fittness Animation -->
                                             <div class="col-xs-12 col-md-12 col-lg-12 lottieContainerFitness" id="lottieContainer0">
                                                 <div id="lottieYoga" class="lottieYoga lottieFitness"> </div>
                                                 <div id="lottieWeightLift" class="lottieWeightLift lottieFitness"> </div> 
                                                 <div id="lottieBoxer" class="lottieBoxer lottieFitness"> </div>
                                                 <div id="lottieTreadmill" class="lottieTreadmill lottieFitness"> </div>
-                                            </div>                                                                  
+                                            </div>
+
+                                            
                                         </div>
                                         <!-- Infographics -->
                                         <div class="col-xs-12 col-md-12 col-lg-12 tab-pane fade" id="pills-infograph" role="tabpanel" aria-labelledby="pills-infograph-tab">                                           
@@ -182,7 +191,7 @@
         <script src="js/form.min.js"></script>
         <script src="js/main.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.11.0/lottie.min.js" integrity="sha512-XCthc/WzPfa+oa49Z3TI6MUK/zlqd67KwyRL9/R19z6uMqBNuv8iEnJ8FWHUFAjC6srr8w3FMZA91Tfn60T/9Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-        <script src="js/demoAnimationData.js"></script>
+        <!-- <script src="js/demoAnimationData.js"></script> -->
         <script src="js/animPortfolioData.js"></script>
 
 
@@ -273,16 +282,95 @@
 
             //animWeightLift.playSegments([10, 0], true);
 
-            $("#weightLiftIcon")[0].addEventListener('click', function(){
+            $("#lottieWeightLift")[0].addEventListener('click', function(){
                 animWeightLift.playSegments([[0, 40], [0, 40]], false);
             },{once : false})
 
-            $("#boxerIcon")[0].addEventListener('click', function(){
+            $("#lottieBoxer")[0].addEventListener('click', function(){
                 animBoxer.playSegments([[0, 70]], false);
             },{once : false})
 
-            $("#treadmillIcon")[0].addEventListener('click', function(){
+            $("#lottieTreadmill")[0].addEventListener('click', function(){
                 animTreadmill.playSegments([[0, 20], [0, 20], [0,20], [0,20]], false);
+            },{once : false})
+
+
+////////////WORLD LEADERS ANIMATION
+            var paramsTrump = {
+                container: document.getElementById('lottieTrump'),
+                renderer: 'svg',
+                loop: false,
+                autoplay: autopl,
+                animationData: animDataTrump
+            };
+            
+            var paramsXi = {
+                container: document.getElementById('lottieXi'),
+                renderer: 'svg',
+                loop: false,
+                autoplay: autopl,
+                animationData: animDataXi
+            };
+
+            var paramsModi = {
+                container: document.getElementById('lottieModi'),
+                renderer: 'svg',
+                loop: false,
+                autoplay: autopl,
+                animationData: animDataModi
+            };
+            
+            var paramsMacron = {
+                container: document.getElementById('lottieMacron'),
+                renderer: 'svg',
+                loop: false,
+                autoplay: autopl,
+                animationData: animDataMacron
+            };
+                        
+            var animTrump;
+            animTrump = lottie.loadAnimation(paramsTrump);
+
+            var animXi;
+            animXi = lottie.loadAnimation(paramsXi);
+
+            var animModi;
+            animModi = lottie.loadAnimation(paramsModi);
+
+            var animMacron;
+            animMacron = lottie.loadAnimation(paramsMacron);
+            
+            // if (!/Mobi|Android/i.test(navigator.userAgent)) {
+            //   animYoga.playSegments([10, 0], true);
+            //   animWeightLift.playSegments([10, 0], true);
+            //   animBoxer.playSegments([10, 0], true);
+            //   animTreadmill.playSegments([10, 0], true);
+            // }   
+           
+            document.addEventListener('DOMContentLoaded', function(event){
+                animTrump.playSegments([10, 0], true);
+                animXi.playSegments([10, 0], true);
+                animModi.playSegments([10, 0], true);
+                animMacron.playSegments([10, 0], true);
+            })
+
+
+            $("#lottieTrump")[0].addEventListener('click', function(){
+                //anim.play()
+                animTrump.playSegments([[0, 40], [0, 40]], true);
+            },{once : false})
+
+
+            $("#lottieXi")[0].addEventListener('click', function(){
+                animXi.playSegments([[0, 60]], false);
+            },{once : false})
+
+            $("#lottieModi")[0].addEventListener('click', function(){
+                animModi.playSegments([[0, 60]], false);
+            },{once : false})
+
+            $("#lottieMacron")[0].addEventListener('click', function(){
+                animMacron.playSegments([[0, 90]], false);
             },{once : false})
 
 ////////////INFO GRAPHICS
@@ -559,6 +647,12 @@
                 /* margin-left: -100px; */
             }
 
+            .lottieWorldLeaders{
+                height: 400px;
+                cursor: pointer;
+                /* margin-left: -100px; */
+            }
+
             .lottieInfogr{
                 /* height: 300px;*/
                 cursor: pointer;
@@ -585,8 +679,8 @@
                 height: 150px;
             }
             
-            .lottieContainerFitness{
-
+            .lottieContainerFitness,
+            .lottieContainerWorldLeaders {
                 display: flex;
                 transform: scale(1);
                 transform-origin: top center;
@@ -596,7 +690,7 @@
                 align-items: center; /* Align items vertically */
                 gap: 10px; /* Optional: Adjust spacing between elements */
             }
-            
+
             .lottieContainer0{
                 display: flex;
                 /* height: 800px; */
@@ -631,7 +725,7 @@
             }
 
             @media screen and (max-width: 767px) {
-            .lottieContainer0, .lottieContainerFitness {
+            .lottieContainer0, .lottieContainerFitness, .lottieContainemWorldLeaders {
             flex-wrap: wrap; /* Allow wrapping on smaller screens */
             justify-content: center; /* Center elements for better alignment */
             gap: 10px; /* Optional: Adds spacing between items */
